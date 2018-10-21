@@ -21,5 +21,6 @@ collections:
       - label: "About Page"
         name: "about"
         file: "content/about.json"
-        widget: "list"
-	    default: ["news"]
+        fields: 
+          - {label: Title, name: title, widget: string}
+          - {label: Intro, name: intro, widget: markdown}
