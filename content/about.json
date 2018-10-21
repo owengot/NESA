@@ -1,11 +1,17 @@
 {
-  "title": "About",
-  "intro": "SSS",
-  "team": [
-    {
-      "name": "Title",
-      "position": "Me",
-      "photo": "/images/uploads/12.jpg"
-    }
-  ]
+  "slide1": {
+    "name": "About",
+    "caption": "Nesa About Caption",
+    "image": "/images/uploads/12.jpg"
+  },
+  "slide2": {
+    "name": "Obst",
+    "caption": "Caption 2",
+    "image": "/images/uploads/12.jpg"
+  },
+  "slide3": {
+    "name": "Caption 3",
+    "caption": "caption 3",
+    "image": "/images/uploads/12.jpg"
+  }
 }
