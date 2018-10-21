@@ -1,3 +1,11 @@
 {
   "title": "About",
+  "intro": "SSS",
+  "team": [
+    {
+      "name": "Title",
+      "position": "Me",
+      "photo": "/images/uploads/12.jpg"
+    }
+  ]
 }
