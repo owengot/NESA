@@ -22,21 +22,21 @@ collections:
         name: "about"
         file: "content/about.json"
         fields: 
-          - label: Slide1
+          - label: Slide_1
             name: slide1
             widget: object
             fields:
               - {label: Name, name: name, widget: string}
               - {label: Caption, name: caption, widget: string}
               - {label: Image, name: image, widget: image}
-          - label: Slide2
+          - label: Slide_2
             name: slide2
             widget: object
             fields:
               - {label: Name, name: name, widget: string}
               - {label: Caption, name: caption, widget: string}
               - {label: Image, name: image, widget: image}
-          - label: Slide3
+          - label: Slide_3
             name: slide3
             widget: object
             fields:
