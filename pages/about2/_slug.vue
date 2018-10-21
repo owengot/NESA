@@ -1,6 +1,6 @@
 <template>
   <article>
-    <h1>{{ title }}</h1>
+    <h1>TETEZTEZ</h1>
     <p>{{ body }}
       <br>
       <strong>Posted on <time :datetime="date">{{ date }}</time></strong>
@@ -21,12 +21,12 @@ export default {
   },
   async asyncData({ params }) {
     // const postPromise = process.BROWSER_BUILD
-    //   ? import('~/content/blog/posts/' + params.slug + '.json')
+    //   ? import('~/content/about2/posts/' + params.slug + '.json')
     //   : Promise.resolve(
-    //       require('~/content/blog/posts/' + params.slug + '.json')
+    //       require('~/content/about2/posts/' + params.slug + '.json')
     //     );
 
-    let post = await import('~/content/blog/posts/' + params.slug + '.json');
+    let post = await import('~/content/about2/posts/' + params.slug + '.json');
     return post;
   }
 };
