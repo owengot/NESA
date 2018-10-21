@@ -1,6 +1,6 @@
 <template>
   <article>
-    <h1>{{ title }}</h1>
+    <h1>SKJSKJ</h1>
     <p>{{ body }}
       <br>
       <strong>Posted on <time :datetime="date">{{ date }}</time></strong>
@@ -11,6 +11,7 @@
 
 <script>
 export default {
+  layout: 'about',
   data () {
     return {
       title: '',

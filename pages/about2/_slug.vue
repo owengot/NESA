@@ -11,6 +11,7 @@
 
 <script>
 export default {
+layout: 'about',
   data () {
     return {
       title: '',

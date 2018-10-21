@@ -1,4 +1,8 @@
 <template>
+<div>
+<section class="header">
+<h1>UHJ</h1>
+</section>
   <section class="container">
     <h2>Blog</h2>
     <ul>
@@ -9,12 +13,14 @@
       </li>
     </ul>
   </section>
+ </div>
 </template>
 
 <script>
 import AppLogo from '~/components/AppLogo.vue';
 
 export default {
+	layout: 'home',
   components: {
     AppLogo
   },
