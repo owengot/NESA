@@ -22,12 +22,24 @@ collections:
         name: "about"
         file: "content/about.json"
         fields: 
-          - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: markdown}
-          - label: Team
-            name: team
-            widget: list
+          - label: Slide1
+            name: slide1
+            widget: object
             fields:
               - {label: Name, name: name, widget: string}
-              - {label: Position, name: position, widget: string}
-              - {label: Photo, name: photo, widget: image}
+              - {label: Caption, name: caption, widget: string}
+              - {label: Image, name: image, widget: image}
+          - label: Slide2
+            name: slide2
+            widget: object
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Caption, name: caption, widget: string}
+              - {label: Image, name: image, widget: image}
+          - label: Slide3
+            name: slide3
+            widget: object
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Caption, name: caption, widget: string}
+              - {label: Image, name: image, widget: image}
