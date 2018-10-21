@@ -23,10 +23,12 @@ collections:
             file: "content/about.json"
             widget: "list"
 	        fields:
-	          - label: Section1
-	            name: section1
-	            widget: object
-	            fields:
-	              - {label: Title, name: quote, widget: string, default: "Section Title"}
-	              - {label: Description, name: description, widget: string, default: "Section Description"}
-	              - {label: Image, name: image, widget: image}
+	                  - {label: Title, name: title, widget: string}
+	                  - {label: Intro, name: intro, widget: markdown}
+	                  - label: Team
+	                    name: team
+	                    widget: list
+	                    fields:
+	                      - {label: Name, name: name, widget: string}
+	                      - {label: Position, name: position, widget: string}
+	                      - {label: Photo, name: photo, widget: image}
