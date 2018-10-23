@@ -10,7 +10,6 @@ var dynamicRoutes = getDynamicPaths({
   '/about': 'about.yaml',
 });
 
-import webpack from 'webpack';
 
 module.exports = {
   /*
