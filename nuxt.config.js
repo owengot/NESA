@@ -10,6 +10,7 @@ var dynamicRoutes = getDynamicPaths({
   '/about': 'about.yaml',
 });
 
+import webpack from 'webpack';
 
 module.exports = {
   /*
@@ -24,12 +25,16 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
+	script: [
+		  { src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' },
+	    ],
   },
   /*
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
+ 
   /*
   ** Route config for pre-rendering
   */
@@ -39,11 +44,13 @@ module.exports = {
   /*
   ** Build configuration
   */
+
   build: {
     /*
     ** Run ESLint on save
     */
-    extend(config, { isDev, isClient }) {
+
+    extend(config, { isDev, isClient, isServer }) {
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',

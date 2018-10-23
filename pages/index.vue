@@ -1,44 +1,87 @@
 <template>
 <div>
 <section class="header">
-<h1>UHJ</h1>
+
 </section>
   <section class="container">
-    <h2>Blog</h2>
-    <ul>
-      <li v-for="post in posts" :key="post.date">
-        <nuxt-link :to="post._path">
-          {{ post.title }}
-        </nuxt-link>
-      </li>
-    </ul>
+    <h2></h2>
+   
+
+	<slick ref="slick" class="slick">
+		<div style="background: red">
+		<img :src=" slide1.image " />
+		<p class="caption">{{ slide1.caption }}</p>
+		</div>
+		<div style="background: green">
+		<img :src=" slide1.image " />
+		</div>
+		<div style="background: purple">
+		3
+		</div>
+	</slick>
+
+
   </section>
  </div>
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue';
+let Slick = null;
+if (process.browser) {
+    /* eslint-disable global-require */
+    Slick = require('vue-slick').default;
+    /* eslint-enable global-require */
+}
 
 export default {
-	layout: 'home',
-  components: {
-    AppLogo
+	components: {
+		Slick
+	},
+layout: 'about',
+  data () {
+    return {
+    slickOptions: {
+                   slidesToShow: 1,
+                   // Any other options that can be got from plugin documentation
+               },
+    }
   },
-  data() {
-    // Using webpacks context to gather all files from a folder
-    const context = require.context('~/content/blog/posts/', false, /\.json$/);
-
-    const posts = context.keys().map(key => ({
-      ...context(key),
-      _path: `/blog/${key.replace('.json', '').replace('./', '')}`
-    }));
-
-    return { posts };
+  async asyncData({ params }) {
+    let post = await import('~/content/about2/about.json');
+    return post;
+  },
+  mounted: () => {
+ 
   }
-};
+}
+
+
 </script>
 
+
 <style>
+
+.slick {
+width: 100%;
+height: 90%;
+
+}
+
+.slick div {
+overflow: hidden;
+width: 100%;
+height: 100%;
+position: relative;
+display: inline-block;
+}
+.caption {
+width: 500px;
+height: 300px;
+position: absolute;
+left: 20px;
+bottom: 20px;
+}
+
 .container {
   min-height: 100vh;
   display: flex;
