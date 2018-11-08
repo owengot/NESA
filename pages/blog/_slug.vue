@@ -1,5 +1,6 @@
 <template>
   <article>
+  <Header />
     <h1>{{ title }}</h1>
     <p>{{ body }}
       <br>
@@ -10,7 +11,12 @@
 </template>
 
 <script>
+import Header from '~/components/Header.vue';
+
 export default {
+components: {
+	Header
+},
   data () {
     return {
       title: '',

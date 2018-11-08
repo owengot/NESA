@@ -1,30 +1,28 @@
 <template>
   <section class="container">
-    <h2>Test</h2>
-    <ul>
-      <li v-for="post in posts" :key="post.date">
-        <nuxt-link :to="post._path">
-          {{ post.title }}
-        </nuxt-link>
-      </li>
-    </ul>
+    <h1>
+      <nuxt-link :to="title">{{title}}</nuxt-link>
+    </h1>
+
   </section>
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue';
+import AppLogo from "~/components/AppLogo.vue";
 
 export default {
+  pageHeader: "default.jpg",
+  layout: "about",
   components: {
     AppLogo
   },
   data() {
     // Using webpacks context to gather all files from a folder
-    const context = require.context('~/content/test/posts/', false, /\.json$/);
+    const context = require.context("~/content/test/posts/", false, /\.json$/);
 
     const posts = context.keys().map(key => ({
       ...context(key),
-      _path: `/test/${key.replace('.json', '').replace('./', '')}`
+      _path: `/test/${key.replace(".json", "").replace("./", "")}`
     }));
 
     return { posts };
@@ -33,6 +31,9 @@ export default {
 </script>
 
 <style>
+.header {
+  height: 900px;
+}
 .container {
   min-height: 100vh;
   display: flex;
@@ -42,8 +43,8 @@ export default {
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; /* 1 */
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
   display: block;
   font-weight: 300;
   font-size: 100px;

@@ -1,0 +1,18 @@
+{
+  "events": [{
+    "name": "2nd World Congress on Surgery and Anesthesia",
+    "date": "June 11-12, 2018 Rome, Italy",
+    "image": "http://www.nesacademy.org/beta/events/photos/recommended/11-6-2018.jpg",
+    "url": "http://scientificfederation.com/surgery-anesthesia-2018/"
+  }, {
+    "name": "3rd World Congress on Midwifery and Women's Health",
+    "date": "November 13-14, 2017 London, UK",
+    "image": "http://www.nesacademy.org/beta/events/photos/recommended/13-11-2017.jpg",
+    "url": "http://midwifery.conferenceseries.com/europe/"
+  }, {
+    "name": "The MCA Scientific Events - 1st World Congress on Maternal Fetal Neonatal Medicine",
+    "date": "April 24-26, 2017 Rome, Italy",
+    "image": "http://www.nesacademy.org/beta/events/photos/recommended/24-04-2017.jpg",
+    "url": "http://bit.ly/WorldMFNM_Site_Banner"
+  }]
+}

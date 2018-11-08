@@ -1,0 +1,37 @@
+{
+  "projects": [{
+    "name": "",
+    "body": "## The NESA's aim is not only to optimize existing surgical procedures or introduce new ones. An essential goal of the academy is to promote the transfer of knowledge, especially in direction of countries with limited resources. \n\n Therefore, NESA organizes courses for surgeons in collaboration with international organizations. Interested organisations are kindly invited to contact the Executive Board of the NESA in order to determine possible forms of collaboration and organize common courses.",
+    "sidebar": [{
+      "type": "image",
+      "url": "http://www.nesacademy.org/beta/projects/photos/african_surgical%20database_5.jpg"
+    }, {
+      "type": "image",
+      "url": "http://www.nesacademy.org/beta/projects/photos/african_surgical%20database_2.jpg"
+    }]
+  }, {
+    "name": "Chechnya – December 2016",
+    "body": "The NESA conducted a surgical workshop in Grozny and Gudermes, Chechnya from December 13-16 with NESA members from Germany, Israel, Russia and Turkey. In each city, live surgeries were performed. The workshop was well attended by 700 participants and was opened with the participation of the Chechen Health Minister. The workshop was followed in the local and Russian television networks. Following this workshop, the NESA has already been invited for future workshops in other Republics and in Moscow."
+  }, {
+    "name": "Tirana – October 1-5, 2005",
+    "body": "This course took place from October 1-5 2005 in Tirana, Albania, under the supervision of the European School of Transfusion Medicine (ESTM) and with the collaboration of the World Health Organization (WHO). The topic of the course, which was attended by about 80 participants, was 'the essential contribution of clinical medicine to blood safety'."
+  }, {
+    "name": "Naples – May 5-6, 2006",
+    "body": "This course took place in Naples (Italy) on May 5-6 at the Clinica Mediterranea and had more than 80 participants. The topic was 'Esperienze di chirurgia ginecologica a confronto'."
+  }, {
+    "name": "Other courses",
+    "body": "Other courses took place in Kaliningrad in October 2006, again in collaboration with the WHO, in Toronto in June 2006 and in Sao Paolo in December 2006, in collaboration with the Albert Einstein Hospital. A surgical course in collaboration with the WHO was held in Sochi, Russia, on May 14-15, 2007. In 2011, the NESA together with FIGO will conduct two surgical courses in Africa, notably in Senegal and Malawi."
+  }, {
+    "name": "Senegal - June 2012",
+    "body": "A surgical workshop was conducted in cooperation with MIF (http://www.medicalaidfilms.org/), and NESA members from Germany, Italy and the UK."
+  }, {
+    "name": "Burkina Faso - June 2013",
+    "body": "A surgical workshop was conducted in Ouagadougou with participation of NESA members from Germany, Italy and the UK. A 4-days' practical course with participation of 80 local surgeons was done."
+  }, {
+    "name": "Senegal - May 2015",
+    "body": "A surgical workshop for all French-speaking African countries was conducted in Dakar, Senegal in participation of NESA members from Germany, France, Italy and Croatia. The subjects were standardized gynecological and surgical procedures. As a result, the NESA was asked to conduct an all-African surgical database in order to improve surgical practice, surgical outcome and to enable data collection and comparison studies. Two months after starting, as of the end of August 2016, 716 operations have been recorded."
+  }, {
+    "name": "Shymkent - November 9-13, 2016",
+    "body": "A surgical workshop was conducted in Shymkent and Turkistan. It was organized by the New European Surgical Academy (NESA) with participants of NESA members from Israel, Canada, Germany, USA, Russia and Turkey. The subjects were endoscopy, oncology and gynecological surgery. Over 250 participants joined and live surgeries were conducted in 2 different hospitals."
+  }]
+}

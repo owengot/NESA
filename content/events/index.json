@@ -1,0 +1,48 @@
+{
+  "events": [{
+    "name": "Minimally Invasive Surgery Week 2017",
+    "date": "September 6-9, 2017 San Francisco, U.S.A",
+    "image": "http://www.nesacademy.org/beta/events/photos/MIS17-01-NEW.png",
+    "url": "http://sls.org/event/minimally-invasive-surgery-week-2017-annual-meeting/"
+  }, {
+    "name": "47 World Congress of Surgery 2017",
+    "date": "August 13-17 2017, Basel, Switzerland",
+    "image": "http://www.nesacademy.org/beta/events/photos/logo-wcs.jpg",
+    "url": "http://wcs2017.org/"
+  }, {
+    "name": "1st World Congress on Maternal Fetal Neonatal Medicine",
+    "date": "April 24-26, 2017 Rome, Italy",
+    "image": "http://www.nesacademy.org/beta/events/photos/MCA.jpg",
+    "url": "http://bit.ly/WorldMFNM_Site_Banner"
+  }, {
+    "name": "Minimally Invasive Surgery Week 2016",
+    "date": "August 31 - September 3, 2016, Boston, U.S.A",
+    "image": "http://www.nesacademy.org/beta/events/photos/MIS16-01.png",
+    "url": "http://bit.ly/WorldMFNM_Site_Banner"
+  }, {
+    "name": "Minimally Invasive Surgery Congress",
+    "date": "March 7-8 2017, London, UK",
+    "image": "http://www.nesacademy.org/beta/events/photos/MIS_banner-website1025201683111AM.jpg",
+    "url": "http://www.mnmconferences.com/Minimally-Invasive-Surgery-Congress"
+  }, {
+    "name": "Turkish National Gynecology and Obstetrics Congress",
+    "date": "October 5-9 2016, Antalya, Turkey",
+    "image": "http://www.nesacademy.org/beta/events/photos/tjod.png",
+    "url": "http://sls.org/mis2016/"
+  }, {
+    "name": "ICoMI 2017: Where Science and Clinical Practice meet.",
+    "date": "May 18-20 2017, Mallorca, Spain",
+    "image": "http://www.nesacademy.org/beta/events/photos/Logo_ICoMI2017_web-XL_2000x523-1024x268.png",
+    "url": "http://icomi2017.org/"
+  }, {
+    "name": "2017 Symposium: Innovations in Gastroenterology",
+    "date": "January 4-6, 2017, Tel Aviv, Israel",
+    "image": "http://www.nesacademy.org/beta/events/photos/Header.png",
+    "url": "http://sls.org/mis2016/"
+  }, {
+    "name": "Pioneer Century Science",
+    "date": "July 8-9 2017, Rome, Italy",
+    "image": "http://www.nesacademy.org/beta/events/photos/top.jpg",
+    "url": "http://www.pcscongress.com/gogc2017/"
+  }]
+}
