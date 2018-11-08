@@ -23,6 +23,7 @@
     "jquery": "^3.3.1",
     "markdown-it": "^8.4.2",
     "marked": "^0.5.1",
+    "medium-zoom": "^1.0.2",
     "nuxt": "^1.0.0",
     "vue-flickity": "^1.1.2",
     "vue-grid-styled": "^0.2.0",

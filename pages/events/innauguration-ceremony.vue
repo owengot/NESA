@@ -21,7 +21,7 @@
 <script>
 import Sidebar from "~/components/SidebarProjects.vue";
 import Event from "~/components/Event.vue";
-import Gallery from "~/components/Gallery.vue";
+import Gallery from "~/components/Gallery2.vue";
 import JQuery from 'jquery';
 let $ = JQuery;
 

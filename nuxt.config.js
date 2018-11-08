@@ -58,6 +58,10 @@ module.exports = {
     {
       src: '~/plugins/VueFlexGrid.js',
       ssr: false
+    },
+    {
+      src: '~/plugins/Medium.js',
+      ssr: false
     }
 
   ],
