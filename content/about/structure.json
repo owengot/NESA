@@ -1,0 +1,42 @@
+{
+  "structure": [{
+    "boards": [{
+      "title": "Urology",
+      "description": "Introduction to the NOS / SLO concept (The New European Surgery Academy)",
+      "url": "http://www.nesacademy.org/downloads/NOS211107_web.pdf"
+    }, {
+      "title": "Benhidjeb T.",
+      "description": "Auxillary-Bilateral-Breast-Approach (ABBA) (Natural Orifice Surgery 1st Meeting, NESA, Berlin - 2006)",
+      "url": "http://www.nesacademy.org/downloads/benhidjeb_abba_web.pdf"
+    }, {
+      "title": "Witzel K.",
+      "description": "Transumbilical herniorrhaphy (Natural Orifice Surgery Working Group, NESA, Berlin - 2006)",
+      "url": "http://www.nesacademy.org/downloads/witzelherniorrhaphy.pdf"
+    }, {
+      "title": "Witzel K.",
+      "description": "The transoral access in endoscopic thyroid resection (NESA, Berlin)",
+      "url": "http://www.nesacademy.org/downloads/witzeltransoral.pdf"
+    }]
+  }, {
+    "name": "Disciplines",
+    "body": "This course took place from October 1-5 2005 in Tirana, Albania, under the supervision of the European School of Transfusion Medicine (ESTM) and with the collaboration of the World Health Organization (WHO). The topic of the course, which was attended by about 80 participants, was 'the essential contribution of clinical medicine to blood safety'."
+  }, {
+    "name": "Naples – May 5-6, 2006",
+    "body": "This course took place in Naples (Italy) on May 5-6 at the Clinica Mediterranea and had more than 80 participants. The topic was 'Esperienze di chirurgia ginecologica a confronto'."
+  }, {
+    "name": "Other courses",
+    "body": "Other courses took place in Kaliningrad in October 2006, again in collaboration with the WHO, in Toronto in June 2006 and in Sao Paolo in December 2006, in collaboration with the Albert Einstein Hospital. A surgical course in collaboration with the WHO was held in Sochi, Russia, on May 14-15, 2007. In 2011, the NESA together with FIGO will conduct two surgical courses in Africa, notably in Senegal and Malawi."
+  }, {
+    "name": "Senegal - June 2012",
+    "body": "A surgical workshop was conducted in cooperation with MIF (http://www.medicalaidfilms.org/), and NESA members from Germany, Italy and the UK."
+  }, {
+    "name": "Burkina Faso - June 2013",
+    "body": "A surgical workshop was conducted in Ouagadougou with participation of NESA members from Germany, Italy and the UK. A 4-days' practical course with participation of 80 local surgeons was done."
+  }, {
+    "name": "Senegal - May 2015",
+    "body": "A surgical workshop for all French-speaking African countries was conducted in Dakar, Senegal in participation of NESA members from Germany, France, Italy and Croatia. The subjects were standardized gynecological and surgical procedures. As a result, the NESA was asked to conduct an all-African surgical database in order to improve surgical practice, surgical outcome and to enable data collection and comparison studies. Two months after starting, as of the end of August 2016, 716 operations have been recorded."
+  }, {
+    "name": "Shymkent - November 9-13, 2016",
+    "body": "A surgical workshop was conducted in Shymkent and Turkistan. It was organized by the New European Surgical Academy (NESA) with participants of NESA members from Israel, Canada, Germany, USA, Russia and Turkey. The subjects were endoscopy, oncology and gynecological surgery. Over 250 participants joined and live surgeries were conducted in 2 different hospitals."
+  }]
+}

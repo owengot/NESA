@@ -1,14 +1,28 @@
 <template>
   <div class="mains">
     <div id="sidebar">
-      <Sidebar :links="links" />
+      <Sidebar
+        :links="links"
+        :vertical="'true'"
+      />
     </div>
     <div id="test">
 
-      <div v-for="project in projects" v-bind:key="project">
-        <Project v-if="project.sidebar" :project="project" :sidebar="'true'" />
+      <div
+        v-for="project in projects"
+        v-bind:key="project"
+      >
+        <Project
+          v-if="project.sidebar"
+          :project="project"
+          :sidebar="'true'"
+        />
 
-        <Project v-else :project="project" :sidebar="'false'" />
+        <Project
+          v-else
+          :project="project"
+          :sidebar="'false'"
+        />
       </div>
 
     </div>
@@ -30,7 +44,14 @@ export default {
   pageTitle: "projects",
   data() {
     return {
-      links : ['Interdisciplinary', 'General Surgery', 'Otolaryngology', 'Urology', 'Obstetrics & Gynaecology', 'Anaesthesiology']
+      links: [
+        "Interdisciplinary",
+        "General Surgery",
+        "Otolaryngology",
+        "Urology",
+        "Obstetrics & Gynaecology",
+        "Anaesthesiology"
+      ]
     };
   },
   async asyncData({ params }) {
@@ -41,7 +62,6 @@ export default {
     //     );
     let post = await import("~/content/projects/index.json");
     return post;
-
   }
 };
 </script>

@@ -1,20 +1,30 @@
 
 <template>
-<div v-if="noTitle">
-    <a :href="url" target="_blank"> 
-  <div class="publication no-title">
-  <p> {{ description }}</p>
+  <div v-if="noTitle">
+    <a
+      :href="url"
+      target="_blank"
+      :class="{ autowidth: autowidth }"
+    >
+      <div class="publication no-title">
+        <p> {{ description }}</p>
+
+      </div>
+    </a>
   </div>
-  </a>
-</div>
-<div v-else>
-    <a :href="url" target="_blank" v-bind:title='title'> 
-  <div class="publication">
-  <h4>{{ title }}</h4>
-  <p> {{ description }}</p>
+  <div v-else>
+    <a
+      :href="url"
+      target="_blank"
+      v-bind:title='title'
+      :class="autowidth"
+    >
+      <div class="publication">
+        <h4>{{ title }}</h4>
+        <p> {{ description }}</p>
+      </div>
+    </a>
   </div>
-  </a>
-</div>
 </template>
 
 
@@ -23,6 +33,11 @@ import vue from "vue";
 
 export default {
   props: {
+    autowidth: {
+      type: String,
+      default: "te",
+      required: false
+    },
     title: {
       type: String,
       default: "",
@@ -48,6 +63,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+
 .publication
   border-radius: 12px
   border: 1px solid #efefef
@@ -101,6 +117,12 @@ export default {
   display: flex
   align-items: center
   padding-top: 10px
+
+.autowidth 
+  .publication
+    max-width: 100%
+    min-width: auto
+    margin: 0 0 10px
 
 
 @keyframes background 

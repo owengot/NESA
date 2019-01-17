@@ -1,16 +1,20 @@
 <template>
   <div class="mains">
     <div id="sidebar">
-      <Sidebar :links="links" />
+      <Sidebar
+        :links="links"
+        :vertical="'true'"
+      />
     </div>
     <div id="test">
 
-      <div class="project">
-        <h1> {{ events[0].body }} </h1>
+      <div class="introduction">
+        <p> {{ events[0].body }} </p>
       </div>
 
-      <Gallery :project="events" />
-
+      <div class="section">
+        <Gallery :project="events[0].gallery" />
+      </div>
     </div>
 
   </div>
@@ -21,8 +25,8 @@
 <script>
 import Sidebar from "~/components/SidebarProjects.vue";
 import Event from "~/components/Event.vue";
-import Gallery from "~/components/Gallery2.vue";
-import JQuery from 'jquery';
+import Gallery from "~/components/Gallery.vue";
+import JQuery from "jquery";
 let $ = JQuery;
 
 export default {
@@ -36,18 +40,39 @@ export default {
   pageTitle: "events",
   data() {
     return {
-      links : ['Current Events', 'Innauguration Ceremony', 'Nesa Days', 'Other Events', 'Recommended Events']
+      links: [
+        "Current Events",
+        "Innauguration Ceremony",
+        "Nesa Days",
+        "Other Events",
+        "Recommended Events"
+      ]
     };
   },
   async asyncData({ params }) {
     let post = await import("~/content/events/posts/innauguration-ceremony.json");
     return post;
-
   }
 };
 </script>
 
 <style lang="sass" scoped>
+
+.section
+  clear: both
+  display: inline-block
+  margin: 20px 0
+
+div /deep/ .gallery 
+  margin: 20px 0 0 5px
+  a
+    width: 18% !important
+    margin: 0 2% 2% 0 !important
+    height: 150px
+    &:nth-child(5n)
+      margin: 0 0 2% 0 !important
+    img
+      height: 150px
 
 @import '~/assets/sass/news.sass'
 
@@ -79,12 +104,23 @@ export default {
     width: 100%
     display: block
 
-.project
+.introduction
   display: flex
-  flex-direction: column
-  align-items: flex-start
   white-space: pre-line
-  margin: 0 0 40px 0
+  margin: 20px 0 0 0
+  p
+    font-size: 1.65em
+    line-height: 43px !important
+    font-family: 'Open Sans', sans-serif
+    font-weight: 800
+    color: black
+    width: 75%
+    float: left
+    clear: both !important
+    padding: 15px 0
+    margin: 30px 0 20px 5px
+    border-bottom: 1px solid #DDD
+
 
 h1, .desc, .photo, p
   color: black !important

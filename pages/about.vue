@@ -1,66 +1,460 @@
 <template>
-  <section class="container">
-    <h1>
-      <nuxt-link :to="title">{{title}}</nuxt-link>
-    </h1>
+  <div class="mains">
+    <div id="test">
 
-  </section>
+      <div
+        v-for="project in projects.slice(0, 1)"
+        v-bind:key="project"
+      >
+
+        <Project
+          v-if="project.sidebar"
+          :project="project"
+          :sidebar="'true'"
+        />
+
+        <Project
+          v-else
+          :project="project"
+          :sidebar="'false'"
+        />
+      </div>
+
+      <div class="section">
+        <h1>Background</h1>
+
+        <p>The following disciplines are represented in the NESA.</p>
+
+        <Disciplines
+          :links="links"
+          :vertical="'false'"
+        />
+
+      </div>
+
+      <div class="section">
+        <h1>Structure</h1>
+
+        <div
+          v-if="project.boards"
+          v-for="project in projects"
+          v-bind:key="project"
+          class="section boards"
+        >
+
+          <Board
+            v-for="board in project.boards"
+            :project="board"
+            v-bind:key="board"
+          />
+
+        </div>
+
+        <p>All other members are voluntary members, should identify with the aims and goals of the NESA and are appointed for limited periods.</p>
+
+      </div>
+
+      <div class="section">
+        <h1>The diplomats</h1>
+
+        <p>The professional diplomats function as correspondents for certain disciplines such as breast surgery and gynaecological or surgical endoscopy. The regional diplomats function as correspondents in various institutions, hospitals or regions and supervise studies in their region.</p>
+
+        <div
+          v-if="project.diplomats"
+          v-for="project in projects"
+          v-bind:key="project"
+        >
+
+          <button
+            id="show-modal"
+            @click="openModal(); modalContent = project.diplomats[0]; modalTitle = 'Diplomats'"
+          >View all Diplomats</button>
+
+        </div>
+
+      </div>
+
+      <div
+        v-if="project.partners"
+        v-for="project in projects"
+        v-bind:key="project"
+        class="section partners"
+      >
+
+        <h1>{{ project.partners[0].title }}</h1>
+
+        <p>{{ project.partners[0].introduction }}</p>
+
+        <div class="featured_partners">
+          <a
+            v-for="partner in project.partners[0].featured_partners"
+            class="partner"
+            v-bind:key="partner"
+            :href="partner.url"
+            :style="{ 'background-image': 'url(' + partner.logo + ')' }"
+          > </a>
+        </div>
+
+        <button
+          id="show-modal"
+          @click="openModal(); modalContent = project.partners[0]; modalTitle = 'Partners'"
+        >View all Partners</button>
+
+      </div>
+
+      <div
+        v-if="project.country_representatives"
+        v-for="project in projects"
+        v-bind:key="project"
+        class="section representatives"
+      >
+
+        <h1>{{ project.country_representatives[0].title }}</h1>
+
+        <p>{{ project.country_representatives[0].introduction }}</p>
+
+        <button
+          id="show-modal"
+          @click="openModal(); modalContent = project.country_representatives[0]; modalTitle = 'Country Representatives'"
+        >View all Representatives</button>
+
+      </div>
+
+      <div
+        v-if="project.honorary_members"
+        v-for="project in projects"
+        v-bind:key="project"
+        class="section members"
+      >
+
+        <h1>{{ project.honorary_members[0].title }}</h1>
+
+        <p>{{ project.honorary_members[0].introduction }}</p>
+
+      </div>
+
+      <div
+        v-if="project.cooperations"
+        v-for="project in projects"
+        v-bind:key="project"
+        class="section cooperations"
+      >
+
+        <h1>{{ project.cooperations[0].title }}</h1>
+
+        <p>{{ project.cooperations[0].introduction }}</p>
+
+        <div class="organisations">
+          <ul
+            v-for="entry in project.cooperations[0].entries"
+            :key="entry"
+          >
+
+            <li> {{ entry.title }} </li>
+
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+    <CustomComponentModal
+      v-if="showModal"
+      @close="showModal = false"
+      :title='modalTitle'
+      :content='modalContent'
+    >
+
+    </CustomComponentModal>
+
+  </div>
 </template>
 
 <script>
-import AppLogo from "~/components/AppLogo.vue";
+import Disciplines from "~/components/SidebarProjects.vue";
+import Project from "~/components/Project.vue";
+import Board from "~/components/Board.vue";
+import CustomComponentModal from "~/components/CustomComponentModal.vue";
 
 export default {
-  pageHeader: "default.jpg",
   layout: "about",
   components: {
-    AppLogo
+    CustomComponentModal,
+    Disciplines,
+    Project,
+    Board
   },
+  pageHeader: "../about.jpg",
+  pageTitle: "about",
   data() {
-    // Using webpacks context to gather all files from a folder
-    const context = require.context("~/content/test/posts/", false, /\.json$/);
-
-    const posts = context.keys().map(key => ({
-      ...context(key),
-      _path: `/test/${key.replace(".json", "").replace("./", "")}`
-    }));
-
-    return { posts };
+    return {
+      title: "",
+      showModal: false,
+      modalTitle: "",
+      modalContent: "",
+      body: "",
+      thumbnail: "",
+      date: "",
+      links: [
+        "General Surgery",
+        "Otolaryngology",
+        "Urology",
+        "Obstetrics & Gynaecology",
+        "Anaesthesiology"
+      ]
+    };
+  },
+  async asyncData({ params }) {
+    let post = await import("~/content/about/index.json");
+    return post;
+  },
+  methods: {
+    openModal() {
+      this.showModal = true;
+      document.documentElement.style.overflow = "hidden";
+    }
   }
 };
 </script>
 
-<style>
-.header {
-  height: 900px;
-}
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+<style lang="sass" scoped>
 
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
+.featured_partners
+  clear: both
+  display: inline-block
+  width: 100%
+  margin: 0% 0 2% 0 !important
 
-.links {
-  padding-top: 15px;
-}
+.partner
+  width: 21%
+  margin: 0% 2% 0 0 !important
+  height: 160px
+  padding: 20px
+  border: 1px solid #efefef !important
+  border-bottom: 2px solid #efefef !important
+  border-radius: 20px !important
+  background-size: 70% !important
+  background-repeat: no-repeat !important
+  background-position: center !important
+  display: inline-block
+  &:hover
+	  border: 1px solid #016895 !important
+	  border-bottom: 2px solid #016895 !important
+	  transition: all 1s ease !important
+	  cursor: pointer !important
+
+
+.modal-enter 
+  opacity: 0
+
+.modal-leave-active 
+  opacity: 0
+
+.modal-enter .modal-container,
+.modal-leave-active .modal-container 
+  -webkit-transform: scale(1.1)
+  transform: scale(1.1)
+
+
+.section
+  clear: both !important
+  width: 100%
+  display: inline-block
+  #show-modal
+    background: #fff
+    border: 1px solid #006895
+    color: #006895
+    text-decoration: none
+    padding: 12px
+    margin: 0 0 10px
+    font-size: 1.2em
+    display: inline-block
+    border-radius: 10px
+    &:focus 
+      outline: 0
+    &:hover 
+      cursor: pointer
+  h1
+    width: 100%
+    clear: both
+    margin: 20px 0
+  p
+    font-size: 1.35em !important
+    font-family: 'Open Sans'
+    line-height: 40px
+    display: inline-block
+    margin: 0 0 20px !important
+
+.section.boards
+  display: flex
+  flex-flow: row wrap
+
+div /deep/ h2
+  font-size: 2.1em !important
+  line-height: 46px !important
+
+div /deep/ ul 
+  margin-top: 10px
+  li 
+    line-height: 36px
+    color: #016895
+    font-size: 1.05em
+    padding: 0 !important
+    margin: 0 !important
+    list-style-type: circle
+  p
+    color: #016895 !important
+    margin: 0 !important
+
+
+.section.cooperations
+  .organisations
+    column-count: 2
+    display: block
+    ul 
+      width: 90%
+      margin: 0
+      padding: 0 0 0 20px
+      -webkit-column-break-inside: avoid
+      page-break-inside: avoid
+      break-inside: avoid
+      li
+        font-size: 1.25em
+        -webkit-column-break-inside: avoid
+        page-break-inside: avoid
+        break-inside: avoid
+
+
+div /deep/ blockquote
+  width: 100%
+  display: block
+  position: relative
+  margin: 20px 0 0 0px
+  clear: none !important
+  top: 50px
+  font-size: 1.3em !important
+  line-height: 24px
+  color: #016895 !important
+  background: #efefef
+  border-radius: 10px
+  padding: 15px 30px
+  background: linear-gradient(to bottom, #fff, #f8fafa)
+  -webkit-box-shadow: 0px 1px 1px 0 rgba(0, 0, 0, 0.1)
+  box-shadow: 0px 1px 1px 0 rgba(0, 0, 0, 0.1)
+  font-weight: 100 !important
+  p
+    font-weight: 100 !important
+    font-family: 'Exo 2'
+    font-size: 1.4em
+    line-height: 1.45em
+    font-style: normal
+  &:before
+    font-family: 'Georgia', serif
+    content: "\201C"
+    color: #97b3df
+    font-style: normal
+    font-size: 5em
+    position: absolute
+    left: -20px
+    top: 30px
+
+
+@import '~/assets/sass/news.sass'
+
+.mains
+  width: 75% !important
+  overflow: hidden
+  margin: 40px auto !important
+  position: relative
+  display: block !important
+
+.main_left
+  width: 64%
+  float: left
+
+
+#sidebar
+  width: 360px
+  float: right
+  margin: 0 0 0 30px
+
+
+.project_sidebar 
+  display: block
+  width: 100%
+  h1
+    width: 100%
+    display: block
+
+.project
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  white-space: pre-line
+  margin: 0 0 40px 0
+
+h1, .desc, .photo, p
+  color: black !important
+  display: inline-block
+
+intro 
+  font-size: 1.5em
+  line-height: 1.9em
+  margin-bottom: 30px
+  font-family: 'Open Sans', sans-serif
+  font-weight: 800
+  color: black
+
+h1
+  font-size: 2.1em
+  line-height: 46px !important
+  font-family: 'Open Sans', sans-serif
+  font-weight: 800
+  color: black
+  width: 97%
+  float: none
+  clear: both !important
+  padding-bottom: 15px
+  margin-bottom: 20px
+  border-bottom: 1px solid #DDD
+  &:after
+    content: ""
+    display: table
+    clear: both
+
+.desc, p
+  display: inline
+  clear: both !important
+  float: none
+
+.desc /deep/ p 
+  font-size: 1.25em !important
+  line-height: 40px
+  color: #000
+  display: inline
+  &:before
+    content: ""
+    display: inline-block
+    clear: both
+
+.photo 
+  display: flex
+  flex-direction: row
+  margin: 1.4em 0 0 0 
+  font-size: 1.25em
+  line-height: 40px
+  color: #000
+
+.photo /deep/ p 
+  &:first-child
+    flex: 0 0 64%
+    padding-right: 30px
+
+.photo /deep/ img 
+  width: 100% !important
+  border-radius: 20px
+  margin: 0 0 20px 20px
+
 </style>

@@ -5,11 +5,10 @@ var path = require('path');
 // automatically and match it to the path of your Nuxt routes.
 // The Nuxt routes are generate by Nuxt automatically based on the pages folder.
 var dynamicRoutes = getDynamicPaths({
-  '/blog': 'blog/posts/*.json',
   '/page': 'page/posts/*.json',
   '/news': 'news/posts/*.json',
+  '/events': 'events/posts/*.json',
   '/projects': 'projects/posts/*.json',
-  '/about': 'about.yaml',
 });
 
 module.exports = {
@@ -18,8 +17,9 @@ module.exports = {
    */
 
   modules: [
+    '@nuxtjs/axios',
     ['@reallifedigital/nuxt-image-loader-module', {
-      imagesBaseDir: 'static/images',
+      imagesBaseDir: 'static',
       imageStyles: {
         small: {
           macros: ['scaleAndCrop|160|90']
@@ -52,6 +52,14 @@ module.exports = {
       ssr: false
     },
     {
+      src: '~/plugins/VueIsotope',
+      ssr: false
+    },
+    {
+      src: '~/plugins/VueMasonry',
+      ssr: false
+    },
+    {
       src: '~/plugins/VueMarkdown.js',
       ssr: false
     },
@@ -62,7 +70,11 @@ module.exports = {
     {
       src: '~/plugins/Medium.js',
       ssr: false
-    }
+    },
+    {
+      src: '~plugins/vue-js-modal',
+      ssr: true
+    },
 
   ],
   css: [

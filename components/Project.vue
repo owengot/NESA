@@ -2,22 +2,48 @@
 
   <div>
 
-    <div class="project_sidebar" v-if="sidebar === 'true'">
+    <div
+      class="project_sidebar"
+      v-if="sidebar === 'true'"
+    >
       <h1 v-if="project.name.length > 0">{{ project.name }}</h1>
       <div class="main_left">
-        <div class="desc" v-html="$md.render(project.body)"></div>
-        <div v-for="item in project.links" v-bind:key="item">
-          <Link :title="item.title" :url="item.url" :description="item.description" />
+        <div
+          class="desc"
+          v-html="$md.render(project.body)"
+        ></div>
+        <div
+          v-for="item in project.links"
+          v-bind:key="item"
+        >
+          <Link
+            :title="item.title"
+            :url="item.url"
+            :description="item.description"
+          />
         </div>
       </div>
       <Sidebar :project="project" />
     </div>
 
-    <div v-else class="project">
+    <div
+      v-else
+      class="project"
+    >
       <h1 v-if="project.name.length > 0">{{ project.name }}</h1>
-      <div class="desc" v-html="$md.render(project.body)"></div>
-      <div v-for="item in project.links" v-bind:key="item">
-        <Link :title="item.title" :url="item.url" :description="item.description" />
+      <div
+        class="desc"
+        v-html="$md.render(project.body)"
+      ></div>
+      <div
+        v-for="item in project.links"
+        v-bind:key="item"
+      >
+        <Link
+          :title="item.title"
+          :url="item.url"
+          :description="item.description"
+        />
       </div>
     </div>
 

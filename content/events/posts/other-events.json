@@ -1,20 +1,109 @@
 {
   "projects": [{
-    "name": "The Anti-C-section campaign",
-    "body": "We start the New Year with an anti-Caesarean-section-campaign. Maybe we should say mea culpa, as the NESA was the one that has distributed an optimised and easy Caesarean section method in many countries. Our aim was to make Caesarean section safer and easier for the mothers. We could not imagine that this method would become one the reasons for over-usage of Caesarean section. We strongly believe that Caesarean section should have a valid indication. \n\n Please download download the document which includes the reasoning for limiting Caesarean section to valid indications.Feedback is welcome and can be sent to [office@nesacademy.org](mailto:office@nesacademy.org).",
+    "date": "June 23, 2006",
+    "entry": "The Natural Orifice Surgery / Scarless operations (NOS / SLO) working group had its first meeting in Berlin, Germany."
+  }, {
+    "date": "March 28, 2007",
+    "entry": "The second meeting of the NOS / SLO working group took place at the Savoy Hotel, Berlin. More information on [the NOS/SLO working group](http://www.nesacademy.org/interdisciplinary.html#NOS)"
+  }, {
+    "date": "January 10-11, 2008",
+    "entry": "Michael Stark and George Peltecu took part as advisors in the WHO conference ['Safe Surgery Saves Lives'](http://www.who.int/patientsafety/events/08/10_01_2008_geneva/en/index.html), which took place in Geneva, Switzerland. The NESA participates in the formulation and distribution of a surgical checklist that will contribute to the safety of surgery. \n\n The NESA has signed a Letter of Endorsements, showing herewith its support of the creation of the Safe Surgery Saves Lives Project by the WHO World Alliance of Patient Safety.",
     "links": [{
-      "title": "New European Surgical Academy [PDF]",
-      "description": "NESA’s Anti-Caesarean-Section Campaign: The dangers of overused Cesarean Sections (NESA)",
-      "url": "http://www.nesacademy.org/downloads/Anti_CS-Campaign.pdf"
-    }]
+      "description": "Letter of Endorsements",
+      "url": "http://www.nesacademy.org/downloads/WHOLoE.pdf"
+    }],
+    "gallery": [{
+        "caption": "image",
+        "url": "/images/events/other/WHO_1.jpg"
+      },
+      {
+        "caption": "image",
+        "url": "/images/events/other/WHO_2.jpg"
+      }
+    ]
   }, {
-    "name": "Ten Step Vaginal Hysterectomy – A modified operative technique for vaginal hysterectomy",
-    "body": "This multinational study compares a traditional vaginal hysterectomy (the Heaney method) with a modified method, the so called “Ten-Step Vaginal Hysterectomy”, which is a result of the analysis of 6 different methods. A study protocol has been elaborated and is available on demand. The pilot study showed a significant reduction of the operative time and of the need for pain killers."
+    "date": "January 10-11, 2008",
+    "entry": "The NESA participated in the launching of the WHO checklist in Washington.",
+    "gallery": [{
+        "caption": "image",
+        "url": "/images/events/other/WHO_1.jpg"
+      },
+      {
+        "caption": "image",
+        "url": "/images/events/other/WHO_2.jpg"
+      }, {
+        "caption": "image",
+        "url": "/images/events/other/WHO_3.jpg"
+      }, {
+        "caption": "image",
+        "url": "/images/events/other/WHO_4.jpg"
+      }, {
+        "caption": "image",
+        "url": "/images/events/other/WHO_5.jpg"
+      }, {
+        "caption": "image",
+        "url": "/images/events/other/WHO_6.jpg"
+      }, {
+        "caption": "image",
+        "url": "/images/events/other/WHO_7.jpg"
+      }, {
+        "caption": "image",
+        "url": "/images/events/other/WHO_8.jpg"
+      }, {
+        "caption": "image",
+        "url": "/images/events/other/WHO_9.jpg"
+      }, {
+        "caption": "image",
+        "url": "/images/events/other/WHO_10.jpg"
+      }
+    ]
   }, {
-    "name": "Computerized labour monitoring",
-    "body": "With this new development of a cervicometer, based on a GPS, the obstetrician can follow up the delivery without digital examination. It enables him to make decisions based on accurate and real-time information, resulting in significantly improved medical care. Obstetrical units may join the project for clinical comparative studies through the NESA."
+    "date": "December 12, 2008",
+    "entry": "During the **SOGOG 2008** and **1st National Congress on Evidence Based Ob/Gyn Practices**, Michael Stark delivered the **Silver Jubilee Oration**. The conference was hosted by the Ahmedabad Obstetrics and Gynaecological Society."
   }, {
-    "name": "Anti-episiotomy campaign",
-    "body": "Episiotomy is considered a common and simple procedure, but it is known to cause complications such as epidermal inclusion cysts or anal sphincter injuries. \n\n It has been shown that women treated by private obstetricians had a 7-fold increased risk to have an episiotomy. It seems that the performance of episiotomy does not meet most of the goals that were attributed to it. The NESA has therefore started an anti-episiotomy campaign. In case episiotomy is necessary, the NESA promotes a two-layered suturing. \n\n In a pilot randomized prospective study it was shown that a two-layered continuous suturing avoiding the vaginal wall resulted in better anatomical results than the traditional three-layered suturing and caused less discomfort and pain."
+    "date": "March 20, 2010",
+    "entry": "The NESA was invited to conduct the conference- **The delivery room in the 21st century – humanity and security.**"
+  }, {
+    "date": "March 4, 2011",
+    "entry": "The NESA conducted a [surgical course in Wroclaw, Poland](http://www.poltowgin.pl/files/STARK.pdf)."
+  }, {
+    "date": "May 30, 2011",
+    "entry": "Michel Odent, London, and Michael Stark conducted a seminar in Taranto, Italy, concerning quality in obstetrics and gynaecology.",
+    "gallery": [{
+        "caption": "image",
+        "url": "/images/events/other/30-05-2011_1.jpg"
+      },
+      {
+        "caption": "image",
+        "url": "/images/events/other/30-05-2011_2.jpg"
+      }, {
+        "caption": "image",
+        "url": "/images/events/other/30-05-2011_3.jpg"
+      }
+    ]
+  }, {
+    "date": "June, 2012",
+    "entry": "The NESA, in cooperation with FIGO and MedicalAidFilms, conducted a surgical and ultrasound course at the Yalgado Ouedragogo hospital in Ouagadougou, Burkina Faso.",
+    "gallery": [{
+        "caption": "image",
+        "url": "/images/events/other/06-2012_1.jpg"
+      },
+      {
+        "caption": "image",
+        "url": "/images/events/other/06-2012_2.jpg"
+      }, {
+        "caption": "image",
+        "url": "/images/events/other/06-2012_3.jpg"
+      }, {
+        "caption": "image",
+        "url": "/images/events/other/06-2012_4.jpg"
+      }, {
+        "caption": "image",
+        "url": "/images/events/other/06-2012_5.jpg"
+      }, {
+        "caption": "image",
+        "url": "/images/events/other/06-2012_6.jpg"
+      }
+    ]
   }]
 }

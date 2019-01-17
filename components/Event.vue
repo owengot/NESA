@@ -2,27 +2,58 @@
 
   <div>
 
-    <div class="project_sidebar" v-if="sidebar === 'true'">
+    <div
+      class="project_sidebar"
+      v-if="sidebar === 'true'"
+    >
       <h1 v-if="project.name.length > 0">{{ project.name }}</h1>
       <h2 v-if="project.date">{{ project.date }}</h2>
-      <img v-if="project.image" :src="project.image" />
-      <div class="desc" v-html="$md.render(project.body)"></div>
+      <img
+        v-if="project.image"
+        :src="project.image"
+      />
       <div class="main_left">
-        <div class="desc" v-html="$md.render(project.body)"></div>
-        <div v-for="item in project.links" v-bind:key="item">
-          <Link :title="item.title" :url="item.url" :description="item.description" />
+        <div
+          class="desc"
+          v-html="$md.render(project.body)"
+        ></div>
+
+        <Gallery :project="project.gallery" />
+
+        <div
+          v-for="item in project.links"
+          v-bind:key="item"
+        >
+          <Link
+            :title="item.title"
+            :url="item.url"
+            :description="item.description"
+          />
         </div>
       </div>
       <Sidebar :project="project" />
     </div>
 
-    <a :href="project.url" v-else>
-      <div class="event">
-        <h1 v-if="project.name.length > 0">{{ project.name }}</h1>
-        <div class="thumbnail"><img v-if="project.image" :src="project.image" /></div>
-        <p v-if="project.date">{{ project.date }}</p>
+    <div
+      v-else
+      class="project"
+    >
+      <h1 v-if="project.name.length > 0">{{ project.name }}</h1>
+      <div
+        class="desc"
+        v-html="$md.render(project.body)"
+      ></div>
+      <div
+        v-for="item in project.links"
+        v-bind:key="item"
+      >
+        <Link
+          :title="item.title"
+          :url="item.url"
+          :description="item.description"
+        />
       </div>
-    </a>
+    </div>
 
   </div>
 
@@ -34,10 +65,15 @@ import Sidebar from "~/components/Sidebar.vue";
 import Link from "~/components/Link.vue";
 import marked from "marked";
 
+import Gallery from "~/components/Gallery.vue";
+import JQuery from "jquery";
+let $ = JQuery;
+
 export default {
   components: {
     Sidebar,
-    Link
+    Link,
+    Gallery
   },
   props: {
     project: { type: String, default: "" },
@@ -55,6 +91,7 @@ export default {
 
 @import '~/assets/sass/news.sass'
 
+
 .mains
   width: 75% !important
   overflow: hidden
@@ -63,8 +100,12 @@ export default {
   display: block !important
 
 .main_left
-  width: 62%
+  width: 60%
   float: left
+
+.sidebar
+  width: 37% !important
+  float: right
 
 .events 
   column-count: 2
@@ -85,9 +126,10 @@ export default {
   display: inline-block
   width: 100%
   clear: both
-  margin: 0px 0 20px 0
+  margin: 20px 0 20px 0
   h1
     width: 100%
+    margin: 0px 0 20px
     display: block
 
 .event
@@ -176,11 +218,13 @@ h1
   font-family: "Open Sans", sans-serif
 
 .desc p 
-    margin: 20px 0 !important
+    margin: 0 !important
+    display: block
 
 .desc /deep/ p 
   font-size: 1.25em !important
   line-height: 40px
+  padding: 0 20px 0 0
   margin: 20px 0 0 0 !important
   color: #000
   display: inline-block
@@ -207,7 +251,7 @@ h1
 .desc /deep/ h2 + p
   font-size: 1.35em !important
   line-height: 40px
-  margin: 20px 0 0 0 !important
+  margin: 0 !important
   color: #000
   width: 95%
   display: inline-block
@@ -230,4 +274,10 @@ h1
   border-radius: 20px
   margin: 0 0 20px 20px
 
+.project
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  white-space: pre-line
+  margin: 0px 0 40px 0
 </style>

@@ -1,14 +1,28 @@
 <template>
   <div class="mains">
     <div id="sidebar">
-      <Sidebar :links="links" />
+      <Sidebar
+        :links="links"
+        :vertical="'true'"
+      />
     </div>
     <div id="test">
 
-      <div v-for="project in projects" v-bind:key="project">
-        <Project v-if="project.sidebar" :project="project" :sidebar="'true'" />
+      <div
+        v-for="project in projects"
+        v-bind:key="project"
+      >
+        <Project
+          v-if="project.sidebar"
+          :project="project"
+          :sidebar="'true'"
+        />
 
-        <Project v-else :project="project" :sidebar="'false'" />
+        <Project
+          v-else
+          :project="project"
+          :sidebar="'false'"
+        />
       </div>
 
     </div>
@@ -18,7 +32,7 @@
 
 <script>
 import Sidebar from "~/components/SidebarProjects.vue";
-import Project from "~/components/Project.vue";
+import Project from "~/components/Event.vue";
 
 export default {
   layout: "about",
@@ -30,7 +44,13 @@ export default {
   pageTitle: "events",
   data() {
     return {
-      links : ['Current Events', 'Innauguration Ceremony', 'Nesa Days', 'Other Events', 'Recommended Events']
+      links: [
+        "Current Events",
+        "Innauguration Ceremony",
+        "Nesa Days",
+        "Other Events",
+        "Recommended Events"
+      ]
     };
   },
   async asyncData({ params }) {
@@ -39,11 +59,8 @@ export default {
     //   : Promise.resolve(
     //       require('~/content/blog/posts/' + params.slug + '.json')
     //     );
-    let post = await import("~/content/events/posts/" +
-      params.slug +
-      ".json");
+    let post = await import("~/content/events/posts/" + params.slug + ".json");
     return post;
-
   }
 };
 </script>

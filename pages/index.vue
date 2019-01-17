@@ -3,6 +3,12 @@
 	<Header />
 
   <section class="container">
+
+
+        <button @click="select(1)">1</button>
+<button @click="select(2)">2</button>
+<button @click="select(3)">3</button>
+
   
    <no-ssr>
      <Flickity ref="flickity" :options="flickityOptions">

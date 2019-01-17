@@ -1,14 +1,58 @@
 <template>
-  <div v-if="includeSidebar" class="sidebar">
+  <div
+    v-if="includeSidebar"
+    class="sidebar"
+  >
 
-    <div v-for="item in project.sidebar" v-bind:key="item" v-if="item.type === 'image'">
+    <div
+      v-for="item in project.sidebar"
+      v-bind:key="item"
+      v-if="item.title"
+      class="event-header"
+    >
+      <h2>
+        {{ item.title }}
+      </h2>
+
+      <p>
+        {{ item.caption }}
+      </p>
+    </div>
+
+    <div
+      v-for="item in project.sidebar"
+      v-bind:key="item"
+      v-if="item.type === 'image'"
+    >
       <img v-bind:src="item.url" />
     </div>
 
-    <div v-for="item in project.sidebar" v-bind:key="item" v-if="item.type === 'gallery'" class="gallery">
+    <div
+      v-for="item in project.sidebar"
+      v-bind:key="item"
+      v-if="item.type === 'text'"
+    >
+      <div v-html="$md.render(item.body)"></div>
+    </div>
 
-      <flickity ref="flickity" :options="flickityOptions">
-        <div v-for="url in item.url" v-bind:key="url" class="carousel-cell" v-bind:style="{ backgroundImage: 'url(' + url + ')' }"></div>
+    <div
+      v-for="item in project.sidebar"
+      v-bind:key="item"
+      v-if="item.type === 'gallery'"
+      class="gallery"
+    >
+
+      <flickity
+        ref="flickity"
+        :options="flickityOptions"
+      >
+        <div
+          v-for="url in item.url"
+          v-bind:key="url"
+          class="carousel-cell"
+          v-bind:style="{ backgroundImage: 'url(' + url + ')' }"
+        >
+        </div>
 
       </flickity>
 
@@ -16,13 +60,34 @@
 
     </div>
 
-    <div v-for="item in project.sidebar" v-bind:key="item" v-if="item.type === 'video'" class="gallery">
-      <video v-bind:src="item.url" controls />
+    <div
+      v-for="item in project.sidebar"
+      v-bind:key="item"
+      v-if="item.type === 'video'"
+      class="gallery"
+    >
+      <video
+        v-bind:src="item.url"
+        controls
+      />
       <p class="caption">{{ item.caption }}</p>
     </div>
 
-    <div v-for="item in project.sidebar" v-bind:key="item" v-if="item.type === 'link'">
-      <p>{{ item.url }}</p>
+    <div
+      v-for="item in project.sidebar"
+      v-bind:key="item"
+      v-if="item.links"
+      class="links"
+    >
+
+      <Link
+        v-for="link in item.links"
+        :key="link"
+        :url="link.url"
+        autowidth="true"
+        :description="link.description"
+      />
+
     </div>
 
   </div>
@@ -30,10 +95,14 @@
 
 <script>
 import vue from "vue";
+import Link from "~/components/Link.vue";
 
 export default {
   props: {
     project: { type: String, default: "" }
+  },
+  components: {
+    Link
   },
   data() {
     return {
@@ -59,6 +128,35 @@ export default {
 </script>
 
 <style>
+.event-header {
+  background: #006895;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px #e4e5e5;
+  padding: 10px 15px;
+  margin: 10px 0 20px 0;
+  font-family: "Open Sans";
+}
+
+.event-header h2 {
+  font-size: 2.1em;
+  line-height: 46px !important;
+  margin-bottom: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  color: white;
+  clear: both;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #ddd;
+}
+
+.event-header p {
+  color: white;
+  font-size: 1.25em;
+  line-height: 40px;
+  padding: 0;
+  margin: 6px 0 0;
+}
+
 .project_sidebar .sidebar {
   width: 35%;
   float: left;
@@ -66,11 +164,10 @@ export default {
   display: block;
 }
 
-.gallery {
+.carousel-slider {
   border: 1px solid #efefef;
   border-radius: 20px;
   margin: 0 0 20px;
-  overflow: hidden;
 }
 .gallery video {
   width: 100%;
@@ -102,7 +199,8 @@ export default {
   height: 100%;
   width: 100%;
   margin-left: 20px;
-  border-radius: 20px 20px 5px 5px;
+  border-radius: 20px 20px 20px 20px;
+  background-size: cover;
 }
 
 /* move page dots into carousel */
