@@ -132,6 +132,12 @@ export default {
     margin: 0px 0 20px
     display: block
 
+div /deep/ a .publication
+  width: auto !important
+  max-width: auto
+  padding-right: 10px
+  min-width: auto
+  margin: 0px 0 10px
 .event
   height: 260px !important
   width: 100% !important
@@ -167,7 +173,6 @@ export default {
     font-weight: normal
     font-size: 1rem !important
     line-height: 30px
-
   .thumbnail
     position: relative
     width: 100%
@@ -180,6 +185,7 @@ export default {
       height: auto
       width: 100%
       transform: translate(-50%, -50%)
+    
 
 h1, .desc, .photo, p
   color: black !important

@@ -59,6 +59,7 @@ export default {
   },
   pageHeader: "../events.jpg",
   pageTitle: "events",
+  bgPosition: "0 -330px",
   data() {
     return {
       links: [
@@ -155,6 +156,7 @@ div /deep/ .gallery
     font-size: 22px
     display: inline-block
     border-radius: 10px
+    clear: both
     margin-bottom: 10px
     &:before
       background: #efefef
@@ -165,10 +167,17 @@ div /deep/ .gallery
       position: absolute
       left: -32px
       top: 18px
+    &:after
+      clear: both
+      content: ''
+      position: absolute
+
   p
     margin-left: 5px
     margin-bottom: 10px
     font-size: 1.25em !important
+    clear: both
+    display: inline-block
     line-height: 35px !important
 
 

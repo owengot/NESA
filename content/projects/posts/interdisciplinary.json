@@ -41,7 +41,7 @@
     }],
     "sidebar": [{
       "type": "video",
-      "url": "../video/NOS_TED.mpg",
+      "url": "/video/NOS_TED.mpg",
       "caption": "TED NOS Video"
     }, {
       "type": "gallery",

@@ -4,7 +4,7 @@
     <a
       :href="url"
       target="_blank"
-      :class="{ autowidth: autowidth }"
+      :class="autowidth"
     >
       <div class="publication no-title">
         <p> {{ description }}</p>

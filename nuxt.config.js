@@ -12,9 +12,6 @@ var dynamicRoutes = getDynamicPaths({
 });
 
 module.exports = {
-  /*
-   ** Headers of the page
-   */
 
   modules: [
     '@nuxtjs/axios',
@@ -52,19 +49,7 @@ module.exports = {
       ssr: false
     },
     {
-      src: '~/plugins/VueIsotope',
-      ssr: false
-    },
-    {
-      src: '~/plugins/VueMasonry',
-      ssr: false
-    },
-    {
       src: '~/plugins/VueMarkdown.js',
-      ssr: false
-    },
-    {
-      src: '~/plugins/VueFlexGrid.js',
       ssr: false
     },
     {
@@ -77,6 +62,7 @@ module.exports = {
     },
 
   ],
+  loading: { color: '#016895' },
   css: [
     // SCSS file in the project
     '@/assets/sass/global.sass'
@@ -93,7 +79,7 @@ module.exports = {
       {
         hid: 'description',
         name: 'description',
-        content: 'Nuxt.js + Netlify CMS project'
+        content: 'Home of the New European Surgery Academy'
       }
     ],
     link: [{
@@ -104,36 +90,15 @@ module.exports = {
       {
         rel: 'stylesheet',
         as: 'style',
-        href: 'https://fonts.googleapis.com/css?family=Exo+2|Niramit|Open+Sans:400,600,700'
+        href: 'https://fonts.googleapis.com/css?family=Exo+2|Open+Sans:400,600,700'
       }
     ],
 
   },
-  /*
-   ** Customize the progress bar color
-   */
-  loading: {
-    color: '#3B8070'
-  },
-
-  /*
-   ** Route config for pre-rendering
-   */
   generate: {
     routes: dynamicRoutes
   },
-  /*
-   ** Build configuration
-   */
-
-
   build: {
-    /*
-     ** Run ESLint on save
-     */
-
-
-
     extend(config, {
       isDev,
       isClient

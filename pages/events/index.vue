@@ -44,6 +44,7 @@ export default {
     Event
   },
   pageHeader: "../events.jpg",
+  bgPosition: "0 -330px",
   pageTitle: "events",
   data() {
     return {
@@ -62,6 +63,7 @@ export default {
   }
 };
 </script>
+
 
 <style lang="sass" scoped>
 

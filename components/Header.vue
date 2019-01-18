@@ -2,20 +2,18 @@
   <header>
   <div id="main-menu">
   <a href="/">
-  <div id="title">
-    <h1>NESA</h1>
-    <p>New European Surgical Academy</p>
+  <div id="logo">
+    <h1 class="title">NESA</h1>
+    <p class="caption">New European Surgical Academy</p>
   </div>
   </a>
-  <div class="contact">
-          <a href="mailto:office@nesacademy.org">office@nesacademy.org</a> ·
-          <a href="http://www.nesacademy.org/login.html">log in</a>
-  </div>
+
   <div id="toggle"><span></span></div>
     <ul id="menu">
       <li v-for="link in menu" :key="link.title">
-      	<a :href="link.href" v-bind:class="{ active: isActive(link) }" :key="link.title">{{link.title}}</a>
+      	<nuxt-link :to="link.href" v-bind:class="{ active: isActive(link) }" :key="link.title">{{link.title}}</nuxt-link>
       	</li>
+        <li><a href="http://nesacademy.org/admin/">Log In</a></li>
     </ul>
   </div>
   </header>
@@ -24,8 +22,10 @@
 
 <style lang="scss">
 li a.active {
-  color: blue !important;
+  color: #016895 !important;
 }
+
+
 header {
   width: 100%;
   height: 90px;
@@ -60,7 +60,7 @@ header {
   margin: 0 auto;
 }
 
-#main-menu #title {
+#main-menu #logo {
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='221' height='221'%3E%3Cdefs%3E%3Cpath id='a' d='M77 105H11V77h38a16.6 16.6 0 0 0-2.7 9c0 10 12.8 14.7 30.7 17v2z'/%3E%3Cpath id='b' d='M77 144H11v-28h38a16.6 16.6 0 0 0-2.7 9c0 10 12.8 14.7 30.7 17v2z'/%3E%3C/defs%3E%3Cg fill='%23016895' fill-rule='evenodd'%3E%3Cpath d='M40.7 105H0a110.5 110.5 0 1 1 0 11h40.7a71.1 71.1 0 1 0 0-11z'/%3E%3Cuse xlink:href='%23a'/%3E%3Cuse transform='matrix(1 0 0 -1 0 260)' xlink:href='%23b'/%3E%3C/g%3E%3C/svg%3E")
     no-repeat 10px center;
   background-size: 53px;
@@ -89,17 +89,18 @@ header {
   display: flex;
   padding: 0em 0 0 0;
   font-size: 1.04em;
-  margin: 26px 10px 0 0;
+  margin: 8px 10px 0 0;
   font-weight: 100 !important;
   background: none;
   box-shadow: none;
-  line-height: 30px;
+  line-height: 35px;
 }
 
 #main-menu #menu li {
   display: inline-block;
-  padding: 0.2em 0.68em 0.4em 1em;
-  border: none;
+  padding: .6em 1.3em 1em 1.3em;
+  height: 100%;
+  border-right: 1px solid #efefef;
   margin: 0 0 0 -4px;
   border-width: 0px 1px 0px 0px;
   -o-border-image: linear-gradient(
@@ -137,8 +138,9 @@ header {
 #main-menu #menu li a {
   text-decoration: none;
   color: black;
-  letter-spacing: 0.4px;
-  font-size: 1.1em;
+  letter-spacing: 0px;
+  font-size: 1.2em;
+  position: relative;
 }
 
 #main-menu #menu li a:hover {
@@ -148,8 +150,9 @@ header {
 #main-menu #menu li a::after {
   content: "";
   display: block;
+  position: absolute;
   width: 0;
-  margin-top: -3px;
+  bottom: -4px;
   height: 2px;
   background: #016895;
   -webkit-transition: width 0.3s;
@@ -161,29 +164,41 @@ header {
   color: #016895;
   -webkit-transition: none;
   transition: none;
-  letter-spacing: 0.17px;
 }
 
 #main-menu #menu li:hover a::after {
   width: 100%;
 }
 
-#main-menu h1 {
-  font-size: 1.9em;
-  font-weight: 600;
-  line-height: 20px;
-  margin: 15px 0 0;
-  color: #016895;
-  padding: 0;
-  text-align: left;
+
+#main-menu #menu li a.active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  bottom: -4px;
+  height: 2px;
+  background: #016895;
 }
 
-#main-menu p {
-  line-height: 20px;
-  padding: 0;
-  font-size: 18px;
-  margin: 6px 0 0;
-  color: #016895;
+#main-menu h1.title {
+  font-size: 1.9em !important;
+  font-weight: 600 !important;
+  line-height: 20px !important;
+  margin: 15px 0 0 !important;
+  color: #016895 !important;
+  padding: 0 !important;
+  border: none !important;
+  text-align: left !important;
+  font-family: "Exo 2" !important;
+}
+
+#main-menu p.caption {
+  line-height: 20px !important;
+  padding: 0 !important;
+  font-size: 18px !important;
+  margin: 6px 0 0 !important;
+  color: #016895 !important;
 }
 
 #main-menu .contact {
@@ -367,8 +382,7 @@ export default {
         { href: "/projects", title: "Projects" },
         { href: "/pedagogy", title: "Pedagogy" },
         { href: "/events", title: "Events" },
-        { href: "/publications", title: "Publications" },
-        { href: "/contact", title: "Contact" }
+        { href: "/publications", title: "Publications" }
       ]
     };
   },

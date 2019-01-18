@@ -2,17 +2,7 @@
   <div>
     <Header />
 
-    <div class='header' v-if="title === 'News'" :style="{ backgroundImage: 'url(' + header + ')', backgroundPosition: bgpos }">
-      <div class="tab">
-        <nuxt-link to="/news">
-          Latest News
-        </nuxt-link>
-      </div>
-    </div>
-
-
-
-    <div v-else class='header' :style="{ backgroundImage: 'url(' + header + ')', backgroundPosition: bgpos }">
+    <div class='header' :style="{ backgroundImage: 'url(' + header + ')', backgroundPosition: bgpos }">
       <div class="tab">
         <nuxt-link :to="'/' + title">
           {{$nuxt.$route.path}}
@@ -54,13 +44,6 @@ export default {
         return r.components.default.options
           ? r.components.default.options.pageHeader
           : r.components.default.pageHeader;
-      })[0];
-    },
-    bgpos() {
-      return this.$route.matched.map(r => {
-        return r.components.default.options
-          ? r.components.default.options.bgPosition
-          : r.components.default.bgPosition;
       })[0];
     }
   }
@@ -105,6 +88,7 @@ html {
   position: relative;
   top: 0;
   background-size: cover;
+  background-position: 0 0px;
   box-shadow: inset 0px -10px 10px rgba(0, 0, 0, 0.2);
 }
 

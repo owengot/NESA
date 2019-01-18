@@ -49,7 +49,8 @@ let $ = JQuery;
 
 export default {
   layout: "about",
-  pageHeader: "news-3.jpg",
+  pageHeader: "/news-3.jpg",
+  bgPosition: "0 -100px",
   pageTitle: "News",
   components: {
     SidebarNews,
@@ -57,7 +58,7 @@ export default {
   },
   data() {
     return {
-      title: "",
+      pageTitle: "News",
       body: "",
       thumbnail: "",
       date: ""

@@ -2,34 +2,57 @@
   <div>
 
     <div class="main-container">
-     Filter: <input type="text" v-model="search"/>   
-<div v-for="customer in filteredCustomers" :key='customer.topic'>
- <span style="color: black">{{customer.topic}}</span>
+    
+<h1>Featured Publication</h1>
+
+<div class="featured-publication" v-for="publication in highlighted" :key='publication'>
+<div class="highlight-images">
+<img v-for="image in publication.images" :src="image" :key='image' />
 </div>
+<h2>{{ publication.title }}</h2>
+<p style="font-weight: bold">{{ publication.editors }} (Eds.)</p>
+<p>{{ publication.description }}</p>
+<p style="font-style: italic; margin: -10px 0 0 0 !important">{{ publication.journal }}</p>
+<a :href="publication.url" class="journal-link"> Publisher Page </a>
+
+</div>
+
+<h1>Recent publications</h1>
+
+
+<input type="text" v-model="search" class="search" placeholder="Search by author, topic, journal.." />
+     <transition-group name="publications" tag="div" class="publications">
+<div class="entry" v-for="entry in filteredCustomers" :key='entry'>
+ <h4>{{entry.author}}</h4>
+  <p>{{entry.topic}}</p>
+  <a :href="entry.url">{{entry.journal}}</a>
+</div>
+</transition-group>
   </div>
-   </div>
+  </div>
+
 </template>
 
 <script>
-import SidebarNews from "~/components/SidebarNews.vue";
-import { Waterfall, WaterfallItem } from "vue2-waterfall";
 
 export default {
   layout: "about",
-  components: {
-    SidebarNews,
-    Waterfall,
-    WaterfallItem
-  },
-  pageHeader: "news-3.jpg",
-  computed: {},
-  pageTitle: "News",
+  pageHeader: "../publications.jpg",
+  pageTitle: "Publications",
+  bgPosition: "0 -210px",
   data() {
     return {
-      title: "About",
-      body: "Test",
-      thumbnail: "",
-      date: "",
+      title: "Publications",
+      highlighted: [
+        {
+      "title": "Uterine Myoma, Myomectomy and Minimally Invasive Treatments.",
+      "description": "This book is devoted to myomas, covering both recent advances in our understanding of their behaviour, and an overview of the current options for their minimally invasive treatments, with endoscopy and new devices. As we learn more about the molecular, genetic and biology of myomas, we will be able to develop more innovative treatments.",
+      "editors": "Tinelli, Andrea; Malvasi, Antonio",
+      "journal": "Springer",
+      "images": ["../publication_1.jpg", "../publication_2.jpg"],
+      "url": "https://www.springer.com/gp/book/9783319103044",
+        }
+      ],
       users: [
         {
       "author": "Stark M.",
@@ -819,7 +842,13 @@ export default {
     filteredCustomers:function()
     {
     	 var self=this;
-       return this.users.filter(function(cust){return cust.topic.toLowerCase().indexOf(self.search.toLowerCase())>=0;});
+
+       return this.users.filter(
+        item =>
+          item.topic.toLowerCase().includes(this.search) ||
+          item.author.toLowerCase().includes(this.search) ||
+          item.journal.toLowerCase().includes(this.search)
+      );
        //return this.customers;
     }
   }
@@ -828,9 +857,64 @@ export default {
 
 <style lang="sass" scoped>
 
+.featured-publication
+  margin: 0 auto 30px
+  display: inline-block
+  font-family: 'Open Sans'
+  h2
+    color: black
+    border-bottom: 1px solid #efefef
+    display: inline-block
+    padding: 10px 0
+  p
+    color: black
+    padding: 10px 0
+    font-size: 1.3em
+  .journal-link
+    border: 1px solid #016895
+    border-radius: 10px
+    padding: 10px
+    display: inline-block
+    margin: 5px 0 0 0
+    color: #016895
+    text-decoration: none
+
+
+
+
+
+.highlight-images
+  width: 40%
+  float: left
+  display: inline-block
+  margin: 0px auto 20px
+  img
+    width: 45%
+    float: left
+    margin-right: 20px
+    border-radius: 10px
+    box-shadow: 0 1px 3px rgba(0,0,0,0.4)
+
+.search
+  margin: 0
+  padding: 10px 10px
+  font-family: 'Open Sans'
+  font-size: 1.3em
+  border-radius: 10px
+  padding: 12px 15px
+  border: 1px solid #efefef
+  width: 50%
+  margin-bottom: 10px
+  transition: border .5s ease
+  &:focus
+    outline: none
+    border: 1px solid #016895
+
+
 .publications
   column-count: 4
-  column-gap: 1em
+  column-gap: 1.5em
+  overflow: hidden
   margin: 20px 0 0 0
   width: 100%
   padding: 0
@@ -846,16 +930,16 @@ export default {
   background: #fafcfc
   display: inline-block
   break-inside: avoid !important
-  margin: 0 0 4% 0
+  margin: 0 0 6% 0
   padding: 0
-  transition: all 0.55s ease
+  transition: all .85s ease
   height: auto
   h4
     width: 100%
     border-radius: 10px 10px 0 0
     margin: 0
-    padding: 12px 3% 12px 4%
-    font-size: 1.2em
+    padding: 12px 3% 12px 5%
+    font-size: 1.05em
     background: linear-gradient( to top, #fff, #f8fafa)
     border-bottom: 1px solid #EFEFEF
     color: #016895
@@ -864,15 +948,19 @@ export default {
     font-weight: 200
   p
     font-size: 1em !important
-    margin: 12px 15px 0px 15px !important
+    margin: 10px 15px 4px 15px !important
+    font-family: 'Open Sans'
+    font-weight: bold
     background: none
     line-height: 23px !important
     padding: 0
-    font-weight: 400
+    font-weight: 600
   a
     display: inline-block
-    width: 92%
+    font-family: 'Open Sans'
+    width: 100%
     font-size: 1em
+    overflow-wrap: break-word
     color: blue !important
     line-height: 21px !important
     padding: 2.4% 4% 2% 3.5% !important
@@ -880,13 +968,14 @@ export default {
     border-radius: 0 0 10px 10px
     margin: 5px 0 0 0 !important
 
-.my-list-enter, .my-list-leave-to
+.publications-enter, .publications-leave-to
   opacity: 0
-  transform: scale(0)
+  transform: scale(0.5)
 
-.my-list-leave-active
-  position: absolute
-  transform: scale(0)
+.publications-leave-active
+  transform: scale(0.5)
+  z-index: 0
+
 
 @import '~/assets/sass/news.sass'
 
@@ -958,22 +1047,17 @@ export default {
   display: block 
 
 
-.featured-image 
-  height: 230px
-  background-size: cover
-  border-radius: 10px 10px 0 0
-  background-position: 0 30% 
-  overflow: hidden
-  position: relative
-  .title
-    width: 100%
-    position: absolute
-    z-index: 9
-
-
-.sidebar
-  width: 29%
-  float: right
-
+h1
+  font-size: 2.1em
+  line-height: 46px !important
+  font-family: 'Open Sans', sans-serif
+  font-weight: 800
+  color: black
+  width: 97%
+  float: none
+  clear: both !important
+  padding-bottom: 15px
+  margin-bottom: 25px
+  border-bottom: 1px solid #DDD
 
 </style>

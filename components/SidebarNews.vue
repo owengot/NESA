@@ -77,38 +77,25 @@
         <p class="hidden">
           <label>Don’t fill this out: <input name="bot-field"></label>
         </p>
-        <label
-          class="form-label"
-          for="name"
-        >
-          Name:
-        </label>
+
         <input
           class="form-field"
           name="name"
           id="name"
+          placeholder="Your Name"
         />
-        <label
-          class="form-label"
-          for="email"
-        >
-          Email:
-        </label>
+
         <input
           class="form-field"
           name="email"
           id="email"
+          placeholder="Your Email Address"
         />
-        <label
-          class="form-label"
-          for="message"
-        >
-          Message:
-        </label>
         <textarea
           class="form-field"
           name="message"
           id="message"
+          placeholder="Your Message"
         ></textarea>
         <input
           class="form-button"
@@ -120,7 +107,7 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .hidden {
   display: none;
 }
@@ -164,7 +151,7 @@ form {
   width: 90%;
   margin: 10px auto 20px;
 }
-input {
+input, textarea {
   width: 100%;
   display: inline-block;
   border-radius: 5px;
@@ -173,6 +160,11 @@ input {
   font-size: 1.1em;
   padding: 15px 10px 15px 15px;
   margin: 5px auto !important;
+  transition: border 1s ease;
+}
+input:focus, textarea:focus {
+  outline: none !important;
+  border: 1px solid #016895;
 }
 .form-button {
   color: #016895;

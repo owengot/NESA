@@ -41,6 +41,7 @@ export default {
     Project
   },
   pageHeader: "../events.jpg",
+  bgPosition: "0 -330px",
   pageTitle: "events",
   data() {
     return {

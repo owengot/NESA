@@ -38,6 +38,7 @@ export default {
   },
   pageHeader: "../events.jpg",
   pageTitle: "events",
+  bgPosition: "0 -330px",
   data() {
     return {
       links: [
@@ -114,11 +115,11 @@ div /deep/ .gallery
     font-family: 'Open Sans', sans-serif
     font-weight: 800
     color: black
-    width: 75%
+    width: 90%
     float: left
     clear: both !important
     padding: 15px 0
-    margin: 30px 0 20px 5px
+    margin: 0px 0 20px 5px
     border-bottom: 1px solid #DDD
 
 

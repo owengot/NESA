@@ -45,6 +45,7 @@
       <flickity
         ref="flickity"
         :options="flickityOptions"
+        style="margin-bottom: 20px !important"
       >
         <div
           v-for="url in item.url"
@@ -55,8 +56,6 @@
         </div>
 
       </flickity>
-
-      <p class="caption">{{ item.caption }}</p>
 
     </div>
 
@@ -150,11 +149,11 @@ export default {
 }
 
 .event-header p {
-  color: white;
+  color: white !important;
   font-size: 1.25em;
-  line-height: 40px;
+  line-height: 30px;
   padding: 0;
-  margin: 6px 0 0;
+  margin: 6px 0 10px 0px;
 }
 
 .project_sidebar .sidebar {
@@ -167,6 +166,7 @@ export default {
 .carousel-slider {
   border: 1px solid #efefef;
   border-radius: 20px;
+  display: block;
   margin: 0 0 20px;
 }
 .gallery video {
@@ -175,16 +175,18 @@ export default {
   margin: 0 !important;
   padding: 0;
 }
-.caption {
+.gallery .caption {
   background: linear-gradient(to top, #fff, #f8fafa);
   width: 100%;
+  border: 1px solid #efefef;
   color: #016895;
   text-align: center;
   padding: 14px 0px;
   font-family: "Exo 2", sans-serif;
   font-size: 1.2em;
   font-weight: 600;
-  margin: 0 !important;
+  border-radius: 0 0 10px 10px;
+  margin: -5px 0 0 0 !important;
 }
 
 .flickity-viewport {

@@ -18,7 +18,7 @@
       <div class="section">
       
      
-      <nuxt-link v-for="link in links" v-bind:key="link" :to="'/' + title + '/' + link.replace(/\W+/g, '-').toLowerCase()">
+      <nuxt-link v-for="link in links" v-bind:key="link" :to="'/projects/' + link.replace(/\W+/g, '-').toLowerCase()">
          <div class="discipline" :id="link.replace(/\W+/g, '-').toLowerCase()"></div>
          <h4>{{ link }}</h4>
       </nuxt-link>
@@ -32,7 +32,7 @@
   </div>
 </template>
 
-<style lang="sass">
+<style lang="sass" scoped>
   
 .horizontal 
   width: 100% !important

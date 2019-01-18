@@ -77,9 +77,9 @@ export default {
     Waterfall,
     WaterfallItem
   },
-  pageHeader: "news-3.jpg",
-  computed: {},
   pageTitle: "News",
+  pageHeader: "news-3.jpg",
+  bgPosition: "0 -100px",
   mounted() {
     if (typeof this.$redrawVueMasonry === "function") {
       this.$redrawVueMasonry();
@@ -95,8 +95,7 @@ export default {
     posts.reverse();
     return {
       posts,
-      title: "About",
-      body: "Test",
+      pageTitle: "Latest News",
       thumbnail: "",
       date: ""
     };
@@ -189,7 +188,7 @@ export default {
     z-index: 9
 
 
-.sidebar
+div /deep/ .sidebar
   width: 29%
   float: right
 

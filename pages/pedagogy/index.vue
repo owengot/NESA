@@ -25,6 +25,7 @@ export default {
   },
   pageHeader: "../pedagogy.jpg",
   pageTitle: "pedagogy",
+  bgPosition: "0 -180px",
   data() {
     return {
       title: "",
@@ -40,6 +41,7 @@ export default {
   }
 };
 </script>
+
 
 <style lang="sass" scoped>
 

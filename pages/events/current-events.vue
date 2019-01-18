@@ -45,6 +45,7 @@ export default {
   },
   pageHeader: "../events.jpg",
   pageTitle: "events",
+  bgPosition: "0 -330px",
   data() {
     return {
       links: [
