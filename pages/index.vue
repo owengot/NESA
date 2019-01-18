@@ -10,21 +10,21 @@
 	       <div class="caption center-left about">
 	               <div class="title"><h3>{{ slide1.name }}</h3></div>
 	               <p>{{ slide1.caption }}</p>
-	       		   <a href="/about">Find out more</a>
+	       		   <nuxt-link to="about">Find out more</nuxt-link>
 	       </div>
        </div>
        <div :style="{ backgroundImage: `url(${slide2.image})` }">
            <div class="caption center-left projects">
                    <div class="title"><h3>{{ slide2.name }}</h3></div>
                    <p>{{ slide2.caption }}</p>
-           		   <a href="/projects">Find out more</a>
+           		   <nuxt-link to="projects">Find out more</nuxt-link>
            </div>
        </div>
        <div :style="{ backgroundImage: `url(${slide3.image})` }">
 	       <div class="caption center-left knowledge">
 	               <div class="title"><h3>{{ slide3.name }}</h3></div>
 	               <p>{{ slide3.caption }}</p>
-	       		   <a href="/knowledge">Find out more</a>
+	       		   <nuxt-link to="knowledge">Find out more</nuxt-link>
 	       </div>
        </div>
      </Flickity>
