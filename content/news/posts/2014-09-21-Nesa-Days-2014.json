@@ -1,42 +1,42 @@
 {
   "title": "NESA Days 2014",
   "date": "September 21st 2014",
-  "image": "images/events/2014/3.jpg",
+  "image": "/images/events/2014/3.jpg",
   "body": "The NESA Days 2014 took place in Daios Cove, Crete in cooperation with the Association of Obstetricians and Gynaecologists of Quebec and the Greek Infertility Association. During the conference, the first 146 operations performed with the European telesurgical system, the Telelap Alf-x, at the University of Rome were reported. Novelties in endoscopy and natural orifice surgery were presented and discussed. Delegates from the MIPT University in Moscow awarded professorships to NESA members for their scientific achievements.",
   "gallery": [{
       "caption": "image",
-      "url": "images/events/2014/1.jpg"
+      "url": "/images/events/2014/1.jpg"
     },
     {
       "caption": "image",
-      "url": "images/events/2014/2.jpg"
+      "url": "/images/events/2014/2.jpg"
     }, {
       "caption": "image",
-      "url": "images/events/2014/3.jpg"
+      "url": "/images/events/2014/3.jpg"
     }, {
       "caption": "image",
-      "url": "images/events/2014/4.jpg"
+      "url": "/images/events/2014/4.jpg"
     }, {
       "caption": "image",
-      "url": "images/events/2014/5.jpg"
+      "url": "/images/events/2014/5.jpg"
     },
     {
       "caption": "image",
-      "url": "images/events/2014/6.jpg"
+      "url": "/images/events/2014/6.jpg"
     }, {
       "caption": "image",
-      "url": "images/events/2014/7.jpg"
+      "url": "/images/events/2014/7.jpg"
     }, {
       "caption": "image",
-      "url": "images/events/2014/8.jpg"
+      "url": "/images/events/2014/8.jpg"
     },
     {
       "caption": "image",
-      "url": "images/events/2014/9.jpg"
+      "url": "/images/events/2014/9.jpg"
     },
     {
       "caption": "image",
-      "url": "images/events/2014/10.jpg"
+      "url": "/images/events/2014/10.jpg"
     }
   ]
 }
