@@ -24,7 +24,7 @@
 	       <div class="caption center-left knowledge">
 	               <div class="title"><h3>{{ slide3.name }}</h3></div>
 	               <p>{{ slide3.caption }}</p>
-	       		   <nuxt-link to="knowledge">Find out more</nuxt-link>
+	       		   <nuxt-link to="pedagogy">Find out more</nuxt-link>
 	       </div>
        </div>
      </Flickity>
