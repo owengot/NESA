@@ -41,12 +41,12 @@
     }],
     "sidebar": [{
       "type": "video",
-      "url": "/video/NOS_TED.mpg",
+      "url": "http://nesacademy.org/beta/video/NOS_TED.mpg",
       "caption": "TED NOS Video"
     }, {
       "type": "gallery",
       "caption": "First Meeting",
-      "url": ["http://nesacademy.org/beta/projects/photos/meeting_1.JPG", "http://nesacademy.org/beta/projects/photos/meeting_2.JPG", "http://nesacademy.org/beta/projects/photos/meeting_3.JPG"]
+      "url": ["/images/projects/interdisciplinary/meeting_1.jpg", "/images/projects/interdisciplinary/meeting_2.jpg", "/images/projects/interdisciplinary/meeting_3.jpg"]
     }]
   }]
 }
