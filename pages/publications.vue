@@ -886,7 +886,7 @@ export default {
 .highlight-images
   width: 40%
   float: left
-  display: inline-block
+  display: block
   margin: 0px auto 20px
   img
     width: 45%

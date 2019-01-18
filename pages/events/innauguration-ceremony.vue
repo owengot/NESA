@@ -108,7 +108,7 @@ div /deep/ .gallery
 .introduction
   display: flex
   white-space: pre-line
-  margin: 20px 0 0 0
+  margin: 0 
   p
     font-size: 1.65em
     line-height: 43px !important
@@ -118,8 +118,8 @@ div /deep/ .gallery
     width: 90%
     float: left
     clear: both !important
-    padding: 15px 0
-    margin: 0px 0 20px 5px
+    padding: 10px 0 20px
+    margin: 0px 0 20px 0
     border-bottom: 1px solid #DDD
 
 
