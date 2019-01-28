@@ -4,7 +4,7 @@
     <div class="main-container">
 
       <no-ssr>
-        <masonry :gutter="5" :cols="$mq | mq({
+        <masonry :gutter="20" :cols="$mq | mq({
       sm: 1,
       mounted: 2,
       lg: 2
