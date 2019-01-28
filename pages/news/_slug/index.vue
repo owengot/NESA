@@ -227,10 +227,75 @@ p
     h3 
       line-height: 58px
       display: inline
-
-
+      box-decoration-break: clone
+      -webkit-box-decoration-break: clone
 
 h1
   color: #016895
+
+@media all and (max-width: 575px)
+  /deep/ .container
+    width: 100% !important
+  .posts
+    width: 100%
+    margin: 0 auto 20px !important
+    display: inline-block
+    float: none
+  .post
+    width: 100%
+    margin: 0 0 6% 0
+  .main-container
+    width: 100%
+    margin: 20px auto !important
+    display: block 
+  p
+    color: black
+    font-family: 'Open Sans'
+    padding: 0px 20px 0px
+    font-size: 1.25em
+  div /deep/ .gallery 
+    margin: 10px 30px
+    display: inline-block
+    height: auto
+    a
+      width: 48% !important
+      margin: 0 2% 2% 0 !important
+      height: 117px
+    &:nth-child(4n)
+      margin: 0 0 2% 0 !important
+    img
+      height: 110px !important
+
+  div /deep/ .sidebar
+    background: #016895
+    width: 100%
+    padding: 0 20px
+    .section
+      margin: 30px 0 20px 0
+    h1
+      background: none
+      border: none
+      border-bottom: 1px solid white
+      color: white
+    p
+      color: white
+    input
+      background: none
+      color: white
+    ::placeholder
+      color: white
+    .form-button
+      color: #016895
+      background: rgba(255,255,255,0.7)
+    .gdpr
+      margin: 0px 15px 20px !important
+      background: none
+      color: white !important
+    .contact
+      margin: 0px 15px 20px !important
+      textarea
+        background: none
+        color: white
+
   
 </style>

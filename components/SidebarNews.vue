@@ -67,7 +67,7 @@
         action="/thank-you"
         netlify-honeypot="bot-field"
         method="post"
-        netlify
+        netlify class="contact"
       >
         <input
           type="hidden"

@@ -183,5 +183,59 @@ export default {
   transition: transform 3s cubic-bezier(0.075, 0.82, 0.165, 1)
   transition-delay: 0s
   transform: translate(30px)
-  
+
+@media all and (max-width: 575px)
+  .caption
+    width: 100% !important
+    left: 0 !important
+    margin: 0 !important
+    transform: none !important
+    padding: 0 4% !important
+    background: white
+    bottom: 0 !important
+    border-radius: 10px 10px 0 0
+    .title
+      margin: 0 0 0 0 !important
+      height: 60px
+    h3
+      font-size: 1.35em !important
+      background-size: 1.5em !important
+      padding: 10px 0 15px 49px !important
+      display: block
+      margin: 10px 0 25px 10px !important
+    &.about h3
+      padding: 8px 0 15px 49px !important
+      background-size: 1.4em !important
+    &.knowledge h3
+      padding: 10px 0 15px 49px !important
+      background-size: 1.4em !important
+    p
+      font-size: 1.1em !important
+      margin: 30px 20px 20px 15px !important
+      position: relative
+      top: 10px
+      padding: 0 !important
+    a
+      margin: 2px 10px 10px 10px
+      font-size: 1em !important
+      width: 95%
+
+.flickity-enabled
+  /deep/ .flickity-page-dots
+  	display: none !important
+
+  .flickity-slider
+    div:nth-child(1)
+        background-position: 0px 0px !important
+        background-size: 145% !important
+        background-repeat: no-repeat
+    div:nth-child(2)
+        background-position: -40px 0 !important
+        background-size: 185% !important
+        background-repeat: no-repeat
+    div:nth-child(3)
+        background-position: -90px 0 !important
+        background-size: 185% !important
+        background-repeat: no-repeat
+
 </style>

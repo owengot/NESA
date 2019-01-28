@@ -5,15 +5,15 @@
     <div class='header' :style="{ backgroundImage: 'url(' + header + ')', backgroundPosition: bgpos }">
       <div class="tab">
         <nuxt-link :to="'/' + title">
-          {{$nuxt.$route.path}}
+          <div v-if = this.$nuxt._route.params.slug> {{ this.$nuxt._route.params.slug.charAt(0).toUpperCase() + this.$nuxt._route.params.slug.slice(1).replace(/-/g, ' ') }}</div>
+          <div v-else>{{ this.$nuxt._route.path.slice(1).charAt(0).toUpperCase() + this.$nuxt._route.path.slice(2) }}</div>
+
         </nuxt-link>
       </div>
     </div>
 
-    <section class="container">
 
       <nuxt />
-    </section>
   </div>
 </template>
 
@@ -77,6 +77,8 @@ html {
   margin: 20px auto;
 }
 
+
+
 .main {
   float: left;
   width: 60%;
@@ -115,5 +117,14 @@ html {
 .header .tab a {
   text-decoration: none;
   color: #016895;
+}
+
+
+@media all and (max-width: 575px) {
+.container {
+  width: 100% !important;
+  color: white !important
+}
+  
 }
 </style>

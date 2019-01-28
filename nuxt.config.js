@@ -31,7 +31,17 @@ module.exports = {
     }],
     [
       '@nuxtjs/markdownit'
-    ]
+    ],
+    ['nuxt-mq',
+      {
+        // Default breakpoint for SSR
+        defaultBreakpoint: 'default',
+        breakpoints: {
+          sm: 450,
+          md: 1250,
+          lg: Infinity
+        }
+      } ]
   ],
   script: [{
     src: "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js",
@@ -60,7 +70,10 @@ module.exports = {
       src: '~plugins/vue-js-modal',
       ssr: true
     },
-
+    {
+      src: '~plugins/VueMasonry',
+      ssr: false
+    }
   ],
   loading: { color: '#016895' },
   css: [

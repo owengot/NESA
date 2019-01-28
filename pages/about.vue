@@ -457,4 +457,83 @@ h1
   border-radius: 20px
   margin: 0 0 20px 20px
 
+
+@media all and (max-width: 575px)
+  div 
+    .mains
+      width: 90% !important
+      margin: 0 auto !important
+    /deep/ .main_left 
+      width: 100% !important
+      h2
+        width: 100%
+        font-size: 1.7em !important
+        line-height: 1.5em
+      ul
+        -webkit-margin-before: 0px !important
+        -webkit-margin-after: 0 !important
+        -webkit-padding-start: 0px !important
+        margin: 15px 0 0 5px !important
+        list-style-position: inside !important
+        p
+          display: inline
+    /deep/ .sidebar
+      width: 90%
+      margin: 4% 0 0 6% !important
+      blockquote
+        margin: 0 !important
+        top: 10px
+    /deep/ .horizontal .section 
+      a
+        display: flex
+        align-items: center
+        height: 80px
+        margin: 0px 0px 10px 0
+        justify-content: center
+      .discipline
+        width: 25% !important
+        padding: 4em 0 0em 0 !important
+        margin: 30px 15px 30px 0
+        border-radius: 10px
+        float: left !important
+        &#general-surgery
+          background-position: center 15px !important
+          background-size: 40px !important
+        &#otolaryngology
+          background-position: center 15px !important
+          background-size: 40px !important
+        &#urology
+          background-position: center 15px !important
+          background-size: 45px !important
+        &#obstetrics-gynaecology
+          background-position: center 15px !important
+          background-size: 45px !important
+        &#anaesthesiology
+          background-position: center 15px !important
+          background-size: 45px !important
+      a
+        width: 100% !important
+      h4
+        font-size: 1.5em
+        display: inline-block
+        text-align: left
+        width: 70%
+        margin: 0
+        padding: 0
+    /deep/ .board
+      width: 100%
+    /deep/ .partner
+      width: 48%
+      float: left
+      margin: 0 0 2% 0 !important
+      &:nth-child(2n)
+        margin: 0 0 2% 2% !important
+    .organisations
+      column-count: 1 !important
+    /deep/ .modal-wrapper
+      width: 90%
+      .modal-container
+        width: 100%
+      
+
 </style>

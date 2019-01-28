@@ -3,7 +3,14 @@
     <div id="sidebar">
       <Sidebar
         :links="links"
-        :vertical="'true'"
+        :vertical="$mq | mq({
+      sm: ' ',
+      md: 'true'
+    })"
+        :mobile="$mq | mq({
+      sm: 'true',
+      md: 'false'
+    })"
       />
     </div>
     <div id="test">
@@ -54,6 +61,9 @@ export default {
         "Anaesthesiology"
       ]
     };
+  },
+  computed () {
+    this.slugTitle = this.$nuxt.$route.path.split('/')[2]
   },
   async asyncData({ params }) {
     // const postPromise = process.BROWSER_BUILD
@@ -134,6 +144,7 @@ h1
     display: table
     clear: both
 
+
 .desc, p
   display: inline
   clear: both !important
@@ -166,5 +177,74 @@ h1
   width: 100% !important
   border-radius: 20px
   margin: 0 0 20px 20px
+
+@media all and (max-width: 575px)
+  div /deep/ .publication
+    border-radius: 12px
+    border: 1px solid #efefef
+    display: inline-block
+    margin: 20px 0 0
+    -webkit-column-break-inside: avoid !important
+    break-inside: avoid !important
+    max-width: auto !important
+    min-width: auto !important
+    width: 100% !important
+    min-height: 60px
+    padding-bottom: 10px
+  #test
+    clear: both
+    display: block
+  .mains
+    width: 90% !important
+    overflow: hidden
+    margin: 30px auto !important
+    position: relative
+    display: block !important
+  div /deep/ .main_left 
+    width: 100% !important
+  div /deep/ .desc h2
+    font-size: 1.35em !important
+  div /deep/ .project h1
+    font-size: 1.35em !important
+    line-height: 1.4em !important
+  #sidebar
+    width: 100%
+    float: none
+    margin: 0
+    clear: both
+  div /deep/ .sidebar
+    width: 100%
+    margin: 0
+    padding: 0 0px
+    .section
+      margin: 30px 0 20px 0
+      overflow-x: auto
+      height: 90px !important
+      white-space: nowrap 
+      a
+        display: inline !important
+        float: left !important
+    h1
+      background: none
+      border: none
+      border-bottom: 1px solid white
+      color: white
+    p
+      color: white
+    input
+      background: none
+      color: white
+    ::placeholder
+      color: white
+    .form-button
+      color: #016895
+      background: rgba(255,255,255,0.7)
+    .gdpr
+      margin: 0px 15px 20px !important
+    .contact
+      margin: 0px 15px 20px !important
+      textarea
+        background: none
+        color: white
 
 </style>

@@ -1060,4 +1060,15 @@ h1
   margin-bottom: 25px
   border-bottom: 1px solid #DDD
 
+@media all and (max-width: 575px)
+  .highlight-images
+    width: 100%
+    margin: 0
+    img
+      width: 45%
+      margin-right: 5%
+  .search
+    width: 100%
+  .publications
+    column-count: 1
 </style>

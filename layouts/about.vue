@@ -15,7 +15,8 @@
     <div v-else class='header' :style="{ backgroundImage: 'url(' + header + ')', backgroundPosition: bgpos }">
       <div class="tab">
         <nuxt-link :to="'/' + title">
-          {{$nuxt.$route.path}}
+          <div v-if = this.$nuxt._route.params.slug> {{ this.$nuxt._route.params.slug.charAt(0).toUpperCase() + this.$nuxt._route.params.slug.slice(1).replace(/-/g, ' ') }}</div>
+          <div v-else>{{ this.$nuxt._route.path.split("/").pop().replace(/-/g, ' ').charAt(0).toUpperCase() + this.$nuxt._route.path.split("/").pop().replace(/-/g, ' ').slice(1) }}</div>
         </nuxt-link>
       </div>
     </div>
@@ -131,5 +132,32 @@ html {
 .header .tab a {
   text-decoration: none;
   color: #016895;
+}
+
+
+@media all and (max-width: 575px) {
+  .header {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  top: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 0 !important;
+  box-shadow: inset 0px -10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  width: 100% !important;
+  color: white !important
+}
+
+.header .tab {
+    line-height: 35px;
+    width: 90% !important;
+    font-size: 1.8em !important;
+    padding: 15px 20px;
+    font-weight: 200;
+  }
 }
 </style>

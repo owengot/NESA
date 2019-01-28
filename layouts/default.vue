@@ -49,4 +49,13 @@ html {
   color: #fff;
   background-color: #35495e;
 }
+
+
+@media all and (max-width: 575px) {
+.container {
+  width: 100% !important;
+  color: white !important
+}
+  
+}
 </style>

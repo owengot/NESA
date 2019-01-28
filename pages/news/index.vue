@@ -1,23 +1,17 @@
 <template>
-  <div>
+<div>
 
     <div class="main-container">
 
-      <Waterfall
-        :percent="[1, 1]"
-        :gutterWidth="20"
-        :gutterHeight="20"
-        class="posts"
-      >
-
-        <WaterfallItem
-          v-for="post in posts"
-          :key="post.date"
-        >
-
-          <div class="post">
-
-            <div v-if="post.image">
+      <no-ssr>
+        <masonry :gutter="5" :cols="$mq | mq({
+      sm: 1,
+      mounted: 2,
+      lg: 2
+    })" class="posts">
+            <div class="post" v-for="(post, index) in posts" :key="index">
+              
+           <div v-if="post.image">
 
               <div
                 class='featured-image'
@@ -55,10 +49,9 @@
             <p>{{ post.body.substr(0, 300) + '..' }}</p>
 
           </div>
+        </masonry>
+    </no-ssr>
 
-        </WaterfallItem>
-
-      </Waterfall>
 
       <SidebarNews :result="title" />
     </div>
@@ -105,6 +98,7 @@ export default {
 
 <style lang="sass" scoped>
 
+
 @import '~/assets/sass/news.sass'
 
 @keyframes opacity
@@ -127,8 +121,8 @@ export default {
   width: 70%
   float: left
   .post
-    width: 94%
-    margin: 0 4% 6% 0
+    width: 100%
+    margin: 0 0 6% 0
 
 .page-leave-active 
   animation: opacity .7s ease-out
@@ -191,6 +185,71 @@ export default {
 div /deep/ .sidebar
   width: 29%
   float: right
+
+.testpost
+  border: 1px solid black
+  display: block
+  width: 100%
+  overflow-wrap: break-word !important
+  &:nth-child(2)
+    border: 1px solid red
+  h1
+    color: black !important
+  p
+    display: block
+    color: black
+    overflow-wrap: break-word !important
+
+
+.container 
+  width: 93%
+  margin: 20px auto
+
+
+@media all and (max-width: 575px)
+  /deep/ .container
+    width: 100% !important
+  .posts
+    width: 94%
+    margin: 0 auto !important
+    display: inline-block
+    float: none
+  .post
+    width: 100%
+    margin: 0 0 6% 0
+  .main-container
+    width: 100%
+    margin: 20px auto !important
+    display: block 
+
+  div /deep/ .sidebar
+    background: #016895
+    width: 100%
+    padding: 0 20px
+    .section
+      margin: 30px 0 20px 0
+    h1
+      background: none
+      border: none
+      border-bottom: 1px solid white
+      color: white
+    p
+      color: white
+    input
+      background: none
+      color: white
+    ::placeholder
+      color: white
+    .form-button
+      color: #016895
+      background: rgba(255,255,255,0.7)
+    .gdpr
+      margin: 0px 15px 20px !important
+    .contact
+      margin: 0px 15px 20px !important
+      textarea
+        background: none
+        color: white
 
 
 </style>
