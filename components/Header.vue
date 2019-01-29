@@ -247,7 +247,7 @@ header {
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='221' height='221'%3E%3Cdefs%3E%3Cpath id='a' d='M77 105H11V77h38a16.6 16.6 0 0 0-2.7 9c0 10 12.8 14.7 30.7 17v2z'/%3E%3Cpath id='b' d='M77 144H11v-28h38a16.6 16.6 0 0 0-2.7 9c0 10 12.8 14.7 30.7 17v2z'/%3E%3C/defs%3E%3Cg fill='%23016895' fill-rule='evenodd'%3E%3Cpath d='M40.7 105H0a110.5 110.5 0 1 1 0 11h40.7a71.1 71.1 0 1 0 0-11z'/%3E%3Cuse xlink:href='%23a'/%3E%3Cuse transform='matrix(1 0 0 -1 0 260)' xlink:href='%23b'/%3E%3C/g%3E%3C/svg%3E")
     no-repeat 10px center;
   background-size: 45px;
-  width: 340px;
+  width: 310px;
   padding-left: 65px;
 }
 
