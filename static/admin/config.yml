@@ -24,8 +24,8 @@ collections:
   - name: "pages" # Used in routes, e.g., /admin/collections/pages
     label: "Pages" # Used in the UI
     files:
-      - label: "About Page"
-        name: "about"
+      - label: "Home Page"
+        name: "home"
         file: "content/home.json"
         fields: 
           - label: Slide_1
@@ -49,3 +49,22 @@ collections:
               - {label: Name, name: name, widget: string}
               - {label: Caption, name: caption, widget: string}
               - {label: Image, name: image, widget: image}
+  - name: "members" # Used in routes, e.g., /admin/collections/pages
+    label: "Members" # Used in the UI
+    files:
+      - label: "Executive Board"
+        name: "Executive_Board"
+        file: "content/members/board.json"
+        fields: 
+          - {label: Title, name: title, widget: string, default: ""}
+          - {label: Description, name: description, widget: string, default: ""}
+          - {label: Introduction, name: introduction, widget: string, default: ""}
+          - label: Member
+            name: entries
+            widget: object
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: First Name, name: first_name, widget: string}
+              - {label: Last Name, name: last_name, widget: string}
+              - {label: Position, name: position, widget: string}
+             
