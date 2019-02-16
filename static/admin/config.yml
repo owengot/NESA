@@ -52,19 +52,112 @@ collections:
   - name: "members" # Used in routes, e.g., /admin/collections/pages
     label: "Members" # Used in the UI
     files:
-      - label: "Executive Board"
+      - label: "The Executive Board"
         name: "Executive_Board"
-        file: "content/members/board.json"
+        file: "content/members/executive-board.json"
         fields: 
           - {label: Title, name: title, widget: string, default: ""}
-          - {label: Description, name: description, widget: string, default: ""}
-          - {label: Introduction, name: introduction, widget: string, default: ""}
-          - label: Member
+          - {label: Description, name: description, widget: text, default: ""}
+          - {label: Introduction, name: introduction, widget: text, default: ""}
+          - label: Members
             name: entries
-            widget: object
+            widget: list
             fields:
-              - {label: Title, name: title, widget: string}
               - {label: First Name, name: first_name, widget: string}
               - {label: Last Name, name: last_name, widget: string}
+              - {label: Title, name: title, widget: string}
               - {label: Position, name: position, widget: string}
-             
+      - label: "The Advisory Board"
+        name: "Advisory_Board"
+        file: "content/members/advisory-board.json"
+        fields: 
+          - {label: Title, name: title, widget: string, default: ""}
+          - {label: Description, name: description, widget: text, default: ""}
+          - {label: Introduction, name: introduction, widget: text, default: ""}
+          - label: Members
+            name: entries
+            widget: list
+            fields:
+              - {label: First Name, name: first_name, widget: string}
+              - {label: Last Name, name: last_name, widget: string}
+              - {label: Title, name: title, widget: string}
+              - {label: Position, name: position, widget: string}
+      - label: "The International Board"
+        name: "International_Board"
+        file: "content/members/international-board.json"
+        fields: 
+          - {label: Title, name: title, widget: string, default: ""}
+          - {label: Description, name: description, widget: text, default: ""}
+          - {label: Introduction, name: introduction, widget: text, default: ""}
+          - label: Members
+            name: entries
+            widget: list
+            fields:
+              - {label: First Name, name: first_name, widget: string}
+              - {label: Last Name, name: last_name, widget: string}
+              - {label: Title, name: title, widget: string}
+              - {label: Position, name: position, widget: string}
+      - label: "Diplomats"
+        name: "Diplomats"
+        file: "content/members/diplomats.json"
+        fields: 
+          - {label: Introduction, name: introduction, widget: text, default: ""}
+          - label: Members
+            name: entries
+            widget: list
+            fields:
+              - {label: First Name, name: first_name, widget: string}
+              - {label: Last Name, name: last_name, widget: string}
+              - {label: Location, name: title, widget: string}
+              - {label: Discipline, name: position, widget: string}
+      - label: "Partners"
+        name: "Partners"
+        file: "content/members/partners.json"
+        fields: 
+          - {label: Title, name: title, widget: string, default: ""}
+          - {label: Introduction, name: introduction, widget: text, default: ""}
+          - label: Featured Partners
+            name: featured_partners
+            widget: list
+            fields:
+              - {label: Organisation Name, name: name, widget: string}
+              - {label: Logo, name: logo, widget: image}
+              - {label: Website, name: url, widget: string}
+          - label: Partners
+            name: entries
+            widget: list
+            fields:
+              - {label: First Name, name: first_name, widget: string}
+              - {label: Last Name, name: last_name, widget: string}
+              - {label: Location, name: title, widget: string, required: false}
+              - {label: Member Profile ID, name: url, widget: string, hint: "The last number in the URL for a NESA member profile, for example 326 for memberprofile.php?id=326", required: false}
+              - {label: Discipline, name: discipline, widget: string, required: false}
+      - label: "Country Representatives"
+        name: "Country Representatives"
+          fields: 
+            - {label: Title, name: title, widget: string, default: ""}
+            - {label: Introduction, name: introduction, widget: text, default: ""}
+            - label: Members
+              name: entries
+              widget: list
+              fields:
+                - {label: First Name, name: first_name, widget: string}
+                - {label: Last Name, name: last_name, widget: string}
+                - {label: Location, name: title, widget: string, required: false}
+                - {label: Member Profile ID, name: url, widget: string, hint: "The last number in the URL for a NESA member profile, for example 326 for memberprofile.php?id=326", required: false}
+                - {label: Discipline, name: discipline, widget: string, required: false}
+      - label: "Honorary Members"
+        name: "Honorary Members"
+          fields: 
+            - {label: Title, name: title, widget: string, default: ""}
+            - {label: Introduction, name: introduction, widget: text, default: ""}
+      - label: "Cooperations"
+        name: "Cooperations"
+        fields: 
+          - {label: Title, name: title, widget: string, default: ""}
+          - label: Organisations
+            name: entries
+            widget: list
+            fields:
+              - {label: Organisation, name: title, widget: string}
+

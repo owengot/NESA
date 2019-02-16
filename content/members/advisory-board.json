@@ -1,0 +1,77 @@
+{
+  "title": "The Advisory Board",
+  "description": "* 14 members \n * 2 members per discipline and 4 additional members \n * Mission: Discipline representation, input of ideas and interdisciplinary thinking",
+  "introduction": "The Advisory Board has 14 members, 2 members per discipline and 4 additional members. The members represent their discipline, bring new ideas to the academy and promote interdisciplinary thinking.",
+  "entries": [{
+      "first_name": "Jacques",
+      "last_name": "Corcos",
+      "location": "Jewish General Hospital, Montréal, Canada",
+      "discipline": "Urology"
+    },
+    {
+      "first_name": "Muhammad",
+      "last_name": "Shamim Khan",
+      "location": "University of London, Kent, United Kingdom",
+      "discipline": "Urology"
+    },
+    {
+      "first_name": "Parwis",
+      "last_name": "Mir-Salim",
+      "location": "Vivantes, Berlin, Germany",
+      "discipline": "Otolaryngology"
+    },
+    {
+      "first_name": "Arie",
+      "last_name": "Rosen",
+      "location": "New Jersey, United States",
+      "discipline": "Otolaryngology"
+    },
+    {
+      "first_name": "Harold P.",
+      "last_name": "Drutz",
+      "location": "University of Toronto, Mount Sinai Hospital, Toronto, Canada",
+      "discipline": "Urogynecology"
+    },
+    {
+      "first_name": "Thomas",
+      "last_name": "Fink",
+      "location": "Sankt Josef Hospital, Center for Pelvicfloor Reconstruction, Ruedesheim, Germany",
+      "discipline": "Urogynecology, Emergency medicine, Acupuncture"
+    },
+    {
+      "first_name": "Christian",
+      "last_name": "Breymann",
+      "location": "Zurich, Switzerland",
+      "discipline": "Ob/Gyn"
+    },
+    {
+      "first_name": "Elisabeth",
+      "last_name": "Annella Stewart",
+      "location": "Mayo Clinic, Boston, United States",
+      "discipline": "Ob/Gyn"
+    },
+    {
+      "first_name": "Abraham Malkiel",
+      "last_name": "Baruchin",
+      "location": "Barzilai Academic Medical Center/BGU University, Ashkelon, Israel",
+      "discipline": "General Surgery"
+    }, {
+      "first_name": "Svend",
+      "last_name": "Schulze",
+      "location": "Glostrup, Denmark",
+      "discipline": "General Surgery"
+    },
+    {
+      "first_name": "Dan",
+      "last_name": "Benhamou",
+      "location": "Departement d'Anesthesie-Reanimation, Hopital de Bicetre, Paris, France",
+      "discipline": "Anaesthesiology"
+    },
+    {
+      "first_name": "Peter",
+      "last_name": "Biro",
+      "location": "University Hospital Zurich, Zurich, Switzerland",
+      "discipline": "Anaesthesiology"
+    }
+  ]
+}
