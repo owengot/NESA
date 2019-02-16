@@ -15,20 +15,6 @@ module.exports = {
 
   modules: [
     '@nuxtjs/axios',
-    ['@reallifedigital/nuxt-image-loader-module', {
-      imagesBaseDir: 'static',
-      imageStyles: {
-        small: {
-          macros: ['scaleAndCrop|160|90']
-        },
-        medium: {
-          macros: ['scaleAndCrop|320|180']
-        },
-        large: {
-          macros: ['scaleAndCrop|640|360']
-        },
-      }
-    }],
     [
       '@nuxtjs/markdownit'
     ],

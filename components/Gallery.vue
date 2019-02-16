@@ -6,14 +6,14 @@
 
       <a
         v-for="item in project"
-        v-bind:key="item"
+        v-bind:key="item.id"
         :href='item.url'
         data-fluidbox-max-width="700"
         class="image-caption"
       >
 
         <img
-          :src="item.url"
+          :src="item.url + '-/scale_crop/220x220/center/'"
           :title="item.caption"
           alt=""
         />
@@ -567,10 +567,10 @@ export default {
   border-radius: none !important;
 }
 .gallery a {
-  margin: 0 2% 0 0;
-  width: 23%;
+  margin: 0 40px 0 0 !important;
+  width: 25%;
   float: left;
-  height: 130px;
+  height: auto;
   display: inline-block;
 }
 
@@ -582,7 +582,7 @@ export default {
   display: inline-block;
   border-radius: 5px;
   width: 100%;
-  height: 120px;
+  height: auto;
 }
 
 .fluidbox__ghost {

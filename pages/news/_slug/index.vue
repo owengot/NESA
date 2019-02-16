@@ -83,13 +83,15 @@ div /deep/ .gallery
   display: inline-block
   height: auto
   a
-    width: 23% !important
+    width: 18% !important
     margin: 0 2% 2% 0 !important
-    height: 140px
-    &:nth-child(4n)
+    height: auto
+    &:nth-child(5n)
+      margin: 0 2% 2% 0 !important
+    &:nth-child(5n)
       margin: 0 0 2% 0 !important
     img
-      height: 140px
+      height: auto
 
 @import '~/assets/sass/news.sass'
 
