@@ -11,11 +11,11 @@
     })" class="posts">
             <div class="post" v-for="(post, index) in posts" :key="index">
               
-           <div v-if="post.image">
+           <div v-if="post.thumbnail">
 
               <div
                 class='featured-image'
-                :style="{ backgroundImage: 'url(' + post.image + ')' }"
+                :style="{ backgroundImage: 'url(' + post.thumbnail + ')' }"
               >
                 <div class="title">
                   <nuxt-link :to="post._path">

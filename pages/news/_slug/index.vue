@@ -8,7 +8,7 @@
         <article>
           <div
             class='featured-image'
-            :style="{ backgroundImage: 'url(' + image + ')' }"
+            :style="{ backgroundImage: 'url(' + thumbnail + ')' }"
           >
 
             <div class="title">
