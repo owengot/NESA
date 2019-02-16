@@ -4,7 +4,7 @@
     <h1>{{ title }}</h1>
     <p>{{ body }}
       <br>
-      <strong>Posted on <time :datetime="date">{{ date }}</time></strong>
+      <strong>Posted on <time :datetime="date">{{ date | formatDateString }}</time></strong>
     </p>
     <img :src="thumbnail">
   </article>

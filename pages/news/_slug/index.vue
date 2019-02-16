@@ -13,7 +13,7 @@
 
             <div class="title">
               <div class="post-date">
-                <h3> {{ date }} </h3>
+                <h3> {{ date | formatDateString }} </h3>
               </div>
               <div class="post-title">
                 <h3> {{ title }} </h3>
@@ -29,7 +29,7 @@
             <Gallery :project="gallery" />
           </div>
 
-          <div class="footer">Posted on <time :datetime="date">{{ date }}</time></div>
+          <div class="footer">Posted on <time>{{ date | formatDateString }}</time></div>
 
         </article>
 

@@ -21,7 +21,7 @@
                   <nuxt-link :to="post._path">
                     <div class="title">
                       <div class="post-date">
-                        <h3> {{ post.date }} </h3>
+                        <h3> {{ post.date | formatDateString }} </h3>
                       </div>
                       <div class="post-title">
                         <h3> {{ post.title }} </h3>
@@ -36,7 +36,7 @@
 
                 <div class="title">
                   <div class="post-date">
-                    <h3> {{ post.date }} </h3>
+                    <h3> {{ post.date | formatDateString }} </h3>
                   </div>
                   <div class="post-title">
                     <h3> {{ post.title }} </h3>
@@ -61,14 +61,11 @@
 
 <script>
 import SidebarNews from "~/components/SidebarNews.vue";
-import { Waterfall, WaterfallItem } from "vue2-waterfall";
 
 export default {
   layout: "about",
   components: {
-    SidebarNews,
-    Waterfall,
-    WaterfallItem
+    SidebarNews
   },
   pageTitle: "News",
   pageHeader: "news-3.jpg",

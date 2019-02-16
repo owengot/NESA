@@ -59,6 +59,9 @@ module.exports = {
       ssr: false
     },
     {
+      src: '~/plugins/filters.js'
+    },
+    {
       src: '~/plugins/VueMarkdown.js',
       ssr: false
     },

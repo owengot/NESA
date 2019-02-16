@@ -1,7 +1,7 @@
 {
   "name": "nuxt-cms",
   "version": "1.0.0",
-  "description": "Nuxt.js + Netlify CMS project",
+  "description": "NESA",
   "author": "Owen <owengot@gmail.com>",
   "private": true,
   "scripts": {
@@ -14,11 +14,12 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "@liqueflies/vue-flex-grid": "0.0.1",
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/markdownit": "^1.2.2",
+    "@nuxtjs/moment": "^1.2.0",
     "@reallifedigital/nuxt-image-loader-module": "^1.3.3",
     "axios": "^0.18.0",
+	"moment": "^2.22.2",
     "fs": "0.0.1-security",
     "gm": "^1.23.1",
     "jquery": "^3.3.1",
@@ -26,19 +27,16 @@
     "markdown-it": "^8.4.2",
     "marked": "^0.5.1",
     "medium-zoom": "^1.0.2",
+    "moment": "^2.24.0",
     "nuxt": "^1.0.0",
     "nuxt-mq": "^1.1.3",
     "vue-flickity": "^1.1.2",
-    "vue-flow-grid": "0.0.4",
-    "vue-grid-styled": "^0.2.0",
     "vue-jquery": "^1.0.6",
     "vue-js-modal": "^1.3.28",
     "vue-markdown": "^2.2.4",
     "vue-masonry": "^0.11.7",
     "vue-no-ssr": "^1.1.1",
-    "vue-slick": "^1.1.13",
-    "vue2-waterfall": "^2.0.1",
-    "vueisotope": "^3.1.2"
+    "vue-slick": "^1.1.13"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
