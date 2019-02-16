@@ -2,12 +2,46 @@
   "title": "The Executive Board",
   "description": "* coordinates the projects \n * organizes all events, especially the annual NESA Days \n * manages the network",
   "introduction": "The Executive Board coordinates the projects of the academy, organizes events, especially the annual NESA Days, and manages the network of the NESA.",
-  "member": [
+  "entries": [{
+      "title": "Prof.",
+      "first_name": "Michael",
+      "last_name": "Stark",
+      "position": "President"
+    },
     {
-      "title": "Test",
-      "first_name": "test",
-      "last_name": "test",
-      "position": "test"
+      "title": "Prof.",
+      "first_name": "Tahar",
+      "last_name": "Benhidjeb",
+      "position": "Director"
+    },
+    {
+      "title": "Prof.",
+      "first_name": "Gian Carlo",
+      "last_name": "Di Renzo",
+      "position": "Secretary General"
+    },
+    {
+      "title": "Dr.",
+      "first_name": "Cornelia",
+      "last_name": "Wohlfarth",
+      "position": "Board Members"
+    },
+    {
+      "title": "Prof.",
+      "first_name": "Manfred",
+      "last_name": "Ottow",
+      "position": "Board Members"
+    }, {
+      "title": "Prof.",
+      "first_name": "Werner",
+      "last_name": "Seebauer",
+      "position": "Board Members"
+    },
+    {
+      "title": "Prof.",
+      "first_name": "Klaus",
+      "last_name": "Vetter",
+      "position": "Board Members"
     }
   ]
 }
