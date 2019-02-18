@@ -1,23 +1,16 @@
 <template>
   <div class="mains">
+    
     <div id="test">
 
-      <div
-        v-for="project in projects.slice(0, 1)"
-        v-bind:key="project"
-      >
-
-        <Project
-          v-if="project.sidebar"
-          :project="project"
-          :sidebar="'true'"
-        />
-
-        <Project
-          v-else
-          :project="project"
-          :sidebar="'false'"
-        />
+      <div class="block">
+      <div class="col_left">
+      <h1>{{ about.title }}</h1>
+      <p v-html="$md.render(about.description)"></p>
+      </div>
+      <div class="col_right">
+        <blockquote>{{ about.quote }}</blockquote>
+      </div>
       </div>
 
       <div class="section">
@@ -37,7 +30,7 @@
 
         <div
           v-if="project.boards"
-          v-for="project in projects"
+          v-for="project in aboutold.projects"
           v-bind:key="project"
           class="section boards"
         >
@@ -61,7 +54,7 @@
 
         <div
           v-if="project.diplomats"
-          v-for="project in projects"
+          v-for="project in aboutold.projects"
           v-bind:key="project"
         >
 
@@ -76,7 +69,7 @@
 
       <div
         v-if="project.partners"
-        v-for="project in projects"
+        v-for="project in aboutold.projects"
         v-bind:key="project"
         class="section partners"
       >
@@ -104,7 +97,7 @@
 
       <div
         v-if="project.country_representatives"
-        v-for="project in projects"
+        v-for="project in aboutold.projects"
         v-bind:key="project"
         class="section representatives"
       >
@@ -122,7 +115,7 @@
 
       <div
         v-if="project.honorary_members"
-        v-for="project in projects"
+        v-for="project in aboutold.projects"
         v-bind:key="project"
         class="section members"
       >
@@ -176,6 +169,8 @@ import Disciplines from "~/components/SidebarProjects.vue";
 import Project from "~/components/Project.vue";
 import Board from "~/components/Board.vue";
 import CustomComponentModal from "~/components/CustomComponentModal.vue";
+import aboutold from '~/content/about/index.json';
+import about from '~/content/pages/about.json';
 
 export default {
   layout: "about",
@@ -185,12 +180,14 @@ export default {
     Project,
     Board
   },
-  pageHeader: "../about.jpg",
+  pageHeader: about.image,
   pageTitle: "about",
   data() {
     return {
       title: "",
       showModal: false,
+      aboutold,
+      about,
       modalTitle: "",
       modalContent: "",
       body: "",
@@ -205,10 +202,6 @@ export default {
       ]
     };
   },
-  async asyncData({ params }) {
-    let post = await import("~/content/about/index.json");
-    return post;
-  },
   methods: {
     openModal() {
       this.showModal = true;
@@ -220,7 +213,61 @@ export default {
 
 <style lang="sass" scoped>
 
+.block 
+  display: flex
+  width: 100%
+  justify-content: space-between
+  p
+    font-size: 1.35em
+    font-family: 'Open Sans'
+    line-height: 1.86em
+    padding: 0 20px 0 0
+    color: #000
+    display: inline-block
+  /deep/ ul 
+    li
+      line-height: 2.2em
+      color: #016895
+      padding: 0 !important
+      margin: 0 !important
+      font-size: 0.8em
+      list-style-type: circle
+      p
+        font-size: 1.2em !important
 
+  .col_left
+    width: 60%
+    h1
+      padding: 0 0 20px 0
+  .col_right
+    width: 35%
+    blockquote
+      width: 100%
+      display: block
+      position: relative
+      margin: 20px 0 0 0px
+      clear: none !important
+      top: 50px
+      font-size: 1.8em !important
+      line-height: 1.42em
+      color: #016895 !important
+      background: #efefef
+      border-radius: 10px
+      font-family: 'Exo 2'
+      padding: 15px 30px
+      background: linear-gradient(to bottom, #fff, #f8fafa)
+      -webkit-box-shadow: 0px 1px 1px 0 rgba(0, 0, 0, 0.1)
+      box-shadow: 0px 1px 1px 0 rgba(0, 0, 0, 0.1)
+      font-weight: 400 !important
+      &:before
+        font-family: 'Georgia', serif
+        content: "\201C"
+        color: #97b3df
+        font-style: normal
+        font-size: 3.6em
+        position: absolute
+        left: -20px
+        top: 20px
 .featured_partners
   clear: both
   display: inline-block
@@ -300,7 +347,6 @@ div /deep/ ul
   li 
     line-height: 36px
     color: #016895
-    font-size: 1.05em
     padding: 0 !important
     margin: 0 !important
     list-style-type: circle
@@ -326,39 +372,6 @@ div /deep/ ul
         page-break-inside: avoid
         break-inside: avoid
 
-
-div /deep/ blockquote
-  width: 100%
-  display: block
-  position: relative
-  margin: 20px 0 0 0px
-  clear: none !important
-  top: 50px
-  font-size: 1.3em !important
-  line-height: 24px
-  color: #016895 !important
-  background: #efefef
-  border-radius: 10px
-  padding: 15px 30px
-  background: linear-gradient(to bottom, #fff, #f8fafa)
-  -webkit-box-shadow: 0px 1px 1px 0 rgba(0, 0, 0, 0.1)
-  box-shadow: 0px 1px 1px 0 rgba(0, 0, 0, 0.1)
-  font-weight: 100 !important
-  p
-    font-weight: 100 !important
-    font-family: 'Exo 2'
-    font-size: 1.4em
-    line-height: 1.45em
-    font-style: normal
-  &:before
-    font-family: 'Georgia', serif
-    content: "\201C"
-    color: #97b3df
-    font-style: normal
-    font-size: 5em
-    position: absolute
-    left: -20px
-    top: 30px
 
 
 @import '~/assets/sass/news.sass'
