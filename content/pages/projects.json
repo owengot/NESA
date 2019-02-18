@@ -76,10 +76,10 @@
         "description": "The transoral access in endoscopic thyroid resection (NESA, Berlin)",
         "url": "http://www.nesacademy.org/downloads/witzeltransoral.pdf"
       }],
-      "video": {
+      "video": [{
         "url": "http://nesacademy.org/beta/video/NOS_TED.mpg",
         "caption": "TED NOS Video"
-      },
+      }],
       "gallery": {
         "caption": "First Meeting",
         "url": ["/images/projects/interdisciplinary/meeting_1.jpg", "/images/projects/interdisciplinary/meeting_2.jpg", "/images/projects/interdisciplinary/meeting_3.jpg"]
