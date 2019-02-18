@@ -134,32 +134,39 @@ collections:
               - {label: Description, name: description, widget: text}
   - name: "publications" # Used in routes, e.g., /admin/collections/pages
     label: "publications"
-    file: "content/publications.json"
-    fields: 
+    files:
       - label: Featured Publication
-        name: featured
-        widget: objects
+        name: featured_publication
+        file: "content/publications/featured_publication.json"
         fields: 
-          - {label: Title, name: title, widget: string}
-          - {label: Description, name: description, widget: text}
-          - {label: Editors, name: editors, widget: string}
-          - {label: Journal, name: journal, widget: string}
-          - label: Images
-            name: images
-            widget: image
-            media_library:
-              config:
-                multiple: true
-                previewStep: false
-          - {label: Link, name: url, widget: string}
+          - label: Featured Publication
+            name: featured
+            widget: object
+            fields: 
+              - {label: Title, name: title, widget: string}
+              - {label: Description, name: description, widget: text}
+              - {label: Editors, name: editors, widget: string}
+              - {label: Journal, name: journal, widget: string}
+              - label: Images
+                name: images
+                widget: image
+                media_library:
+                  config:
+                    multiple: true
+                    previewStep: false
+              - {label: Link, name: url, widget: string}
       - label: Publications
-        name: entries
-        widget: list
-        fields: 
-          - {label: Author, name: author, widget: string}
-          - {label: Topic, name: topic, widget: string}
-          - {label: Link, name: url, widget: string}
-          - {label: Journal, name: journal, widget: string}
+        name: publications
+        file: "content/publications/publications.json"
+        fields:
+          - label: Publications
+            name: entries
+            widget: list
+            fields: 
+              - {label: Author, name: author, widget: string}
+              - {label: Topic, name: topic, widget: string}
+              - {label: Link, name: url, widget: string}
+              - {label: Journal, name: journal, widget: string}
   - name: "events" # Used in routes, e.g., /admin/collections/pages
     label: "Events"
     files:
