@@ -74,7 +74,7 @@ collections:
             fields:
               - {label: Name, name: name, widget: string}
               - {label: Discipline, name: discipline, widget: string}
-              - {label: Description, name: description, widget: string}
+              - {label: Description, name: description, widget: text}
               - label: Images
                 name: images
                 widget: list
@@ -117,52 +117,18 @@ collections:
           - {label: Header Image, name: image, widget: image}
           - {label: Introduction, name: introduction, widget: text}
           - label: Images
-            name: images
-            widget: list
-            required: false
-            fields:
-              - {label: Image, name: image, widget: string}
+            name: url
+            widget: image
+            media_library:
+              config:
+                multiple: true
+                previewStep: false
           - label: "Entries"
             name: "entries"
             widget: "list"
             fields:
               - {label: Name, name: name, widget: string}
-              - {label: Discipline, name: discipline, widget: string}
-              - {label: Description, name: description, widget: string}
-              - label: Images
-                name: images
-                widget: list
-                required: false
-                fields:
-                  - {label: Image, name: image, widget: string}
-              - label: Resources (Research Papers, External Links)
-                name: links
-                widget: list
-                required: false
-                fields:
-                  - {label: Title, name: title, widget: string}
-                  - {label: Description, name: description, widget: string}
-                  - {label: URL, name: url, widget: string}
-              - label: Video 
-                name: video
-                widget: list
-                required: false
-                fields:
-                  - {label: Caption, name: caption, widget: string}
-                  - {label: URL, name: url, widget: string}
-              - label: Gallery 
-                name: gallery
-                widget: object
-                required: false
-                fields:
-                  - {label: Caption, name: caption, widget: string}
-                  - label: Images
-                    name: url
-                    widget: image
-                    media_library:
-                      config:
-                        multiple: true
-                        previewStep: false
+              - {label: Description, name: description, widget: text}
   - name: "members" # Used in routes, e.g., /admin/collections/pages
     label: "Members" # Used in the UI
     files:
