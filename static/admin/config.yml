@@ -132,6 +132,34 @@ collections:
             fields:
               - {label: Name, name: name, widget: string}
               - {label: Description, name: description, widget: text}
+  - name: "publications" # Used in routes, e.g., /admin/collections/pages
+    label: "publications"
+    file: "content/publications.json"
+    fields: 
+      - label: Featured Publication
+        name: featured
+        widget: objects
+        fields: 
+          - {label: Title, name: title, widget: string}
+          - {label: Description, name: description, widget: text}
+          - {label: Editors, name: editors, widget: string}
+          - {label: Journal, name: journal, widget: string}
+          - label: Images
+            name: images
+            widget: image
+            media_library:
+              config:
+                multiple: true
+                previewStep: false
+          - {label: Link, name: url, widget: string}
+      - label: Publications
+        name: entries
+        widget: list
+        fields: 
+          - {label: Author, name: author, widget: string}
+          - {label: Topic, name: topic, widget: string}
+          - {label: Link, name: url, widget: string}
+          - {label: Journal, name: journal, widget: string}
   - name: "events" # Used in routes, e.g., /admin/collections/pages
     label: "Events"
     files:
@@ -177,16 +205,16 @@ collections:
                 name: links
                 widget: list
                 fields: 
-                  - {label: Description, name: description, widget: text}
+                  - {label: Description, name: description, widget: string}
                   - {label: Link, name: url, widget: string}
-              - label: Slider
+              - label: Sidebar Gallery
                 name: slider
                 widget: image
                 media_library:
                   config:
                     multiple: true
                     previewStep: false
-              - label: Gallery
+              - label: Images
                 name: gallery
                 widget: list
                 fields: 
