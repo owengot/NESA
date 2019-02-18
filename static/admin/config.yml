@@ -139,14 +139,14 @@ collections:
         name: "current_events"
         file: "content/events/current.json"
         fields:
-            label: "Events"
-            name: "entries"
-            widget: "list"
-            fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Date, name: date, widget: string}
-              - {label: Image, name: image, widget: image}
-              - {label: Link, name: url, widget: string}
+            - label: "Events"
+              name: "entries"
+              widget: "list"
+              fields:
+                - {label: Name, name: name, widget: string}
+                - {label: Date, name: date, widget: string}
+                - {label: Image, name: image, widget: image}
+                - {label: Link, name: url, widget: string}
       - label: "Innauguration Ceremony"
         name: "innauguration_ceremony"
         file: "content/events/innauguration_ceremony.json"
@@ -157,14 +157,14 @@ collections:
             widget: list
             fields: 
               - label: Image
-                name: image
+                name: url
                 widget: image
               - {label: Caption, name: caption, widget: string}
       - label: "Nesa Days"
         name: "nesa_days"
         file: "content/events/nesa_days.json"
         fields:
-          - {label: Introduction, name: introduction, widget: text}
+          - {label: Introduction, name: description, widget: text}
           - label: Events
             name: entries
             widget: list
@@ -174,7 +174,7 @@ collections:
               - {label: Location, name: location, widget: string}
               - {label: Date, name: date, widget: string}
               - label: Links
-                name: info
+                name: links
                 widget: list
                 fields: 
                   - {label: Description, name: description, widget: text}
@@ -222,14 +222,14 @@ collections:
         name: "recommended_events"
         file: "content/events/recommended.json"
         fields:
-            label: "Events"
-            name: "entries"
-            widget: "list"
-            fields:
-              - {label: Title, name: title, widget: string}
-              - {label: Date, name: date, widget: string}
-              - {label: Image, name: image, widget: image}
-              - {label: Link, name: url, widget: string}
+            - label: "Events"
+              name: "entries"
+              widget: "list"
+              fields:
+                - {label: Title, name: title, widget: string}
+                - {label: Date, name: date, widget: string}
+                - {label: Image, name: image, widget: image}
+                - {label: Link, name: url, widget: string}
   - name: "members" # Used in routes, e.g., /admin/collections/pages
     label: "Members" # Used in the UI
     files:
