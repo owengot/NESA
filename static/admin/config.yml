@@ -73,7 +73,10 @@ collections:
             widget: "list"
             fields:
               - {label: Name, name: name, widget: string}
-              - {label: Discipline, name: discipline, widget: string}
+              - label: "Discipline"
+                name: "discipline"
+                widget: "select"
+                options: ["Featured Projects", "Interdisciplinary", "General Surgery", "Otolaryngology", "Urology", "Obstetrics and Gynaecology", "Anaesthesiology"]
               - {label: Description, name: description, widget: text}
               - label: Images
                 name: images
