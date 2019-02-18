@@ -59,7 +59,7 @@ collections:
         fields: 
           - {label: Title, name: title, widget: string, default: 'about'}
           - {label: Header Image, name: image, widget: image}
-          - {label: Introduction, name: introduction, widget: text}
+          - {label: Introduction, name: description, widget: text}
           - {label: Quote, name: quote, widget: text}
       - label: "Projects"
         name: "projects"
@@ -68,50 +68,6 @@ collections:
           - {label: Title, name: title, widget: string, default: 'Projects'}
           - {label: Header Image, name: image, widget: image}
           - {label: Introduction, name: introduction, widget: text}
-          - label: "Projects"
-            name: "entries"
-            widget: "list"
-            fields:
-              - {label: Name, name: name, widget: string}
-              - label: "Discipline"
-                name: "discipline"
-                widget: "select"
-                options: ["Featured Projects", "Interdisciplinary", "General Surgery", "Otolaryngology", "Urology", "Obstetrics and Gynaecology", "Anaesthesiology"]
-              - {label: Description, name: description, widget: text}
-              - label: Images
-                name: images
-                widget: list
-                required: false
-                fields:
-                  - {label: Image, name: image, widget: string}
-              - label: Resources (Research Papers, External Links)
-                name: links
-                widget: list
-                required: false
-                fields:
-                  - {label: Title, name: title, widget: string}
-                  - {label: Description, name: description, widget: string}
-                  - {label: URL, name: url, widget: string}
-              - label: Video 
-                name: video
-                widget: list
-                required: false
-                fields:
-                  - {label: Caption, name: caption, widget: string}
-                  - {label: URL, name: url, widget: string}
-              - label: Gallery 
-                name: gallery
-                widget: object
-                required: false
-                fields:
-                  - {label: Caption, name: caption, widget: string}
-                  - label: Images
-                    name: url
-                    widget: image
-                    media_library:
-                      config:
-                        multiple: true
-                        previewStep: false
       - label: "Pedagogy"
         name: "pedagogy"
         file: "content/pages/pedagogy.json"
@@ -132,15 +88,113 @@ collections:
             fields:
               - {label: Name, name: name, widget: string}
               - {label: Description, name: description, widget: text}
-  - name: "publications" # Used in routes, e.g., /admin/collections/pages
-    label: "publications"
+  - label: "Projects"
+    name: "projects"
+    - label: "Featured Projects"
+      name: "featured_projects"
+      file: "content/projects/featured_projects.json"
+      fields: 
+        label: "Featured Project"
+        name: "entries"
+        widget: "list"
+        fields:
+          - {label: Name, name: name, widget: string}
+          - label: "Discipline"
+            name: "discipline"
+            widget: "select"
+            options: ["Interdisciplinary", "General Surgery", "Otolaryngology", "Urology", "Obstetrics and Gynaecology", "Anaesthesiology"]
+          - {label: Description, name: description, widget: text}
+          - label: Images
+            name: images
+            widget: list
+            required: false
+            fields:
+              - {label: Image, name: image, widget: string}
+          - label: Resources (Research Papers, External Links)
+            name: links
+            widget: list
+            required: false
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Description, name: description, widget: string}
+              - {label: URL, name: url, widget: string}
+          - label: Video 
+            name: video
+            widget: list
+            required: false
+            fields:
+              - {label: Caption, name: caption, widget: string}
+              - {label: URL, name: url, widget: string}
+          - label: Gallery 
+            name: gallery
+            widget: object
+            required: false
+            fields:
+              - {label: Caption, name: caption, widget: string}
+              - label: Images
+                name: url
+                widget: image
+                media_library:
+                  config:
+                    multiple: true
+                    previewStep: false
+    - label: "Featured Projects"
+      name: "featured_projects"
+      file: "content/projects/projects.json"
+      fields: 
+        label: "Project"
+        name: "entries"
+        widget: "list"
+        fields:
+          - {label: Name, name: name, widget: string}
+          - label: "Discipline"
+            name: "discipline"
+            widget: "select"
+            options: ["Interdisciplinary", "General Surgery", "Otolaryngology", "Urology", "Obstetrics and Gynaecology", "Anaesthesiology"]
+          - {label: Description, name: description, widget: text}
+          - label: Images
+            name: images
+            widget: list
+            required: false
+            fields:
+              - {label: Image, name: image, widget: string}
+          - label: Resources (Research Papers, External Links)
+            name: links
+            widget: list
+            required: false
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Description, name: description, widget: string}
+              - {label: URL, name: url, widget: string}
+          - label: Video 
+            name: video
+            widget: list
+            required: false
+            fields:
+              - {label: Caption, name: caption, widget: string}
+              - {label: URL, name: url, widget: string}
+          - label: Gallery 
+            name: gallery
+            widget: object
+            required: false
+            fields:
+              - {label: Caption, name: caption, widget: string}
+              - label: Images
+                name: url
+                widget: image
+                media_library:
+                  config:
+                    multiple: true
+                    previewStep: false
+  - name: "Publications" # Used in routes, e.g., /admin/collections/pages
+    label: "Publications"
     files:
       - label: Featured Publication
         name: featured_publication
         file: "content/publications/featured_publication.json"
         fields: 
           - label: Featured Publication
-            name: featured
+            name: featured_pub
             widget: object
             fields: 
               - {label: Title, name: title, widget: string}

@@ -1,0 +1,120 @@
+{
+  "entries": [{
+      "name": "Safe Surgery Saves Lives",
+      "discipline": "Interdisciplinary",
+      "description": "The NESA participated as a consultant in the WHO project 'Safe Surgery Saves Lives' and promotes the resulting Safety Checklist internationally. For more information, download the article 'Primum non nocere'.",
+      "links": [{
+          "title": "Stark M., Baberg H.",
+          "description": "Primum non nocere. The WHO Surgery Safety Checklist (Laparoscopy Today, 2008, 7(2): 15-8)",
+          "url": "http://www.nesacademy.org/downloads/PrimumNonNocere.pdf"
+        },
+        {
+          "title": "Stark M., Baberg H.",
+          "description": "Primum non nocere. The WHO Surgery Safety Checklist (Laparoscopy Today, 2008, 7(2): 15-8)",
+          "url": "http://www.nesacademy.org/downloads/PrimumNonNocere.pdf"
+        }
+      ]
+    },
+    {
+      "name": "Natural Orifice Surgery (NOS) / Scarless Operations Working Group (SLO)",
+      "discipline": "Interdisciplinary",
+      "description": "The NESA founded the first European-based, interdisciplinary working group on NOS / SLO. Its goal is to develop surgical procedures using the natural body openings as well as 'scarless' operations, and to promote alternatives to the 'traditional' abdominal and endoscopical operations. The working group elaborates study protocols, conducts pre-clinical and clinical studies, explores specific physiological and surgical aspects and develops adapted instruments. Endoscopical procedures have replaced laparotomy in many cases.The NESA believes that the natural orifice pathway might equally replace many laparoscopic operations.This is due to the relatively low risk in introducing the instruments and to the assumedly lower intra - abdominal pressure required. Transaxillar and transmamillar procedures are also optimized. The participants are surgeons from various surgical disciplines as well as pharmacologists, physiologists and representatives of the industry. The first meeting of the working group took place on June 23, 2006, the second on March 28, 2007 in Berlin."
+    },
+    {
+      "name": "The Transdouglas Endoscopic Device",
+      "discipline": "Interdisciplinary",
+      "description": "The NOS working group is developing a new surgical device, the TED (Transdouglas Endoscopic Device). The TED is a multichannel, articulated, rigid endoscope that facilitates surgical procedures in the upper abdomen (cholecystectomy, liver biopsy, splenectomy etc.) as well as in the pelvis (hysterectomy, cystectomy, etc.) by using a single entry.",
+      "links": [{
+        "description": "Protocol of the 1st meeting (incl. list of participants)",
+        "url": "http://www.nesacademy.org/downloads/NOSprotocol230606.pdf"
+      }, {
+        "description": "Protocol of the 2nd meeting (incl. list of participants)",
+        "url": "http://www.nesacademy.org/downloads/NOSprotocol280307.pdf"
+      }, {
+        "title": "Stark M.",
+        "description": "Introduction to the NOS / SLO concept (The New European Surgery Academy)",
+        "url": "http://www.nesacademy.org/downloads/NOS211107_web.pdf"
+      }, {
+        "title": "Benhidjeb T.",
+        "description": "Auxillary-Bilateral-Breast-Approach (ABBA) (Natural Orifice Surgery 1st Meeting, NESA, Berlin - 2006)",
+        "url": "http://www.nesacademy.org/downloads/benhidjeb_abba_web.pdf"
+      }, {
+        "title": "Witzel K.",
+        "description": "Transumbilical herniorrhaphy (Natural Orifice Surgery Working Group, NESA, Berlin - 2006)",
+        "url": "http://www.nesacademy.org/downloads/witzelherniorrhaphy.pdf"
+      }, {
+        "title": "Witzel K.",
+        "description": "The transoral access in endoscopic thyroid resection (NESA, Berlin)",
+        "url": "http://www.nesacademy.org/downloads/witzeltransoral.pdf"
+      }],
+      "video": [{
+        "url": "http://nesacademy.org/beta/video/NOS_TED.mpg",
+        "caption": "TED NOS Video"
+      }],
+      "gallery": {
+        "caption": "First Meeting",
+        "url": ["/images/projects/interdisciplinary/meeting_1.jpg", "/images/projects/interdisciplinary/meeting_2.jpg", "/images/projects/interdisciplinary/meeting_3.jpg"]
+      }
+    },
+    {
+      "name": "Comparison of abdominal incisions",
+      "discipline": "General Surgery",
+      "description": "The goal of this project is to re-evaluate different abdominal incisions in use, to analyse any single step in every incision and to compare the clinical outcome, early and late complications etc."
+    },
+    {
+      "name": "Simulation",
+      "discipline": "General Surgery",
+      "description": "The NESA designs and promotes the next generation of simulators, so-called biosimulators, which will enable surgeons to become familiar with the new challenges brought about by Natural Orifice Surgery. Surgeons will be trained and certified prior to performing operations."
+    },
+    {
+      "name": "The transoral thyroidectomy",
+      "discipline": "Otolaryngology",
+      "description": "A NESA team consisting of an otolaryngologist, a general surgeon and anatomists conducted at the Erasmus University of Rotterdam the pre-clinical studies concerning the new concept of transoral thyroidectomy. See the following articles.",
+      "links": [{
+        "title": "Wilhelm T., Harlaar J., Kerver A., Kleinrensink GJ., Benhidjeb T.",
+        "description": "Transoral endoscopic thyroidectomy - Part 1: rationale and anatomical studies. (Chirurg. 2010;81(1):50-5.)",
+        "url": "https://www.ncbi.nlm.nih.gov/pubmed/19940971"
+      }, {
+        "title": "Benhidjeb T., Harlaar J., Kleinrensink GJ., Kerver A., Wilhelm T.",
+        "description": "Transoral endoscopic thyroidectomy : Part 2: Surgical technique (Chirurg. 2010;81(2):134-8.)",
+        "url": "https://www.ncbi.nlm.nih.gov/pubmed/19876604"
+      }]
+    },
+    {
+      "name": "Urology",
+      "discipline": "Urology",
+      "description": "Urological operations are planned in combination with the NOS project. The first project will be Transdouglas Nephrectomy."
+    },
+    {
+      "name": "The Anti-C-section campaign",
+      "discipline": "Obstetrics and Gynaecology",
+      "description": "We start the New Year with an anti-Caesarean-section-campaign. Maybe we should say mea culpa, as the NESA was the one that has distributed an optimised and easy Caesarean section method in many countries. Our aim was to make Caesarean section safer and easier for the mothers. We could not imagine that this method would become one the reasons for over-usage of Caesarean section. We strongly believe that Caesarean section should have a valid indication. \n\n Please download download the document which includes the reasoning for limiting Caesarean section to valid indications.Feedback is welcome and can be sent to [office@nesacademy.org](mailto:office@nesacademy.org).",
+      "links": [{
+        "title": "New European Surgical Academy [PDF]",
+        "description": "NESA’s Anti-Caesarean-Section Campaign: The dangers of overused Cesarean Sections (NESA)",
+        "url": "http://www.nesacademy.org/downloads/Anti_CS-Campaign.pdf"
+      }]
+    }, {
+      "name": "Ten Step Vaginal Hysterectomy – A modified operative technique for vaginal hysterectomy",
+      "discipline": "Obstetrics and Gynaecology",
+      "description": "This multinational study compares a traditional vaginal hysterectomy (the Heaney method) with a modified method, the so called “Ten-Step Vaginal Hysterectomy”, which is a result of the analysis of 6 different methods. A study protocol has been elaborated and is available on demand. The pilot study showed a significant reduction of the operative time and of the need for pain killers."
+    }, {
+      "name": "Computerized labour monitoring",
+      "discipline": "Obstetrics and Gynaecology",
+      "description": "With this new development of a cervicometer, based on a GPS, the obstetrician can follow up the delivery without digital examination. It enables him to make decisions based on accurate and real-time information, resulting in significantly improved medical care. Obstetrical units may join the project for clinical comparative studies through the NESA."
+    }, {
+      "name": "Anti-episiotomy campaign",
+      "discipline": "Obstetrics and Gynaecology",
+      "description": "Episiotomy is considered a common and simple procedure, but it is known to cause complications such as epidermal inclusion cysts or anal sphincter injuries. \n\n It has been shown that women treated by private obstetricians had a 7-fold increased risk to have an episiotomy. It seems that the performance of episiotomy does not meet most of the goals that were attributed to it. The NESA has therefore started an anti-episiotomy campaign. In case episiotomy is necessary, the NESA promotes a two-layered suturing. \n\n In a pilot randomized prospective study it was shown that a two-layered continuous suturing avoiding the vaginal wall resulted in better anatomical results than the traditional three-layered suturing and caused less discomfort and pain."
+    },
+    {
+      "name": "Computer assisted anaesthetic dosage according to pharmacokinetic algorithms",
+      "discipline": "Anaesthesiology",
+      "description": "This modified approach ensures an optimal use of anaesthetic agents taking into account the individual needs of each patient."
+    }, {
+      "name": "Simulation of endotracheal intubation",
+      "discipline": "Anaesthesiology",
+      "description": "These days, the intubation simulators are lacking interactivity. The aim of this study is to elaborate a modified simulator which will be as close as possible to real conditions."
+    }
+  ]
+}
