@@ -6,24 +6,24 @@
   
    <no-ssr>
      <Flickity ref="flickity" :options="flickityOptions">
-       <div :style="{ backgroundImage: `url(${slide1.image})` }">
+       <div :style="{ backgroundImage: `url(${home.slide1.image})` }">
 	       <div class="caption center-left about">
-	               <div class="title"><h3>{{ slide1.name }}</h3></div>
-	               <p>{{ slide1.caption }}</p>
+	               <div class="title"><h3>{{ home.slide1.name }}</h3></div>
+	               <p>{{ home.slide1.caption }}</p>
 	       		   <nuxt-link to="about">Find out more</nuxt-link>
 	       </div>
        </div>
-       <div :style="{ backgroundImage: `url(${slide2.image})` }">
+       <div :style="{ backgroundImage: `url(${home.slide2.image})` }">
            <div class="caption center-left projects">
-                   <div class="title"><h3>{{ slide2.name }}</h3></div>
-                   <p>{{ slide2.caption }}</p>
+                   <div class="title"><h3>{{ home.slide2.name }}</h3></div>
+                   <p>{{ home.slide2.caption }}</p>
            		   <nuxt-link to="projects">Find out more</nuxt-link>
            </div>
        </div>
-       <div :style="{ backgroundImage: `url(${slide3.image})` }">
+       <div :style="{ backgroundImage: `url(${home.slide3.image})` }">
 	       <div class="caption center-left knowledge">
-	               <div class="title"><h3>{{ slide3.name }}</h3></div>
-	               <p>{{ slide3.caption }}</p>
+	               <div class="title"><h3>{{ home.slide3.name }}</h3></div>
+	               <p>{{ home.slide3.caption }}</p>
 	       		   <nuxt-link to="pedagogy">Find out more</nuxt-link>
 	       </div>
        </div>
@@ -39,6 +39,7 @@
 
 <script>
 import Header from "~/components/Header.vue";
+import home from "~/content/pages/home.json";
 
 export default {
   components: {
@@ -46,6 +47,7 @@ export default {
   },
   data() {
     return {
+      home,
       flickityOptions: {
         bgLazyLoad: true,
         prevNextButtons: false,
@@ -60,12 +62,7 @@ export default {
         pauseAutoPlayOnHover: false
       }
     };
-  },
-  async asyncData({ params }) {
-    let post = await import("~/content/home.json");
-    return post;
-  },
-  mounted: () => {}
+  }
 };
 </script>
 

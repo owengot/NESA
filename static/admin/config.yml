@@ -30,7 +30,7 @@ collections:
     files:
       - label: "Home"
         name: "home"
-        file: "content/home.json"
+        file: "content/pages/home.json"
         fields: 
           - label: Slide 1
             name: slide1
@@ -80,7 +80,7 @@ collections:
         fields: 
           - {label: Title, name: title, widget: string, default: 'Projects'}
           - {label: Header Image, name: image, widget: image}
-          - {label: Introduction, name: introduction, widget: text}
+          - {label: Introduction, name: description, widget: text}
           - label: Images
             name: images
             widget: image
@@ -501,19 +501,19 @@ collections:
     files:
       - label: "Current Events"
         name: "current_events"
-        file: "content/events/current.json"
+        file: "content/events/current-events.json"
         fields:
           - label: "Events"
             name: "entries"
             widget: "list"
             fields:
-              - {label: Name, name: name, widget: string}
+              - {label: Name, name: title, widget: string}
               - {label: Date, name: date, widget: string}
               - {label: Image, name: image, widget: image}
               - {label: Link, name: url, widget: string}
       - label: "Innauguration Ceremony"
         name: "innauguration_ceremony"
-        file: "content/events/innauguration_ceremony.json"
+        file: "content/events/innauguration-ceremony.json"
         fields:
           - {label: Introduction, name: introduction, widget: text}
           - label: Gallery
@@ -526,7 +526,7 @@ collections:
               - {label: Caption, name: caption, widget: string}
       - label: "Nesa Days"
         name: "nesa_days"
-        file: "content/events/nesa_days.json"
+        file: "content/events/nesa-days.json"
         fields:
           - {label: Introduction, name: description, widget: text}
           - label: Events
@@ -560,7 +560,7 @@ collections:
                   - {label: Caption, name: caption, widget: string}
       - label: "Other Events"
         name: "other_events"
-        file: "content/events/other.json"
+        file: "content/events/other-events.json"
         fields: 
           - label: Events
             name: entries
@@ -584,7 +584,7 @@ collections:
                   - {label: Caption, name: caption, widget: string}
       - label: "Recommended Events"
         name: "recommended_events"
-        file: "content/events/recommended.json"
+        file: "content/events/recommended-events.json"
         fields:
             - label: "Events"
               name: "entries"
@@ -601,11 +601,11 @@ collections:
         name: "Executive_Board"
         file: "content/members/executive-board.json"
         fields: 
-          - {label: Title, name: title, widget: string, default: ""}
-          - {label: Description, name: description, widget: text, default: ""}
-          - {label: Introduction, name: introduction, widget: text, default: ""}
+          - {label: Title, name: ex_title, widget: string, default: ""}
+          - {label: Description, name: ex_description, widget: text, default: ""}
+          - {label: Introduction, name: ex_introduction, widget: text, default: ""}
           - label: Members
-            name: entries
+            name: ex_entries
             widget: list
             fields:
               - {label: First Name, name: first_name, widget: string}
@@ -616,11 +616,11 @@ collections:
         name: "Advisory_Board"
         file: "content/members/advisory-board.json"
         fields: 
-          - {label: Title, name: title, widget: string, default: ""}
-          - {label: Description, name: description, widget: text, default: ""}
-          - {label: Introduction, name: introduction, widget: text, default: ""}
+          - {label: Title, name: ab_title, widget: string, default: ""}
+          - {label: Description, name: ab_description, widget: text, default: ""}
+          - {label: Introduction, name: ab_introduction, widget: text, default: ""}
           - label: Members
-            name: entries
+            name: ab_entries
             widget: list
             fields:
               - {label: First Name, name: first_name, widget: string}
@@ -631,11 +631,11 @@ collections:
         name: "International_Board"
         file: "content/members/international-board.json"
         fields: 
-          - {label: Title, name: title, widget: string, default: ""}
-          - {label: Description, name: description, widget: text, default: ""}
-          - {label: Introduction, name: introduction, widget: text, default: ""}
+          - {label: Title, name: ib_title, widget: string, default: ""}
+          - {label: Description, name: ib_description, widget: text, default: ""}
+          - {label: Introduction, name: ib_introduction, widget: text, default: ""}
           - label: Members
-            name: entries
+            name: ib_entries
             widget: list
             fields:
               - {label: First Name, name: first_name, widget: string}
@@ -646,9 +646,9 @@ collections:
         name: "Diplomats"
         file: "content/members/diplomats.json"
         fields: 
-          - {label: Introduction, name: introduction, widget: text, default: ""}
+          - {label: Introduction, name: di_introduction, widget: text, default: ""}
           - label: Members
-            name: entries
+            name: di_entries
             widget: list
             fields:
               - {label: First Name, name: first_name, widget: string}
@@ -659,8 +659,8 @@ collections:
         name: "Partners"
         file: "content/members/partners.json"
         fields: 
-          - {label: Title, name: title, widget: string, default: ""}
-          - {label: Introduction, name: introduction, widget: text, default: ""}
+          - {label: Title, name: pa_title, widget: string, default: ""}
+          - {label: Introduction, name: pa_introduction, widget: text, default: ""}
           - label: Featured Partners
             name: featured_partners
             widget: list
@@ -669,7 +669,7 @@ collections:
               - {label: Logo, name: logo, widget: image}
               - {label: Website, name: url, widget: string}
           - label: Partners
-            name: entries
+            name: pa_entries
             widget: list
             fields:
               - {label: First Name, name: first_name, widget: string}
@@ -681,30 +681,30 @@ collections:
         name: "Country Representatives"
         file: "content/members/country_representatives.json"
         fields: 
-          - {label: Title, name: title, widget: string, default: ""}
-          - {label: Introduction, name: introduction, widget: text, default: ""}
+          - {label: Title, name: cr_title, widget: string, default: ""}
+          - {label: Introduction, name: cr_introduction, widget: text, default: ""}
           - label: Members
-            name: entries
+            name: cr_entries
             widget: list
             fields:
               - {label: First Name, name: first_name, widget: string}
               - {label: Last Name, name: last_name, widget: string}
-              - {label: Location, name: title, widget: string, required: false}
-              - {label: Member Profile ID, name: url, widget: string, hint: "The last number in the URL for a NESA member profile, for example 326 for memberprofile.php?id=326", required: false}
+              - {label: Location, name: location, widget: string, required: false}
+              - {label: Country, name: country, widget: string, required: false}
               - {label: Discipline, name: discipline, widget: string, required: false}
       - label: "Honorary Members"
         name: "Honorary Members"
         file: "content/members/honorary_members.json"
         fields: 
-          - {label: Title, name: title, widget: string, default: ""}
-          - {label: Introduction, name: introduction, widget: text, default: ""}
+          - {label: Title, name: hr_title, widget: string, default: ""}
+          - {label: Introduction, name: hr_introduction, widget: text, default: ""}
       - label: "Cooperations"
         name: "Cooperations"
         file: "content/members/cooperations.json"
         fields: 
-          - {label: Title, name: title, widget: string, default: ""}
+          - {label: Title, name: co_title, widget: string, default: ""}
           - label: Organisations
-            name: entries
+            name: co_entries
             widget: list
             fields:
               - {label: Organisation, name: title, widget: string}
