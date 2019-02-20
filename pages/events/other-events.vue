@@ -20,7 +20,7 @@
 
         <div
           class="entry"
-          v-for="entry in projects"
+          v-for="entry in otherEvents.entries"
           :key="entry"
         >
           <h2> {{ entry.date }} </h2>
@@ -55,6 +55,10 @@ import Sidebar from "~/components/SidebarProjects.vue";
 import Link from "~/components/Link.vue";
 import Gallery from "~/components/Gallery.vue";
 import JQuery from "jquery";
+
+import events from '~/content/pages/events.json';
+import otherEvents from '~/content/events/other-events.json';
+
 let $ = JQuery;
 
 export default {
@@ -64,11 +68,13 @@ export default {
     Link,
     Gallery
   },
-  pageHeader: "../events.jpg",
-  pageTitle: "events",
+  pageHeader: events.image,
+  pageTitle: events.title,
   bgPosition: "0 -330px",
   data() {
     return {
+      events,
+      otherEvents,
       links: [
         "Current Events",
         "Innauguration Ceremony",
@@ -77,10 +83,6 @@ export default {
         "Recommended Events"
       ]
     };
-  },
-  async asyncData({ params }) {
-    let post = await import("~/content/events/posts/other-events.json");
-    return post;
   }
 };
 </script>

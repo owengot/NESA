@@ -1,7 +1,7 @@
 {
-  "title": "Cooperations",
-  "introduction": "The NESA has cooperation agreements with the following institutions",
-  "entries": [{
+  "co_title": "Cooperations",
+  "co_introduction": "The NESA has cooperation agreements with the following institutions",
+  "co_entries": [{
       "title": "Academics without Borders (AWB/USF)"
     },
     {

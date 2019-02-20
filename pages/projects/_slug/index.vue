@@ -14,13 +14,13 @@
       />
     </div>
     <div id="test">
-
+<p> {{ post }} </p>
       <div
-        v-for="project in projects"
-        v-bind:key="project"
+        v-for="project in entries"
+        v-bind:key="project.id"
       >
         <Project
-          v-if="project.sidebar"
+          v-if="project.images || project.video || project.video"
           :project="project"
           :sidebar="'true'"
         />
@@ -39,7 +39,7 @@
 
 <script>
 import Sidebar from "~/components/SidebarProjects.vue";
-import Project from "~/components/Project.vue";
+import Project from "~/components/NewProject.vue";
 
 export default {
   layout: "about",

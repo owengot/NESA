@@ -1,6 +1,6 @@
 {
-  "title": "The Partners",
-  "introduction": "The partners are active members of the academy who take part in national and multinational studies.",
+  "pa_title": "Partners",
+  "pa_introduction": "The partners are active members of the academy who take part in national and multinational studies.",
   "featured_partners": [{
       "name": "Charité",
       "logo": "/images/charite.svg",
@@ -22,7 +22,7 @@
       "url": "http://nesacademy.org/"
     }
   ],
-  "entries": [{
+  "pa_entries": [{
       "first_name": "Ali",
       "last_name": "Amoushahi",
       "location": "Medical University of Isfahan, Isfahan, Iran",

@@ -19,17 +19,11 @@
     >
 
       <div
-        v-for="entry in events"
-        v-bind:key="entry"
+        v-for="entry in events.entries"
+        v-bind:key="entry.id"
       >
+   
         <Event
-          v-if="entry.sidebar"
-          :project="entry"
-          :sidebar="'true'"
-        />
-
-        <Event
-          v-else
           :project="entry"
           :sidebar="'false'"
         />
@@ -43,6 +37,7 @@
 <script>
 import Sidebar from "~/components/SidebarProjects.vue";
 import Event from "~/components/FeaturedEvent.vue";
+import events from '~/content/events/combined.js';
 
 export default {
   layout: "about",
@@ -50,11 +45,12 @@ export default {
     Sidebar,
     Event
   },
-  pageHeader: "../events.jpg",
+  pageHeader: events.image,
   bgPosition: "0 -330px",
-  pageTitle: "events",
+  pageTitle: events.title,
   data() {
     return {
+      events,
       links: [
         "Current Events",
         "Innauguration Ceremony",
@@ -63,10 +59,6 @@ export default {
         "Recommended Events"
       ]
     };
-  },
-  async asyncData({ params }) {
-    let post = await import("~/content/events/index.json");
-    return post;
   }
 };
 </script>

@@ -61,14 +61,15 @@
 
 <script>
 import SidebarNews from "~/components/SidebarNews.vue";
+import news from "~/content/pages/news.json";
 
 export default {
   layout: "about",
   components: {
     SidebarNews
   },
-  pageTitle: "News",
-  pageHeader: "news-3.jpg",
+  pageTitle: news.title,
+  pageHeader: news.image,
   bgPosition: "0 -100px",
   mounted() {
     if (typeof this.$redrawVueMasonry === "function") {
@@ -85,6 +86,7 @@ export default {
     posts.reverse();
     return {
       posts,
+      news,
       pageTitle: "Latest News",
       thumbnail: "",
       date: ""

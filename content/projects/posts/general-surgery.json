@@ -1,9 +1,9 @@
 {
-  "projects": [{
+  "entries": [{
     "name": "Comparison of abdominal incisions",
-    "body": "The goal of this project is to re-evaluate different abdominal incisions in use, to analyse any single step in every incision and to compare the clinical outcome, early and late complications etc."
+    "description": "The goal of this project is to re-evaluate different abdominal incisions in use, to analyse any single step in every incision and to compare the clinical outcome, early and late complications etc."
   }, {
     "name": "Simulation",
-    "body": "The NESA designs and promotes the next generation of simulators, so-called biosimulators, which will enable surgeons to become familiar with the new challenges brought about by Natural Orifice Surgery. Surgeons will be trained and certified prior to performing operations."
+    "description": "The NESA designs and promotes the next generation of simulators, so-called biosimulators, which will enable surgeons to become familiar with the new challenges brought about by Natural Orifice Surgery. Surgeons will be trained and certified prior to performing operations."
   }]
 }

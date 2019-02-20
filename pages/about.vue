@@ -28,17 +28,27 @@
       <div class="section">
         <h1>Structure</h1>
 
-        <div
-          v-if="project.boards"
-          v-for="project in aboutold.projects"
-          v-bind:key="project"
-          class="section boards"
-        >
+        <div class="section boards">
 
           <Board
-            v-for="board in project.boards"
-            :project="board"
-            v-bind:key="board"
+            :title="about.ex_title"
+            :description="about.ex_description"
+            :entries="about.ex_entries"
+            :introduction="about.ex_introduction"
+          />
+
+          <Board
+            :title="about.ab_title"
+            :description="about.ab_description"
+            :entries="about.ab_entries"
+            :introduction="about.ab_introduction"
+          />
+
+          <Board
+            :title="about.ib_title"
+            :description="about.ib_description"
+            :entries="about.ib_entries"
+            :introduction="about.ib_introduction"
           />
 
         </div>
@@ -50,39 +60,27 @@
       <div class="section">
         <h1>The diplomats</h1>
 
-        <p>The professional diplomats function as correspondents for certain disciplines such as breast surgery and gynaecological or surgical endoscopy. The regional diplomats function as correspondents in various institutions, hospitals or regions and supervise studies in their region.</p>
-
-        <div
-          v-if="project.diplomats"
-          v-for="project in aboutold.projects"
-          v-bind:key="project"
-        >
+        <p>{{ about.di_introduction }}</p>
 
           <button
             id="show-modal"
-            @click="openModal(); modalContent = project.diplomats[0]; modalTitle = 'Diplomats'"
+            @click="openModal(); modalEntries = about.di_entries; modalTitle = 'Diplomats'; modalIntroduction = about.di_introduction"
           >View all Diplomats</button>
 
-        </div>
 
       </div>
 
-      <div
-        v-if="project.partners"
-        v-for="project in aboutold.projects"
-        v-bind:key="project"
-        class="section partners"
-      >
+      <div class="section partners">
 
-        <h1>{{ project.partners[0].title }}</h1>
+        <h1>{{ about.pa_title }}</h1>
 
-        <p>{{ project.partners[0].introduction }}</p>
+        <p>{{ about.pa_introduction }}</p>
 
         <div class="featured_partners">
           <a
-            v-for="partner in project.partners[0].featured_partners"
+            v-for="partner in about.featured_partners"
             class="partner"
-            v-bind:key="partner"
+            v-bind:key="partner.id"
             :href="partner.url"
             :style="{ 'background-image': 'url(' + partner.logo + ')' }"
           > </a>
@@ -90,63 +88,51 @@
 
         <button
           id="show-modal"
-          @click="openModal(); modalContent = project.partners[0]; modalTitle = 'Partners'"
+          @click="openModal(); modalEntries = about.pa_entries; modalTitle = 'Partners'; modalIntroduction = about.pa_introduction"
         >View all Partners</button>
 
       </div>
 
-      <div
-        v-if="project.country_representatives"
-        v-for="project in aboutold.projects"
-        v-bind:key="project"
-        class="section representatives"
-      >
+      <div class="section representatives">
 
-        <h1>{{ project.country_representatives[0].title }}</h1>
+        <h1>{{ about.cr_title }}</h1>
 
-        <p>{{ project.country_representatives[0].introduction }}</p>
+        <p>{{ about.cr_introduction }}</p>
 
         <button
           id="show-modal"
-          @click="openModal(); modalContent = project.country_representatives[0]; modalTitle = 'Country Representatives'"
+          @click="openModal(); modalEntries = about.cr_entries; modalIntroduction = about.cr_introduction; modalTitle = 'Country Representatives'"
         >View all Representatives</button>
 
       </div>
 
-      <div
-        v-if="project.honorary_members"
-        v-for="project in aboutold.projects"
-        v-bind:key="project"
-        class="section members"
-      >
+      <div class="section members">
 
-        <h1>{{ project.honorary_members[0].title }}</h1>
+        <h1>{{ about.hm_title }}</h1>
 
-        <p>{{ project.honorary_members[0].introduction }}</p>
+        <p>{{ about.hm_introduction }}</p>
 
       </div>
 
-      <div
-        v-if="project.cooperations"
-        v-for="project in projects"
-        v-bind:key="project"
-        class="section cooperations"
+      <div class="section cooperations"
       >
 
-        <h1>{{ project.cooperations[0].title }}</h1>
+        <h1>{{ about.co_title }}</h1>
 
-        <p>{{ project.cooperations[0].introduction }}</p>
+        <p>{{ about.co_introduction }}</p>
 
         <div class="organisations">
           <ul
-            v-for="entry in project.cooperations[0].entries"
-            :key="entry"
+            v-for="entry in about.co_entries"
+            :key="entry.id"
           >
 
             <li> {{ entry.title }} </li>
 
           </ul>
         </div>
+
+        <div style='clear:both'></div>
 
       </div>
 
@@ -156,7 +142,8 @@
       v-if="showModal"
       @close="showModal = false"
       :title='modalTitle'
-      :content='modalContent'
+      :entries='modalEntries'
+      :introduction='modalIntroduction'
     >
 
     </CustomComponentModal>
@@ -166,33 +153,25 @@
 
 <script>
 import Disciplines from "~/components/SidebarProjects.vue";
-import Project from "~/components/Project.vue";
 import Board from "~/components/Board.vue";
 import CustomComponentModal from "~/components/CustomComponentModal.vue";
-import aboutold from '~/content/about/index.json';
-import about from '~/content/pages/about.json';
+import about from '~/content/members/combined.js'
 
 export default {
   layout: "about",
   components: {
     CustomComponentModal,
     Disciplines,
-    Project,
     Board
   },
   pageHeader: about.image,
-  pageTitle: "about",
+  pageTitle: about.title,
   data() {
     return {
-      title: "",
       showModal: false,
-      aboutold,
       about,
       modalTitle: "",
       modalContent: "",
-      body: "",
-      thumbnail: "",
-      date: "",
       links: [
         "General Surgery",
         "Otolaryngology",
@@ -358,9 +337,10 @@ div /deep/ ul
 .section.cooperations
   .organisations
     column-count: 2
-    display: block
+    float: left
     ul 
       width: 90%
+      display: block
       margin: 0
       padding: 0 0 0 20px
       -webkit-column-break-inside: avoid

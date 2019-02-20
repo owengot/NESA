@@ -2,7 +2,6 @@
   <div class="mains">
     <div id="sidebar">
       <Sidebar
-        :links="links"
         :vertical="$mq | mq({
       sm: ' ',
       md: 'true'
@@ -11,23 +10,21 @@
       sm: 'true',
       md: 'false'
     })"
+        :links="links"
       />
     </div>
-    <div id="test">
+    <div
+      id="test"
+      class="events"
+    >
 
       <div
-        v-for="project in projects"
-        v-bind:key="project"
+        v-for="entry in entries"
+        v-bind:key="entry.id"
       >
-        <Project
-          v-if="project.sidebar"
-          :project="project"
-          :sidebar="'true'"
-        />
-
-        <Project
-          v-else
-          :project="project"
+   
+        <Event
+          :project="entry"
           :sidebar="'false'"
         />
       </div>
@@ -39,19 +36,21 @@
 
 <script>
 import Sidebar from "~/components/SidebarProjects.vue";
-import Project from "~/components/Event.vue";
+import Event from "~/components/FeaturedEvent.vue";
+import events from '~/content/pages/events.json';
 
 export default {
   layout: "about",
   components: {
     Sidebar,
-    Project
+    Event
   },
-  pageHeader: "../events.jpg",
+  pageHeader: events.image,
   bgPosition: "0 -330px",
-  pageTitle: "events",
+  pageTitle: events.title,
   data() {
     return {
+      events,
       links: [
         "Current Events",
         "Innauguration Ceremony",
@@ -61,22 +60,32 @@ export default {
       ]
     };
   },
+  computed () {
+    this.slugTitle = this.$nuxt.$route.path.split('/')[2]
+  },
   async asyncData({ params }) {
     // const postPromise = process.BROWSER_BUILD
     //   ? import('~/content/blog/posts/' + params.slug + '.json')
     //   : Promise.resolve(
     //       require('~/content/blog/posts/' + params.slug + '.json')
     //     );
-    let post = await import("~/content/events/posts/" + params.slug + ".json");
+    let post = await import("~/content/events/" +
+      params.slug +
+      ".json");
     return post;
   }
 };
 </script>
 
+
 <style lang="sass" scoped>
 
 @import '~/assets/sass/news.sass'
 
+.events 
+  column-count: 2
+  column-gap: 30px
+  
 .mains
   width: 75% !important
   overflow: hidden
@@ -171,20 +180,7 @@ h1
   border-radius: 20px
   margin: 0 0 20px 20px
 
-
 @media all and (max-width: 575px)
-  div /deep/ .gallery 
-    margin: 0px 0px
-    display: inline-block
-    height: auto
-    a
-      width: 48% !important
-      margin: 0 2% 2% 0 !important
-      height: 140px
-      &:nth-child(2n)
-        margin: 0 0 2% 0 !important
-      img
-        height: 130px
   .events 
     column-count: 1
     column-gap: 0px
@@ -213,7 +209,6 @@ h1
     width: 100% !important
   div /deep/ .desc h2
     font-size: 1.35em !important
-    line-height: 1.3em !important
   div /deep/ .project h1
     font-size: 1.35em !important
     line-height: 1.4em !important
@@ -223,11 +218,9 @@ h1
     margin: 0
     clear: both
   div /deep/ .sidebar
-    width: 100% !important
+    width: 100%
     margin: 0
     padding: 0 0px
-    .gallery
-      width: 100% !important
     .section
       margin: 30px 0 20px 0
       overflow-x: auto

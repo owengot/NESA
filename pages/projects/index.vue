@@ -16,12 +16,16 @@
     </div>
     <div id="test">
 
+      <div class="project">
+              <h1>{{ projects.introduction }}</h1>
+      </div>
+      
       <div
-        v-for="project in projects"
-        v-bind:key="project"
+        v-for="project in projects.entries"
+        v-bind:key="project.id"
       >
         <Project
-          v-if="project.sidebar"
+          v-if="project.images || project.video || project.video"
           :project="project"
           :sidebar="'true'"
         />
@@ -40,7 +44,8 @@
 
 <script>
 import Sidebar from "~/components/SidebarProjects.vue";
-import Project from "~/components/Project.vue";
+import Project from "~/components/NewProject.vue";
+import projects from '~/content/projects/combined.js'
 
 export default {
   layout: "about",
@@ -48,11 +53,12 @@ export default {
     Sidebar,
     Project
   },
-  pageHeader: "../projects.jpg",
+  pageHeader: projects.image,
   bgPosition: "0 -100px",
-  pageTitle: "projects",
+  pageTitle: projects.title,
   data() {
     return {
+      projects,
       links: [
         "Interdisciplinary",
         "General Surgery",
@@ -62,15 +68,6 @@ export default {
         "Anaesthesiology"
       ]
     };
-  },
-  async asyncData({ params }) {
-    // const postPromise = process.BROWSER_BUILD
-    //   ? import('~/content/blog/posts/' + params.slug + '.json')
-    //   : Promise.resolve(
-    //       require('~/content/blog/posts/' + params.slug + '.json')
-    //     );
-    let post = await import("~/content/projects/index.json");
-    return post;
   }
 };
 </script>
@@ -99,9 +96,10 @@ export default {
   margin: 0 0 0 30px
 
 
-.project_sidebar 
-  display: block
+div /deep/ .project_sidebar 
+  display: inline-block
   width: 100%
+  margin: 0 0 20px 0
   h1
     width: 100%
     display: block
@@ -126,7 +124,7 @@ intro
   color: black
 
 h1
-  font-size: 2.1em
+  font-size: 1.6em
   line-height: 46px !important
   font-family: 'Open Sans', sans-serif
   font-weight: 800

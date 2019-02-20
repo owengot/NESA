@@ -1,7 +1,7 @@
 {
-  "title": "The Country Representatives",
-  "introduction": "The country representatives represent the members of their countries in NESA and NESA in their countries. They establish contacts to medical institutions, coordinate the communication with diplomats and partners and supervise studies in their countries.",
-  "entries": [{
+  "cr_title": "The Country Representatives",
+  "cr_introduction": "The country representatives represent the members of their countries in NESA and NESA in their countries. They establish contacts to medical institutions, coordinate the communication with diplomats and partners and supervise studies in their countries.",
+  "cr_entries": [{
       "first_name": "Larbi",
       "last_name": "Hireche",
       "location": "Salim Zemirli Hospital, Algiers",

@@ -1,6 +1,6 @@
 {
-  "projects": [{
+  "entries": [{
     "name": "Urology",
-    "body": "Urological operations are planned in combination with the NOS project. The first project will be Transdouglas Nephrectomy."
+    "description": "Urological operations are planned in combination with the NOS project. The first project will be Transdouglas Nephrectomy."
   }]
 }

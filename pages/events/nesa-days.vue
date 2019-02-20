@@ -1,7 +1,9 @@
 <template>
   <div class="mains">
+    <div class="main_left" v-html="$md.render(nesaDays.description)"></div>
     <div id="sidebar">
       <Sidebar
+        :links="links"
         :vertical="$mq | mq({
       sm: ' ',
       md: 'true'
@@ -10,29 +12,18 @@
       sm: 'true',
       md: 'false'
     })"
-        :links="links"
       />
     </div>
-    <div
-      id="test"
-      class="events"
-    >
+    <div id="test">
 
       <div
-        v-for="entry in events"
-        v-bind:key="entry"
+        v-for="entry in nesaDays.entries"
+        v-bind:key="entry.id"
       >
         <Event
-          v-if="entry.sidebar"
           :project="entry"
-          :sidebar="'true'"
         />
 
-        <Event
-          v-else
-          :project="entry"
-          :sidebar="'false'"
-        />
       </div>
 
     </div>
@@ -42,7 +33,9 @@
 
 <script>
 import Sidebar from "~/components/SidebarProjects.vue";
-import Event from "~/components/FeaturedEvent.vue";
+import Event from "~/components/NesaDays.vue";
+import events from '~/content/pages/events.json';
+import nesaDays from '~/content/events/nesa-days.json';
 
 export default {
   layout: "about",
@@ -50,11 +43,13 @@ export default {
     Sidebar,
     Event
   },
-  pageHeader: "../events.jpg",
-  pageTitle: "events",
+  pageHeader: events.image,
   bgPosition: "0 -330px",
+  pageTitle: events.title,
   data() {
     return {
+      events,
+      nesaDays,
       links: [
         "Current Events",
         "Innauguration Ceremony",
@@ -63,10 +58,6 @@ export default {
         "Recommended Events"
       ]
     };
-  },
-  async asyncData({ params }) {
-    let post = await import("~/content/events/posts/recommended-events.json");
-    return post;
   }
 };
 </script>
@@ -75,10 +66,32 @@ export default {
 
 @import '~/assets/sass/news.sass'
 
-.events 
-  column-count: 1
-  column-gap: 30px
-  
+.main_left
+  width: 60% !important
+  float: left
+  margin: 0 0 20px 0
+  color: black !important
+  /deep/ h2
+    font-size: 1.65em
+    line-height: 46px !important
+    font-family: 'Open Sans', sans-serif
+    font-weight: 800
+    color: black
+    width: 95%
+    float: none
+    clear: both !important
+    border-bottom: 1px solid #DDD
+    padding-bottom: 20px
+    margin-bottom: 0px
+  /deep/ p
+    font-size: 1.35em !important
+    line-height: 40px
+    margin: 0 !important
+    color: #000
+    width: 95%
+    display: inline-block
+    padding: 20px 0 0 0
+
 .mains
   width: 75% !important
   overflow: hidden
@@ -173,15 +186,8 @@ h1
   border-radius: 20px
   margin: 0 0 20px 20px
 
+
 @media all and (max-width: 575px)
-  .main
-    width: 100% !important
-    float: none
-  .section
-    width: 90% !important
-    float: none
-  .timeline
-    margin-top: 20px
   div /deep/ .gallery 
     margin: 0px 0px
     display: inline-block
@@ -222,6 +228,7 @@ h1
     width: 100% !important
   div /deep/ .desc h2
     font-size: 1.35em !important
+    line-height: 1.3em !important
   div /deep/ .project h1
     font-size: 1.35em !important
     line-height: 1.4em !important
@@ -266,4 +273,5 @@ h1
       textarea
         background: none
         color: white
+
 </style>

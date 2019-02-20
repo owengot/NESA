@@ -1,7 +1,7 @@
 {
-  "projects": [{
+  "entries": [{
     "name": "The transoral thyroidectomy",
-    "body": "A NESA team consisting of an otolaryngologist, a general surgeon and anatomists conducted at the Erasmus University of Rotterdam the pre-clinical studies concerning the new concept of transoral thyroidectomy. See the following articles.",
+    "description": "A NESA team consisting of an otolaryngologist, a general surgeon and anatomists conducted at the Erasmus University of Rotterdam the pre-clinical studies concerning the new concept of transoral thyroidectomy. See the following articles.",
     "links": [{
       "title": "Wilhelm T., Harlaar J., Kerver A., Kleinrensink GJ., Benhidjeb T.",
       "description": "Transoral endoscopic thyroidectomy - Part 1: rationale and anatomical studies. (Chirurg. 2010;81(1):50-5.)",

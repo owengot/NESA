@@ -1,8 +1,8 @@
 {
-  "title": "The International Board",
-  "description": "* Persons or institutions with high disciplineal and personal reputation \n * Members function as consultants to the Advisory and Executive Boards \n * Members promote the academy in various disciplineal forums",
-  "introduction": "The members of the International Board are persons or institutions with high professional and personal reputation who function as consultants to the Advisory and Executive Boards and promote the academy in various professional forums.",
-  "entries": [{
+  "ib_title": "The International Board",
+  "ib_description": "* Persons or institutions with high disciplineal and personal reputation \n * Members function as consultants to the Advisory and Executive Boards \n * Members promote the academy in various disciplineal forums",
+  "ib_introduction": "The members of the International Board are persons or institutions with high professional and personal reputation who function as consultants to the Advisory and Executive Boards and promote the academy in various professional forums.",
+  "ib_entries": [{
       "first_name": "Michel",
       "last_name": "Bercovier",
       "location": "Université Pierre et Marie Curie, Paris, France",

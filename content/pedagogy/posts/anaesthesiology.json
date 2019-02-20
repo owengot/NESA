@@ -1,9 +1,0 @@
-{
-  "projects": [{
-    "name": "Computer assisted anaesthetic dosage according to pharmacokinetic algorithms",
-    "body": "This modified approach ensures an optimal use of anaesthetic agents taking into account the individual needs of each patient."
-  }, {
-    "name": "Simulation of endotracheal intubation",
-    "body": "These days, the intubation simulators are lacking interactivity. The aim of this study is to elaborate a modified simulator which will be as close as possible to real conditions."
-  }]
-}

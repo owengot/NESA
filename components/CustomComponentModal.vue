@@ -23,7 +23,7 @@
 
               <div class="modal-body">
                 <slot name="introduction">
-                  <p>{{ content.introduction }}</p>
+                  <p>{{ introduction }}</p>
                 </slot>
                 <slot name="body">
 
@@ -69,7 +69,7 @@ import orderBy from "lodash.orderby";
 
 export default {
   name: "Modal_Adaptive",
-  props: ["title", "content"],
+  props: ["title", "entries", "introduction"],
   methods: {
     closeModal() {
       document.documentElement.style.overflow = "auto";
@@ -81,7 +81,7 @@ export default {
         this.title === "Diplomats" ||
         this.title === "The International Board"
       ) {
-        let users = orderBy(this.content.entries, "last_name");
+        let users = orderBy(this.entries, "last_name");
 
         const map1 = users.map(x => x.last_name.substring(0, 1));
 
@@ -103,7 +103,7 @@ export default {
 
         return groups;
       } else if (this.title === "Country Representatives") {
-        let users = orderBy(this.content.entries, "country");
+        let users = orderBy(this.entries, "country");
 
         const map1 = users.map(x => x.country);
 
@@ -125,7 +125,7 @@ export default {
 
         return groups;
       } else if (this.title === "The Executive Board") {
-        let users = this.content.entries;
+        let users = this.entries;
 
         const map1 = users.map(x => x.position);
 
@@ -147,7 +147,7 @@ export default {
 
         return groups;
       } else {
-        let users = orderBy(this.content.entries, "discipline");
+        let users = orderBy(this.entries, "discipline");
 
         const map1 = users.map(x => x.discipline);
 

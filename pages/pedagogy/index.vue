@@ -1,9 +1,16 @@
 <template>
   <div class="mains">
     <div id="test">
+      <div class="introduction">
+<div class="body" v-html="$md.render(pedagogy.description)">
+</div>
+<div class="side">
+<img v-for="item in pedagogy.images" :key='item.id' :src="item" />
+</div>
+      </div>
 
-      <div v-for="project in projects" v-bind:key="project">
-        <Project v-if="project.sidebar" :project="project" :sidebar="'true'" />
+      <div v-for="project in pedagogy.entries" v-bind:key="project.id">
+        <Project v-if="project.images" :project="project" :sidebar="'true'" />
 
         <Project v-else :project="project" :sidebar="'false'" />
       </div>
@@ -14,24 +21,20 @@
 </template>
 
 <script>
-import Sidebar from "~/components/SidebarProjects.vue";
-import Project from "~/components/Project.vue";
+import Project from "~/components/NewProject.vue";
+import pedagogy from '~/content/pages/pedagogy.json';
 
 export default {
   layout: "about",
   components: {
-    Sidebar,
     Project
   },
-  pageHeader: "../pedagogy.jpg",
-  pageTitle: "pedagogy",
+  pageHeader: pedagogy.image,
+  pageTitle: pedagogy.title,
   bgPosition: "0 -180px",
   data() {
     return {
-      title: "",
-      body: "",
-      thumbnail: "",
-      date: ""
+      pedagogy
     };
   },
   async asyncData({ params }) {
@@ -45,6 +48,39 @@ export default {
 <style lang="sass" scoped>
 
 @import '~/assets/sass/news.sass'
+
+.introduction 
+  display: inline-flex
+  justify-content: space-between
+  margin: 0 0 20px 0
+  .body
+    width: 62%
+    font-family: Open Sans, sans-serif
+    /deep/ h2
+      font-size: 1.6em
+      line-height: 46px !important
+      font-weight: 800
+      color: #000 !important
+      width: 95%
+      float: none
+      clear: both !important
+      border-bottom: 1px solid #ddd
+      padding-bottom: 20px
+      margin-bottom: 0
+    /deep/ p
+      font-size: 1.4em !important
+      line-height: 40px
+      margin: 20px 0 0 !important
+      color: #000
+      font-weight: 400
+      width: 95%
+      display: inline-block
+  .side
+    width: 35%
+    img 
+      width: 100%
+      border-radius: 20px
+      margin: 10px 0
 
 .mains
   width: 75% !important

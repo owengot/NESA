@@ -1,22 +1,23 @@
 <template>
 
   <div class="board">
-    <h1>{{ project.title }}</h1>
+    <h1>{{ title }}</h1>
     <div
       class="description"
-      v-html="$md.render(project.description)"
+      v-html="$md.render(description)"
     > </div>
 
     <button
       id="show-modal"
-      @click="openModal(); modalContent = project; modalTitle = project.title"
+      @click="openModal(); modalEntries = entries; modalTitle = title; modalIntroduction = introduction"
     >View Members</button>
 
     <CustomComponentModal
       v-if="showModal"
       @close="showModal = false"
       :title='modalTitle'
-      :content='modalContent'
+      :entries='modalEntries'
+      :introduction='modalIntroduction'
     >
 
     </CustomComponentModal>
@@ -41,9 +42,7 @@ export default {
       modalContent: ""
     };
   },
-  props: {
-    project: []
-  },
+  props: ["title", "description", "entries", "introduction"],
   methods: {
     openModal() {
       this.showModal = true;

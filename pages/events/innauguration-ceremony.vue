@@ -16,11 +16,12 @@
     <div id="test">
 
       <div class="introduction">
-        <p> {{ events[0].body }} </p>
+        <p> {{ innaugurationCeremony.introduction }} </p>
       </div>
 
       <div class="section">
-        <Gallery :project="events[0].gallery" />
+                <Gallery :project="innaugurationCeremony.gallery" />
+
       </div>
     </div>
 
@@ -31,23 +32,25 @@
 
 <script>
 import Sidebar from "~/components/SidebarProjects.vue";
-import Event from "~/components/Event.vue";
 import Gallery from "~/components/Gallery.vue";
 import JQuery from "jquery";
+import events from '~/content/pages/events.json';
+import innaugurationCeremony from '~/content/events/innauguration-ceremony.json';
 let $ = JQuery;
 
 export default {
   layout: "about",
   components: {
     Sidebar,
-    Event,
     Gallery
   },
-  pageHeader: "../events.jpg",
-  pageTitle: "events",
+  pageHeader: events.image,
+  pageTitle: events.title,
   bgPosition: "0 -330px",
   data() {
     return {
+      events,
+      innaugurationCeremony,
       links: [
         "Current Events",
         "Innauguration Ceremony",

@@ -1,8 +1,8 @@
 {
-  "title": "The Advisory Board",
-  "description": "* 14 members \n * 2 members per discipline and 4 additional members \n * Mission: Discipline representation, input of ideas and interdisciplinary thinking",
-  "introduction": "The Advisory Board has 14 members, 2 members per discipline and 4 additional members. The members represent their discipline, bring new ideas to the academy and promote interdisciplinary thinking.",
-  "entries": [{
+  "ab_title": "The Advisory Board",
+  "ab_description": "* 14 members \n * 2 members per discipline and 4 additional members \n * Mission: Discipline representation, input of ideas and interdisciplinary thinking",
+  "ab_introduction": "The Advisory Board has 14 members, 2 members per discipline and 4 additional members. The members represent their discipline, bring new ideas to the academy and promote interdisciplinary thinking.",
+  "ab_entries": [{
       "first_name": "Jacques",
       "last_name": "Corcos",
       "location": "Jewish General Hospital, Montréal, Canada",

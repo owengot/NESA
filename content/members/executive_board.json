@@ -1,8 +1,8 @@
 {
-  "title": "The Executive Board",
-  "description": "* coordinates the projects \n * organizes all events, especially the annual NESA Days \n * manages the network",
-  "introduction": "The Executive Board coordinates the projects of the academy, organizes events, especially the annual NESA Days, and manages the network of the NESA.",
-  "entries": [{
+  "ex_title": "The Executive Board",
+  "ex_description": "* coordinates the projects \n * organizes all events, especially the annual NESA Days \n * manages the network",
+  "ex_introduction": "The Executive Board coordinates the projects of the academy, organizes events, especially the annual NESA Days, and manages the network of the NESA.",
+  "ex_entries": [{
       "title": "Prof.",
       "first_name": "Michael",
       "last_name": "Stark",
