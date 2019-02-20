@@ -1,10 +1,13 @@
-{ 
+{
   "featured_pub": {
     "title": "Uterine Myoma, Myomectomy and Minimally Invasive Treatments.",
     "description": "This book is devoted to myomas, covering both recent advances in our understanding of their behaviour, and an overview of the current options for their minimally invasive treatments, with endoscopy and new devices. As we learn more about the molecular, genetic and biology of myomas, we will be able to develop more innovative treatments.",
     "editors": "Tinelli, Andrea; Malvasi, Antonio",
     "journal": "Springer",
-    "images": ["../publication_1.jpg", "../publication_2.jpg"],
+    "images": [
+      "https://ucarecdn.com/e6f2c39c-75b2-43b2-803a-f8ff883adfa3~2/nth/0/",
+      "https://ucarecdn.com/e6f2c39c-75b2-43b2-803a-f8ff883adfa3~2/nth/1/"
+    ],
     "url": "https://www.springer.com/gp/book/9783319103044"
   }
 }
