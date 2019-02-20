@@ -1,18 +1,22 @@
 {
-  "entries": [{
-    "title": "2nd World Congress on Surgery and Anesthesia",
-    "date": "June 11-12, 2018 Rome, Italy",
-    "image": "/images/events/recommended/11-6-2018.jpg",
-    "url": "http://scientificfederation.com/surgery-anesthesia-2018/"
-  }, {
-    "title": "3rd World Congress on Midwifery and Women's Health",
-    "date": "November 13-14, 2017 London, UK",
-    "image": "/images/events/recommended/13-11-2017.jpg",
-    "url": "http://midwifery.conferenceseries.com/europe/"
-  }, {
-    "title": "The MCA Scientific Events - 1st World Congress on Maternal Fetal Neonatal Medicine",
-    "date": "April 24-26, 2017 Rome, Italy",
-    "image": "/images/events/recommended/24-04-2017.jpg",
-    "url": "http://bit.ly/WorldMFNM_Site_Banner"
-  }]
+  "entries": [
+    {
+      "title": "2nd World Congress on Surgery and Anesthesia",
+      "date": "June 11-12, 2018 Rome, Italy",
+      "image": "https://ucarecdn.com/af340684-18b7-4f1e-97f0-d1f95647a0d3/",
+      "url": "http://scientificfederation.com/surgery-anesthesia-2018/"
+    },
+    {
+      "title": "3rd World Congress on Midwifery and Women's Health",
+      "date": "November 13-14, 2017 London, UK",
+      "image": "https://ucarecdn.com/48834860-eff3-499a-b2bd-33f123f91c13/",
+      "url": "http://midwifery.conferenceseries.com/europe/"
+    },
+    {
+      "title": "The MCA Scientific Events - 1st World Congress on Maternal Fetal Neonatal Medicine",
+      "date": "April 24-26, 2017 Rome, Italy",
+      "image": "https://ucarecdn.com/9b4dd222-37ba-4432-b631-5ccb5c5c92fe/",
+      "url": "http://bit.ly/WorldMFNM_Site_Banner"
+    }
+  ]
 }
