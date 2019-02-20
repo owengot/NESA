@@ -1,55 +1,73 @@
 {
   "introduction": "The NESA was inaugurated in Berlin on October 29, 2004, in presence of international members of the scientific community, delegates from the WHO and the EU as well as ambassadors and representatives from European and non-European countries.",
-  "gallery": [{
-      "caption": "image",
-      "url": "/images/inauguration/inauguration_1.jpg"
-    }, {
-      "caption": "image",
-      "url": "/images/inauguration/inauguration_2.jpg"
-    }, {
-      "caption": "image",
-      "url": "/images/inauguration/inauguration_3.jpg"
-    }, {
-      "caption": "image",
-      "url": "/images/inauguration/inauguration_4.jpg"
-    }, {
-      "caption": "image",
-      "url": "/images/inauguration/inauguration_5.jpg"
-    }, {
-      "caption": "image",
-      "url": "/images/inauguration/inauguration_6.jpg"
-    }, {
-      "caption": "image",
-      "url": "/images/inauguration/inauguration_7.jpg"
-    }, {
-      "caption": "image",
-      "url": "/images/inauguration/inauguration_9.jpg"
-    }, {
-      "caption": "image",
-      "url": "/images/inauguration/inauguration_10.jpg"
-    }, {
-      "caption": "image",
-      "url": "/images/inauguration/inauguration_11.jpg"
-    }, {
-      "caption": "image",
-      "url": "/images/inauguration/inauguration_12.jpg"
-    }, {
-      "caption": "image",
-      "url": "/images/inauguration/inauguration_13.jpg"
-    }, {
-      "caption": "image",
-      "url": "/images/inauguration/inauguration_14.jpg"
-    }, {
-      "caption": "image",
-      "url": "/images/inauguration/inauguration_18.jpg"
-    }, {
-      "caption": "image",
-      "url": "/images/inauguration/inauguration_19.jpg"
-    }, {
-      "caption": "image",
-      "url": "/images/inauguration/inauguration_20.jpg"
-    }, {
-      "caption": "image",
-      "url": "/images/inauguration/inauguration_21.jpg"
-    }]
+  "gallery": [
+    {
+      "url": "https://ucarecdn.com/26dd3f31-a4da-460a-bf71-cb9166a965ee/",
+      "caption": "image"
+    },
+    {
+      "url": "https://ucarecdn.com/8e901fb5-1aee-4a09-83c3-30c0d4197ff0/",
+      "caption": "image"
+    },
+    {
+      "url": "https://ucarecdn.com/a338edbf-05cc-49d5-9e93-bf7c4ba15db3/",
+      "caption": "Prof. Michael Stark, NESA President"
+    },
+    {
+      "url": "https://ucarecdn.com/e59fdd43-280f-4041-898d-1705e06a68be/",
+      "caption": "Dr. Francesco De Meo, NESA Director"
+    },
+    {
+      "url": "https://ucarecdn.com/26ae3c94-654a-4c31-8cb5-b55003ea6b90/",
+      "caption": "image"
+    },
+    {
+      "url": "https://ucarecdn.com/a078f3bd-6dbd-4c79-9062-0ff7000c63c1/",
+      "caption": "Prof. Peter Biro, Prof. Albert Huch, Prof. Michael Stark"
+    },
+    {
+      "url": "https://ucarecdn.com/ffcf6b4a-b2c8-4a09-9e3a-f33a32d6f981/",
+      "caption": "image"
+    },
+    {
+      "url": "https://ucarecdn.com/86c8c360-a491-449e-a0b8-ba7ec35b8fdd/",
+      "caption": "image"
+    },
+    {
+      "url": "https://ucarecdn.com/6843183c-e341-4100-8a7d-0b629801536a/",
+      "caption": "image"
+    },
+    {
+      "url": "https://ucarecdn.com/e63e3024-5c22-479c-b408-0c2bb1a02a3f/",
+      "caption": "image"
+    },
+    {
+      "url": "https://ucarecdn.com/8fc6b418-a812-4343-b669-14b548ddd7a0/",
+      "caption": "image"
+    },
+    {
+      "url": "https://ucarecdn.com/43b31a8f-0c15-499f-a782-a769dbd538c0/",
+      "caption": "image"
+    },
+    {
+      "url": "https://ucarecdn.com/0956fc82-6f27-4475-9012-a4fa5cd603ae/",
+      "caption": "image"
+    },
+    {
+      "url": "https://ucarecdn.com/09cd104d-51e5-4874-91b9-9eb786e46962/",
+      "caption": "image"
+    },
+    {
+      "url": "https://ucarecdn.com/7669e5e8-fd14-401b-ac81-ce3c27dc642a/",
+      "caption": "image"
+    },
+    {
+      "url": "https://ucarecdn.com/7572ac6c-85f2-4e6c-bf34-c654e4ffd1bf/",
+      "caption": "image"
+    },
+    {
+      "url": "https://ucarecdn.com/9b8521d7-7577-48f3-b5e9-c3b36cc1f2c7/",
+      "caption": "image"
+    }
+  ]
 }
