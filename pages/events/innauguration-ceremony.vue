@@ -79,11 +79,11 @@ div /deep/ .gallery
   a
     width: 18% !important
     margin: 0 2% 2% 0 !important
-    height: 150px
+    height: auto
     &:nth-child(5n)
       margin: 0 0 2% 0 !important
     img
-      height: 150px
+      height: auto
 
 @import '~/assets/sass/news.sass'
 
