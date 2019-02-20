@@ -143,13 +143,13 @@ h1
 div /deep/ .gallery 
   margin: 10px 0 0 5px
   a
-    width: 31% !important
+    width: 23% !important
     margin: 0 2% 2% 0 !important
-    height: 150px
-    &:nth-child(3n)
+    height: auto
+    &:nth-child(4n)
       margin: 0 0 2% 0 !important
     img
-      height: 150px
+      height: auto
 
 .entry
   color: black

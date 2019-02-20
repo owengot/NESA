@@ -40,14 +40,12 @@
                       class="user"
                     >
 
-                      <p v-if="user.url"><a
-                          :href="user.url"
-                          target="_blank"
-                        >{{ user.first_name }} {{ user.last_name }}</a> ({{ user.location }})<span v-if="value != user.discipline">, {{ user.discipline }} </span></p>
-
                       <p v-if="user.position">{{ user.title }} {{ user.first_name }} {{ user.last_name }} </p>
 
-                      <p v-else>{{ user.first_name }} {{ user.last_name }} ({{ user.location }})<span v-if="value != user.discipline">, {{ user.discipline }} </span> </p>
+                      <p v-else><a v-if="user.url"
+                          :href="user.url"
+                          target="_blank"
+                        >{{ user.first_name }} {{ user.last_name }}</a> <span v-else>{{ user.first_name }} {{ user.last_name }}</span> <span v-if="user.location"> ({{ user.location }})</span><span v-if="value != user.discipline">, {{ user.discipline }} </span> </p>
 
                     </div>
 
