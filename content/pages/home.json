@@ -2,16 +2,16 @@
   "slide1": {
     "name": "Welcome to NESA",
     "caption": "The New European Surgical Academy (NESA) was founded in 2004 as an initiative of leading surgeons from different disciplines in order to re-evaluate existing surgical procedures, introduce new surgical procedures and ideas, as well as share and transfer the gathered know-how to countries with limited resources.",
-    "image": "/images/uploads/about.jpg"
+    "image": "https://ucarecdn.com/481584ff-77ee-40cb-9477-08c2d0693d4b/"
   },
   "slide2": {
     "name": "Our Projects",
     "caption": "NESA coordinates international studies in the fields of general surgery, gynaecology, urology, otolaryngology and anaesthesiology. From caeserian sections for universal use to standardization of surgical procedures, find out more about these initiatives.",
-    "image": "/images/uploads/projects.jpg"
+    "image": "https://ucarecdn.com/648fb97e-2aba-49b3-870c-b4c1f938c341/"
   },
   "slide3": {
     "name": "Transfer of Knowledge",
     "caption": "The NESA's aim is not only to optimize existing surgical procedures or introduce new ones. An essential goal of the academy is to promote the transfer of knowledge, especially in direction of countries with limited resources.",
-    "image": "/images/uploads/knowledge.jpg"
+    "image": "https://ucarecdn.com/6c69856e-c643-4745-a205-5ba841f2124f/"
   }
 }
