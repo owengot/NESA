@@ -6,21 +6,21 @@
   
    <no-ssr>
      <Flickity ref="flickity" :options="flickityOptions">
-       <div :style="{ backgroundImage: `url(${home.slide1.image})` }">
+       <div class="image" :style="{ backgroundImage: `url(${home.slide1.image})` }">
 	       <div class="caption center-left about">
 	               <div class="title"><h3>{{ home.slide1.name }}</h3></div>
 	               <p>{{ home.slide1.caption }}</p>
 	       		   <nuxt-link to="about">Find out more</nuxt-link>
 	       </div>
        </div>
-       <div :style="{ backgroundImage: `url(${home.slide2.image})` }">
+       <div class="image" :style="{ backgroundImage: `url(${home.slide2.image})` }">
            <div class="caption center-left projects">
                    <div class="title"><h3>{{ home.slide2.name }}</h3></div>
                    <p>{{ home.slide2.caption }}</p>
            		   <nuxt-link to="projects">Find out more</nuxt-link>
            </div>
        </div>
-       <div :style="{ backgroundImage: `url(${home.slide3.image})` }">
+       <div class="image" :style="{ backgroundImage: `url(${home.slide3.image})` }">
 	       <div class="caption center-left knowledge">
 	               <div class="title"><h3>{{ home.slide3.name }}</h3></div>
 	               <p>{{ home.slide3.caption }}</p>
@@ -69,7 +69,19 @@ export default {
 
 <style lang="sass" scoped>
 
-
+.flickity-slider
+  div:nth-child(1)
+      background-position: 0px 0px !important
+      background-size: 100% !important
+      background-repeat: no-repeat
+  div:nth-child(2)
+      background-position: -40px -160px !important
+      background-size: 125% !important
+      background-repeat: no-repeat
+  div:nth-child(3)
+      background-position: 0px 0 !important
+      background-size: 135% !important
+      background-repeat: no-repeat
 
 .flickity-enabled
   width: 100%
@@ -79,12 +91,11 @@ export default {
   /deep/ .flickity-page-dots .is-selected
     background-color: #016895 !important
 
-  div
-    width: 100%
-    height: 100%
-    position: relative
-    display: inline-block
-    background-size: cover !important;
+.image
+  width: 100%
+  height: 100%
+  position: relative
+  display: inline-block
 
 .subtitle
   font-weight: 300
@@ -103,8 +114,8 @@ export default {
   border-radius: 20px
   color: black !important
   position: absolute !important
-  bottom: 80px !important
-  left: 30px
+  bottom: 40px !important
+  left: 10px
   background: rgba(255, 255, 255, 0.95)
   a
     font-size: 1.12em
@@ -216,11 +227,9 @@ export default {
       margin: 2px 10px 10px 10px
       font-size: 1em !important
       width: 95%
-
-.flickity-enabled
-  /deep/ .flickity-page-dots
-  	display: none !important
-
+  .flickity-enabled
+    /deep/ .flickity-page-dots
+  	  display: none !important
   .flickity-slider
     div:nth-child(1)
         background-position: 0px 0px !important
