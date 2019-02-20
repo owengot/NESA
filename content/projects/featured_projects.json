@@ -1,18 +1,24 @@
 {
-  "entries": [{
+  "entries": [
+    {
       "name": "VIEZION",
       "description": "In January 2016 the NESA launched the VIEZION working group with the aim to optimize post-surgical oncological treatment by combining targeted chemotherapy with stem-cells and the Preimplantation Factor (PIF) therapy for improving natural immunology. Institutions who have joined this project are: the Department of Applied Stem Cell Biology and Cell Technology at the University of Leipzig, Germany, the BioIncept in New Jersey, USA, the Hartmann Oncological Institute in Paris, France and the Gynecological Oncological Department at Charite University Hospital, Berlin, Germany."
     },
     {
       "name": "Standardization of surgical procedures",
       "description": "Many studies compare different surgical approaches, often, however, in each group the procedures might show some variations. As only standardized surgical methods are optimal for comparing methods, surgeons and institutions, the NESA promotes meta-analysis studies with standardized methods. View the PDF."
-    }, {
+    },
+    {
       "name": "Towards an optimized Cesarean Section for universal use",
       "description": "The NESA promotes an evidence-based Cesarean Section based on the principles of minimalism. One of the unsolved questions is the optimal place to open the uterus with or without opening the bladder plica. Although the uterus and the cervix comprise one organ, their histology and function are completely different as determined by the embryology. Revisiting the embryology might solve this question and the NESA initiated a 2-armed prospective, international, multi-centric study in cooperation with University Hospital of Versaille in Poissy and ELSAN Hospital Group, France."
-    }, {
+    },
+    {
       "name": "All-African Surgical Database",
       "description": "Following the successful surgical workshop conducted by NESA in Dakar, Senegal in May 2015, in cooperation with FIGO and the ELSAN Hospital Group in France, the NESA was asked to start the all-African surgical database in order to improve surgical practice, surgical outcome and to enable data collection and comparison studies. The NESA asked the ISGE to join this project. /n /n The first stage has been to define standardized surgical methods and to implement these methods in the daily work. Through the series of workshops and lectures, optimal methods of surgery were distributed in several African countries. The participating surgeons disseminate information to their colleagues and the details of the surgeries performed with the modified techniques are collected in a database created by the Institute of Numerical Mathematics at the Russian Academy of Sciences (INM RAS), Moscow, Russia. The first results of the project are [reflected in the publication](http://www.oatext.com/Towards-a-unified-evidence-based-cesarean-section-in-the-african-continent-the-introduction-of-the-all-african-surgical-database.php).",
-      "images": ["/images/projects/african_surgical%20database_3.jpg", "/images/projects/african_surgical%20database_4.jpg"]
+      "images": [
+        "https://ucarecdn.com/a979ff01-c448-4db4-b11e-30efd05edd3c~2/nth/0/",
+        "https://ucarecdn.com/a979ff01-c448-4db4-b11e-30efd05edd3c~2/nth/1/"
+      ]
     },
     {
       "name": "Natural Orifice Surgery / Scarless Operations Working Group",
