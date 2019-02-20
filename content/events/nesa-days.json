@@ -169,9 +169,7 @@
           "url": "http://www.nesacademy.org/downloads/nesadays2009/programme2009.pdf"
         }
       ],
-      "slider": [
-        "https://ucarecdn.com/9a77aad5-769c-4072-84e1-1dadd2a18928~1/nth/0/"
-      ]
+      "slider": ""
     },
     {
       "title": "USP NESA Innovation Days 2012",
@@ -214,9 +212,7 @@
           "url": "http://www.nesacademy.org/downloads/nesadays2014/Program_Abstracts_AOGQ_NESA_v20140902-5.pdf"
         }
       ],
-      "slider": [
-        "https://ucarecdn.com/8a89253a-160f-4a10-887f-327f4a63262c~1/nth/0/"
-      ],
+      "slider": "",
       "gallery": [
         {
           "url": "https://ucarecdn.com/d26b069c-20bb-4d4b-a974-5e09338289eb/",
@@ -258,12 +254,10 @@
     },
     {
       "title": "NESA Days 2015",
-      "description": " ",
+      "description": "",
       "location": "Berlin",
       "date": "September 18–20, 2015",
-      "slider": [
-        "https://ucarecdn.com/2b0ec7fe-3212-40b0-a793-d245f1222222~1/nth/0/"
-      ],
+      "slider": "",
       "gallery": [
         {
           "url": "https://ucarecdn.com/68fd1eea-0c10-4c1c-8b2e-3c30b4b8273c/",
