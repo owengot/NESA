@@ -1,109 +1,132 @@
 {
-  "entries": [{
-    "date": "June 23, 2006",
-    "entry": "The Natural Orifice Surgery / Scarless operations (NOS / SLO) working group had its first meeting in Berlin, Germany."
-  }, {
-    "date": "March 28, 2007",
-    "entry": "The second meeting of the NOS / SLO working group took place at the Savoy Hotel, Berlin. More information on [the NOS/SLO working group](http://www.nesacademy.org/interdisciplinary.html#NOS)"
-  }, {
-    "date": "January 10-11, 2008",
-    "entry": "Michael Stark and George Peltecu took part as advisors in the WHO conference ['Safe Surgery Saves Lives'](http://www.who.int/patientsafety/events/08/10_01_2008_geneva/en/index.html), which took place in Geneva, Switzerland. The NESA participates in the formulation and distribution of a surgical checklist that will contribute to the safety of surgery. \n\n The NESA has signed a Letter of Endorsements, showing herewith its support of the creation of the Safe Surgery Saves Lives Project by the WHO World Alliance of Patient Safety.",
-    "links": [{
-      "description": "Letter of Endorsements",
-      "url": "http://www.nesacademy.org/downloads/WHOLoE.pdf"
-    }],
-    "gallery": [{
-        "caption": "image",
-        "url": "/images/events/other/WHO_1.jpg"
-      },
-      {
-        "caption": "image",
-        "url": "/images/events/other/WHO_2.jpg"
-      }
-    ]
-  }, {
-    "date": "January 10-11, 2008",
-    "entry": "The NESA participated in the launching of the WHO checklist in Washington.",
-    "gallery": [{
-        "caption": "image",
-        "url": "/images/events/other/WHO_1.jpg"
-      },
-      {
-        "caption": "image",
-        "url": "/images/events/other/WHO_2.jpg"
-      }, {
-        "caption": "image",
-        "url": "/images/events/other/WHO_3.jpg"
-      }, {
-        "caption": "image",
-        "url": "/images/events/other/WHO_4.jpg"
-      }, {
-        "caption": "image",
-        "url": "/images/events/other/WHO_5.jpg"
-      }, {
-        "caption": "image",
-        "url": "/images/events/other/WHO_6.jpg"
-      }, {
-        "caption": "image",
-        "url": "/images/events/other/WHO_7.jpg"
-      }, {
-        "caption": "image",
-        "url": "/images/events/other/WHO_8.jpg"
-      }, {
-        "caption": "image",
-        "url": "/images/events/other/WHO_9.jpg"
-      }, {
-        "caption": "image",
-        "url": "/images/events/other/WHO_10.jpg"
-      }
-    ]
-  }, {
-    "date": "December 12, 2008",
-    "entry": "During the **SOGOG 2008** and **1st National Congress on Evidence Based Ob/Gyn Practices**, Michael Stark delivered the **Silver Jubilee Oration**. The conference was hosted by the Ahmedabad Obstetrics and Gynaecological Society."
-  }, {
-    "date": "March 20, 2010",
-    "entry": "The NESA was invited to conduct the conference- **The delivery room in the 21st century – humanity and security.**"
-  }, {
-    "date": "March 4, 2011",
-    "entry": "The NESA conducted a [surgical course in Wroclaw, Poland](http://www.poltowgin.pl/files/STARK.pdf)."
-  }, {
-    "date": "May 30, 2011",
-    "entry": "Michel Odent, London, and Michael Stark conducted a seminar in Taranto, Italy, concerning quality in obstetrics and gynaecology.",
-    "gallery": [{
-        "caption": "image",
-        "url": "/images/events/other/30-05-2011_1.jpg"
-      },
-      {
-        "caption": "image",
-        "url": "/images/events/other/30-05-2011_2.jpg"
-      }, {
-        "caption": "image",
-        "url": "/images/events/other/30-05-2011_3.jpg"
-      }
-    ]
-  }, {
-    "date": "June, 2012",
-    "entry": "The NESA, in cooperation with FIGO and MedicalAidFilms, conducted a surgical and ultrasound course at the Yalgado Ouedragogo hospital in Ouagadougou, Burkina Faso.",
-    "gallery": [{
-        "caption": "image",
-        "url": "/images/events/other/06-2012_1.jpg"
-      },
-      {
-        "caption": "image",
-        "url": "/images/events/other/06-2012_2.jpg"
-      }, {
-        "caption": "image",
-        "url": "/images/events/other/06-2012_3.jpg"
-      }, {
-        "caption": "image",
-        "url": "/images/events/other/06-2012_4.jpg"
-      }, {
-        "caption": "image",
-        "url": "/images/events/other/06-2012_5.jpg"
-      }, {
-        "caption": "image",
-        "url": "/images/events/other/06-2012_6.jpg"
-      }
-    ]
-  }]
+  "entries": [
+    {
+      "date": "June 23, 2006",
+      "entry": "The Natural Orifice Surgery / Scarless operations (NOS / SLO) working group had its first meeting in Berlin, Germany."
+    },
+    {
+      "date": "March 28, 2007",
+      "entry": "The second meeting of the NOS / SLO working group took place at the Savoy Hotel, Berlin. More information on [the NOS/SLO working group](http://www.nesacademy.org/interdisciplinary.html#NOS)"
+    },
+    {
+      "date": "January 10-11, 2008",
+      "entry": "Michael Stark and George Peltecu took part as advisors in the WHO conference ['Safe Surgery Saves Lives'](http://www.who.int/patientsafety/events/08/10_01_2008_geneva/en/index.html), which took place in Geneva, Switzerland. The NESA participates in the formulation and distribution of a surgical checklist that will contribute to the safety of surgery. \n\n The NESA has signed a Letter of Endorsements, showing herewith its support of the creation of the Safe Surgery Saves Lives Project by the WHO World Alliance of Patient Safety.",
+      "gallery": [
+        {
+          "url": "https://ucarecdn.com/0582b41f-e80a-41f1-89d1-c03991230d11/",
+          "caption": "image"
+        },
+        {
+          "url": "https://ucarecdn.com/5fc7a0ae-78d7-4826-979c-1bcf8a6df13b/",
+          "caption": "image"
+        }
+      ]
+    },
+    {
+      "date": "January 10-11, 2008",
+      "entry": "The NESA participated in the launching of the WHO checklist in Washington.",
+      "gallery": [
+        {
+          "url": "https://ucarecdn.com/35496a1d-e4e4-414f-82be-8844334564fc/",
+          "caption": "image"
+        },
+        {
+          "url": "https://ucarecdn.com/2497c296-81ea-4a66-a547-efefa9526329/",
+          "caption": "image"
+        },
+        {
+          "url": "https://ucarecdn.com/33ba538a-bfd9-432e-bf87-7d0bf4420f57/",
+          "caption": "image"
+        },
+        {
+          "url": "https://ucarecdn.com/aabf81a0-8bbf-48c6-a4a8-9ae9018a31a7/",
+          "caption": "image"
+        },
+        {
+          "url": "https://ucarecdn.com/5216e39a-8adf-466c-8668-e78ab89d548b/",
+          "caption": "image"
+        },
+        {
+          "url": "https://ucarecdn.com/ac90fbca-db3c-416b-8f17-20a1a5de3837/",
+          "caption": "image"
+        },
+        {
+          "url": "https://ucarecdn.com/6241c208-d6df-453b-b1ae-ad0f461e2328/",
+          "caption": "image"
+        },
+        {
+          "url": "https://ucarecdn.com/8b88176a-d6d8-48a6-8efa-ca3910acbe16/",
+          "caption": "image"
+        },
+        {
+          "url": "https://ucarecdn.com/0464fdcd-24e9-4a8c-80ef-7aaae6584267/",
+          "caption": "image"
+        },
+        {
+          "url": "https://ucarecdn.com/c767bcde-c0e8-47cd-9d0a-10ccee8a8d69/",
+          "caption": "image"
+        }
+      ]
+    },
+    {
+      "date": "December 12, 2008",
+      "entry": "During the **SOGOG 2008** and **1st National Congress on Evidence Based Ob/Gyn Practices**, Michael Stark delivered the **Silver Jubilee Oration**. The conference was hosted by the Ahmedabad Obstetrics and Gynaecological Society."
+    },
+    {
+      "date": "March 20, 2010",
+      "entry": "The NESA was invited to conduct the conference- **The delivery room in the 21st century – humanity and security.**"
+    },
+    {
+      "date": "March 4, 2011",
+      "entry": "The NESA conducted a [surgical course in Wroclaw, Poland](http://www.poltowgin.pl/files/STARK.pdf)."
+    },
+    {
+      "date": "May 30, 2011",
+      "entry": "Michel Odent, London, and Michael Stark conducted a seminar in Taranto, Italy, concerning quality in obstetrics and gynaecology.",
+      "gallery": [
+        {
+          "url": "https://ucarecdn.com/9f3bdc31-269b-48c8-9572-0595095fce54/",
+          "caption": "image"
+        },
+        {
+          "url": "https://ucarecdn.com/aed64301-806c-44b9-9d90-d9080675b947/",
+          "caption": "image"
+        },
+        {
+          "url": "https://ucarecdn.com/bd8c5b2b-111c-446c-a1be-4e3221d8e7e8/",
+          "caption": "image"
+        }
+      ]
+    },
+    {
+      "date": "June, 2012",
+      "entry": "The NESA, in cooperation with FIGO and MedicalAidFilms, conducted a surgical and ultrasound course at the Yalgado Ouedragogo hospital in Ouagadougou, Burkina Faso.",
+      "gallery": [
+        {
+          "url": "https://ucarecdn.com/1e75368c-ba04-4578-9289-667adc89eee7/",
+          "caption": "image"
+        },
+        {
+          "url": "https://ucarecdn.com/ae31ccb0-c180-4656-8268-1cd5df537839/",
+          "caption": "image"
+        },
+        {
+          "url": "https://ucarecdn.com/044f0d43-4264-45b6-9932-74b4ca467adb/",
+          "caption": "image"
+        },
+        {
+          "url": "https://ucarecdn.com/2553bfa1-7a64-4467-abfa-fe41dabf2df4/",
+          "caption": "image"
+        },
+        {
+          "url": "https://ucarecdn.com/226e9ba4-bbe5-4622-b3ed-cc0e035d963b/",
+          "caption": "image"
+        },
+        {
+          "url": "https://ucarecdn.com/897f3a4d-86ed-4df0-a8ab-02de696f688c/",
+          "caption": "image"
+        }
+      ]
+    }
+  ]
 }
