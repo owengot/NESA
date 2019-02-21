@@ -1,6 +1,12 @@
 {
-  "entries": [{
-    "name": "Urology",
-    "description": "Urological operations are planned in combination with the NOS project. The first project will be Transdouglas Nephrectomy."
-  }]
+  "entries": [
+    {
+      "name": "Urology",
+      "description": "Urological operations are planned in combination with the NOS project.\n\nThe first project will be Transdouglas Nephrectomy.",
+      "gallery": {
+        "caption": "  ",
+        "url": "/images/uploads/06-2012_5.jpg"
+      }
+    }
+  ]
 }
