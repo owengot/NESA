@@ -1,16 +1,14 @@
 <template>
   <div class="mains">
-    
     <div id="test">
-
       <div class="block">
-      <div class="col_left">
-      <h1>{{ about.title }}</h1>
-      <p v-html="$md.render(about.description)"></p>
-      </div>
-      <div class="col_right">
-        <blockquote>{{ about.quote }}</blockquote>
-      </div>
+        <div class="col_left">
+          <h1>{{ about.title }}</h1>
+          <p v-html="$md.render(about.description)"></p>
+        </div>
+        <div class="col_right">
+          <blockquote>{{ about.quote }}</blockquote>
+        </div>
       </div>
 
       <div class="section">
@@ -18,18 +16,13 @@
 
         <p>The following disciplines are represented in the NESA.</p>
 
-        <Disciplines
-          :links="links"
-          :vertical="'false'"
-        />
-
+        <Disciplines :links="links" :vertical="'false'"/>
       </div>
 
       <div class="section">
         <h1>Structure</h1>
 
         <div class="section boards">
-
           <Board
             :title="about.ex_title"
             :description="about.ex_description"
@@ -50,11 +43,9 @@
             :entries="about.ib_entries"
             :introduction="about.ib_introduction"
           />
-
         </div>
 
         <p>All other members are voluntary members, should identify with the aims and goals of the NESA and are appointed for limited periods.</p>
-
       </div>
 
       <div class="section">
@@ -62,16 +53,13 @@
 
         <p>{{ about.di_introduction }}</p>
 
-          <button
-            id="show-modal"
-            @click="openModal(); modalEntries = about.di_entries; modalTitle = 'Diplomats'; modalIntroduction = about.di_introduction"
-          >View all Diplomats</button>
-
-
+        <button
+          id="show-modal"
+          @click="openModal(); modalEntries = about.di_entries; modalTitle = 'Diplomats'; modalIntroduction = about.di_introduction"
+        >View all Diplomats</button>
       </div>
 
       <div class="section partners">
-
         <h1>{{ about.pa_title }}</h1>
 
         <p>{{ about.pa_introduction }}</p>
@@ -83,18 +71,16 @@
             v-bind:key="partner.id"
             :href="partner.url"
             :style="{ 'background-image': 'url(' + partner.logo + ')' }"
-          > </a>
+          ></a>
         </div>
 
         <button
           id="show-modal"
           @click="openModal(); modalEntries = about.pa_entries; modalTitle = 'Partners'; modalIntroduction = about.pa_introduction"
         >View all Partners</button>
-
       </div>
 
       <div class="section representatives">
-
         <h1>{{ about.cr_title }}</h1>
 
         <p>{{ about.cr_introduction }}</p>
@@ -103,51 +89,36 @@
           id="show-modal"
           @click="openModal(); modalEntries = about.cr_entries; modalIntroduction = about.cr_introduction; modalTitle = 'Country Representatives'"
         >View all Representatives</button>
-
       </div>
 
       <div class="section members">
-
         <h1>{{ about.hm_title }}</h1>
 
         <p>{{ about.hm_introduction }}</p>
-
       </div>
 
-      <div class="section cooperations"
-      >
-
+      <div class="section cooperations">
         <h1>{{ about.co_title }}</h1>
 
         <p>{{ about.co_introduction }}</p>
 
         <div class="organisations">
-          <ul
-            v-for="entry in about.co_entries"
-            :key="entry.id"
-          >
-
-            <li> {{ entry.title }} </li>
-
+          <ul v-for="entry in about.co_entries" :key="entry.id">
+            <li>{{ entry.title }}</li>
           </ul>
         </div>
 
-        <div style='clear:both'></div>
-
+        <div style="clear:both"></div>
       </div>
-
     </div>
 
     <CustomComponentModal
       v-if="showModal"
       @close="showModal = false"
-      :title='modalTitle'
-      :entries='modalEntries'
-      :introduction='modalIntroduction'
-    >
-
-    </CustomComponentModal>
-
+      :title="modalTitle"
+      :entries="modalEntries"
+      :introduction="modalIntroduction"
+    ></CustomComponentModal>
   </div>
 </template>
 
@@ -155,7 +126,7 @@
 import Disciplines from "~/components/SidebarProjects.vue";
 import Board from "~/components/Board.vue";
 import CustomComponentModal from "~/components/CustomComponentModal.vue";
-import about from '~/content/members/combined.js'
+import about from "~/content/members/combined.js";
 
 export default {
   layout: "about",
@@ -452,6 +423,10 @@ h1
 
 
 @media all and (max-width: 575px)
+  div /deep/ .col_left
+    width: 100%
+  div /deep/ .col_right
+    display: none
   div 
     .mains
       width: 90% !important
