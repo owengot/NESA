@@ -1,108 +1,22 @@
 <template>
   <div class="sidebar">
-
     <div class="section">
       <h1>Subscribe to our Newsletter</h1>
       <p>Get regular updates on all the latest news and current events from NESA</p>
-      <form
-        name="contact"
-        action="/thank-you"
-        netlify-honeypot="bot-field"
-        method="post"
-        netlify
-      >
-        <input
-          type="hidden"
-          name="form-name"
-          value="contact"
-        />
+      <form name="contact" action="/thank-you" netlify-honeypot="bot-field" method="post" netlify>
+        <input type="hidden" name="form-name" value="contact">
         <p class="hidden">
-          <label>Don’t fill this out: <input name="bot-field"></label>
+          <label>
+            Don’t fill this out:
+            <input name="bot-field">
+          </label>
         </p>
-        <input
-          class="form-field"
-          name="name"
-          id="name"
-          placeholder="Your name"
-        />
-        <input
-          class="form-field"
-          name="email"
-          id="email"
-          placeholder="Your email address"
-        />
-        <input
-          class="form-button"
-          type="submit"
-          value="Subscribe"
-        />
+        <input class="form-field" name="name" id="name" placeholder="Your name">
+        <input class="form-field" name="email" id="email" placeholder="Your email address">
+        <input class="form-button" type="submit" value="Subscribe">
       </form>
 
       <p class="gdpr">View our GDPR policy on Data Protection</p>
-
-    </div>
-
-    <div class="section">
-      <h1>Follow us</h1>
-
-      <div class="social">
-        <a
-          href="twitter.com/nesa"
-          class="twitter"
-        ></a>
-        <a
-          href="twitter.com/nesa"
-          class="rss"
-        ></a>
-
-      </div>
-
-    </div>
-
-    <div class="section">
-
-      <h1>Get in touch</h1>
-      <form
-        name="contact"
-        action="/thank-you"
-        netlify-honeypot="bot-field"
-        method="post"
-        netlify class="contact"
-      >
-        <input
-          type="hidden"
-          name="form-name"
-          value="contact"
-        />
-        <p class="hidden">
-          <label>Don’t fill this out: <input name="bot-field"></label>
-        </p>
-
-        <input
-          class="form-field"
-          name="name"
-          id="name"
-          placeholder="Your Name"
-        />
-
-        <input
-          class="form-field"
-          name="email"
-          id="email"
-          placeholder="Your Email Address"
-        />
-        <textarea
-          class="form-field"
-          name="message"
-          id="message"
-          placeholder="Your Message"
-        ></textarea>
-        <input
-          class="form-button"
-          type="submit"
-          value="Send message"
-        />
-      </form>
     </div>
   </div>
 </template>
@@ -151,7 +65,8 @@ form {
   width: 90%;
   margin: 10px auto 20px;
 }
-input, textarea {
+input,
+textarea {
   width: 100%;
   display: inline-block;
   border-radius: 5px;
@@ -162,7 +77,8 @@ input, textarea {
   margin: 5px auto !important;
   transition: border 1s ease;
 }
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   outline: none !important;
   border: 1px solid #016895;
 }

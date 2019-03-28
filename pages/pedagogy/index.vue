@@ -2,27 +2,24 @@
   <div class="mains">
     <div id="test">
       <div class="introduction">
-<div class="body" v-html="$md.render(pedagogy.description)">
-</div>
-<div class="side">
-<img v-for="item in pedagogy.images" :key='item.id' :src="item" />
-</div>
+        <div class="body" v-html="$md.render(pedagogy.description)"></div>
+        <div class="side">
+          <img v-for="item in pedagogy.images" :key="item.id" :src="item">
+        </div>
       </div>
 
       <div v-for="project in pedagogy.entries" v-bind:key="project.id">
-        <Project v-if="project.images" :project="project" :sidebar="'true'" />
+        <Project v-if="project.images" :project="project" :sidebar="'true'"/>
 
-        <Project v-else :project="project" :sidebar="'false'" />
+        <Project v-else :project="project" :sidebar="'false'"/>
       </div>
-
     </div>
-
   </div>
 </template>
 
 <script>
 import Project from "~/components/NewProject.vue";
-import pedagogy from '~/content/pages/pedagogy.json';
+import pedagogy from "~/content/pages/pedagogy.json";
 
 export default {
   layout: "about",
@@ -178,6 +175,26 @@ h1
 
 
 @media all and (max-width: 575px)
+
+  .introduction
+    display: inline-block
+    .body
+      width: 100%
+      /deep/ h2
+        font-size: 1.4em !important
+        line-height: 38px !important
+        font-weight: 400 !important
+      /deep/ p
+        font-size: 1.25em !important
+        line-height: 36px !important
+  
+  /deep/ p
+    font-size: 1.25em !important
+    line-height: 36px !important
+
+  .side
+    width: 100% !important
+    float: none !important
   div /deep/ .publication
     border-radius: 12px
     border: 1px solid #efefef

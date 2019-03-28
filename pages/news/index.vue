@@ -9,30 +9,26 @@
               :style="{ backgroundImage: 'url(' + post.fields.header.stringValue + '/-/resize/900x/-/format/jpeg/-/quality/normal/-/progressive/yes/-/max_icc_size/0/)' }"
             >
               <div class="title">
-                <nuxt-link :to="'/' + post.fields.title.stringValue">
-                  <div class="title">
-                    <div class="post-date">
-                      <h3>{{ post.createTime | formatDateString }}</h3>
-                    </div>
-                    <div class="post-title">
-                      <h3>{{ post.fields.title.stringValue }}</h3>
-                    </div>
+                <div class="title">
+                  <div class="post-date">
+                    <h3>{{ post.createTime | formatDateString }}</h3>
                   </div>
-                </nuxt-link>
+                  <div class="post-title">
+                    <h3>{{ post.fields.title.stringValue }}</h3>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <div v-else>
-            <nuxt-link :to="'/' + post.fields.title.stringValue">
-              <div class="title">
-                <div class="post-date">
-                  <h3>{{ post.createTime | formatDateString }}</h3>
-                </div>
-                <div class="post-title">
-                  <h3>{{ post.fields.title.stringValue }}</h3>
-                </div>
+            <div class="title">
+              <div class="post-date">
+                <h3>{{ post.createTime | formatDateString }}</h3>
               </div>
-            </nuxt-link>
+              <div class="post-title">
+                <h3>{{ post.fields.title.stringValue }}</h3>
+              </div>
+            </div>
           </div>
 
           <div class="post-content" :inner-html.prop="post.fields.content.stringValue | trim"></div>
@@ -114,7 +110,7 @@ export default {
   float: left
   border-radius: 10px
   width: 18% !important
-  height: 120px !important
+  height: auto !important
   margin: 10px 2% 10px 0
 
 
@@ -137,7 +133,7 @@ export default {
     opacity: 1
 
 .posts
-  width: 65%
+  width: 60%
   float: left
   .post
     width: 100%
@@ -204,7 +200,7 @@ export default {
 
 
 div /deep/ .sidebar
-  width: 29%
+  width: 35%
   float: right
 
 .testpost
@@ -228,19 +224,52 @@ div /deep/ .sidebar
 
 
 @media all and (max-width: 575px)
+  .container
+    margin: 0 auto !important
   /deep/ .container
     width: 100% !important
   .posts
-    width: 94%
+    width: 100%
     margin: 0 auto !important
     display: inline-block
     float: none
-  .post
-    width: 100%
-    margin: 0 0 6% 0
+    /deep/ .post
+      width: 100%
+      margin: 2% 0 6% 0 !important
+      padding: 0 0 0% 0 !important
+      border: none !important
+      .post-content
+        /deep/ p
+          margin: 20px 30px 20px !important
+          img
+            width: 45% !important
+            height: auto !important
+            margin-right: 5%
+            &:nth-child(2n)
+              margin-right: 0% !important
+      .featured-image
+        border-radius: 0
+        .title
+          width: 100%
+          position: absolute
+          height: auto
+          background: linear-gradient(0deg, white -5%, rgba(255, 255, 255, 0) 70%)
+          bottom: 0px
+          border: none !important
+          margin: 0
+          padding: 120px 0 0 0
+          h3
+            margin: 0
+            -webkit-box-decoration-break: clone !important
+            box-decoration-break: clone !important
+            padding: 10px 15px 6px
+            font-size: 1.3em !important
+            margin: 0 20px 0 20px !important
+          .post-title
+            border: none !important
   .main-container
     width: 100%
-    margin: 20px auto !important
+    margin: 0px auto 20px !important
     display: block 
 
   div /deep/ .sidebar

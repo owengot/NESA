@@ -1,7 +1,6 @@
 <template>
   <div class="mains">
     <div id="sidebar">
-
       <Sidebar
         :links="links"
         :vertical="$mq | mq({
@@ -15,37 +14,27 @@
       />
     </div>
     <div id="test">
-
-      <div class="project">
-              <h1>{{ projects.introduction }}</h1>
+      <div class="project introduction">
+        <h1>{{ projects.introduction }}</h1>
       </div>
-      
-      <div
-        v-for="project in projects.entries"
-        v-bind:key="project.id"
-      >
+
+      <div v-for="project in projects.entries" v-bind:key="project.id">
         <Project
           v-if="project.images || project.video || project.video"
           :project="project"
           :sidebar="'true'"
         />
 
-        <Project
-          v-else
-          :project="project"
-          :sidebar="'false'"
-        />
+        <Project v-else :project="project" :sidebar="'false'"/>
       </div>
-
     </div>
-
   </div>
 </template>
 
 <script>
 import Sidebar from "~/components/SidebarProjects.vue";
 import Project from "~/components/NewProject.vue";
-import projects from '~/content/projects/combined.js'
+import projects from "~/content/projects/combined.js";
 
 export default {
   layout: "about",
@@ -174,6 +163,31 @@ h1
   margin: 0 0 20px 20px
 
 @media all and (max-width: 575px)
+
+  /deep/ p
+    font-size: 1.25em !important
+    line-height: 36px !important
+  .project
+    margin: 0 0 0 0 !important
+    h1
+      border-bottom: 0 
+      margin: 0
+
+  div /deep/ .project h1, div /deep/ .project_sidebar h1
+    font-size: 1.7em
+    line-height: 38px !important
+    padding: 10px 0
+  
+  div /deep/ .project
+    margin: 0 auto 10px !important
+
+  .introduction /deep/ h1
+    font-size: 1.4em !important
+    line-height: 40px !important
+    font-weight: 400 !important
+    padding-bottom: 0 !important
+    margin-bottom: 10px !important
+    border: none
   #test
     clear: both
     display: block
@@ -193,6 +207,8 @@ h1
     float: none
     margin: 0
     clear: both
+  /deep/ .sidebar img
+    margin: 20px 0 10px !important
   div /deep/ .sidebar
     width: 100%
     margin: 0
