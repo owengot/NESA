@@ -1,30 +1,40 @@
 <template>
   <header>
-  <div id="main-menu">
-  <a href="/">
-  <div id="logo">
-    <h1 class="title">NESA</h1>
-    <p class="caption">New European Surgical Academy</p>
-  </div>
-  </a>
+    <div id="main-menu">
+      <a href="/">
+        <div id="logo">
+          <h1 class="title">NESA</h1>
+          <p class="caption">New European Surgical Academy</p>
+        </div>
+      </a>
 
-  <div id="toggle" :class="{ open: showMobileMenu }" v-on:click="showMobileMenu = !showMobileMenu"><span></span></div>
-    <ul id="menu" v-bind:class="{ opened: showMobileMenu }">
-      <li v-for="link in menu" :key="link.title" v-on:click="showMobileMenu = !showMobileMenu">
-      	<nuxt-link :to="link.href" v-bind:class="{ active: isActive(link) }" :key="link.title">{{link.title}}</nuxt-link>
-      	</li>
-        <li><a href="http://nesacademy.org/admin/">Log In</a></li>
-    </ul>
-  </div>
+      <div
+        id="toggle"
+        :class="{ open: showMobileMenu }"
+        v-on:click="showMobileMenu = !showMobileMenu"
+      >
+        <span></span>
+      </div>
+      <ul id="menu" v-bind:class="{ opened: showMobileMenu }">
+        <li v-for="link in menu" :key="link.title" v-on:click="showMobileMenu = !showMobileMenu">
+          <nuxt-link
+            :to="link.href"
+            v-bind:class="{ active: isActive(link) }"
+            :key="link.title"
+          >{{link.title}}</nuxt-link>
+        </li>
+        <li>
+          <a href="http://connect.nesacademy.org/">Log In</a>
+        </li>
+      </ul>
+    </div>
   </header>
-  
 </template>
 
 <style lang="scss">
 li a.active {
   color: #016895 !important;
 }
-
 
 header {
   width: 100%;
@@ -98,7 +108,7 @@ header {
 
 #main-menu #menu li {
   display: inline-block;
-  padding: .6em 1.3em 1em 1.3em;
+  padding: 0.6em 1.3em 1em 1.3em;
   height: 100%;
   border-right: 1px solid #efefef;
   margin: 0 0 0 -4px;
@@ -170,7 +180,6 @@ header {
   width: 100%;
 }
 
-
 #main-menu #menu li a.active::after {
   content: "";
   display: block;
@@ -236,26 +245,24 @@ header {
 }
 
 @media all and (max-width: 575px) {
-
-  
   #main-menu h1.title {
     margin: 15px 0 0 0 !important;
     font-weight: 800;
   }
 
-#main-menu #logo {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='221' height='221'%3E%3Cdefs%3E%3Cpath id='a' d='M77 105H11V77h38a16.6 16.6 0 0 0-2.7 9c0 10 12.8 14.7 30.7 17v2z'/%3E%3Cpath id='b' d='M77 144H11v-28h38a16.6 16.6 0 0 0-2.7 9c0 10 12.8 14.7 30.7 17v2z'/%3E%3C/defs%3E%3Cg fill='%23016895' fill-rule='evenodd'%3E%3Cpath d='M40.7 105H0a110.5 110.5 0 1 1 0 11h40.7a71.1 71.1 0 1 0 0-11z'/%3E%3Cuse xlink:href='%23a'/%3E%3Cuse transform='matrix(1 0 0 -1 0 260)' xlink:href='%23b'/%3E%3C/g%3E%3C/svg%3E")
-    no-repeat 10px center;
-  background-size: 45px;
-  width: 310px;
-  padding-left: 65px;
-}
+  #main-menu #logo {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='221' height='221'%3E%3Cdefs%3E%3Cpath id='a' d='M77 105H11V77h38a16.6 16.6 0 0 0-2.7 9c0 10 12.8 14.7 30.7 17v2z'/%3E%3Cpath id='b' d='M77 144H11v-28h38a16.6 16.6 0 0 0-2.7 9c0 10 12.8 14.7 30.7 17v2z'/%3E%3C/defs%3E%3Cg fill='%23016895' fill-rule='evenodd'%3E%3Cpath d='M40.7 105H0a110.5 110.5 0 1 1 0 11h40.7a71.1 71.1 0 1 0 0-11z'/%3E%3Cuse xlink:href='%23a'/%3E%3Cuse transform='matrix(1 0 0 -1 0 260)' xlink:href='%23b'/%3E%3C/g%3E%3C/svg%3E")
+      no-repeat 10px center;
+    background-size: 45px;
+    width: 310px;
+    padding-left: 65px;
+  }
 
   #main-menu #title {
     width: 240px;
   }
 
-  #main-menu p.caption  {
+  #main-menu p.caption {
     display: block;
     font-size: 1em !important;
     margin-top: 6px !important;
@@ -405,14 +412,13 @@ export default {
     isActive(link) {
       return this.$route.fullPath === link.href;
     },
-   
-toggleMenu: function () {
-  var toggle = document.getElementById("#toggle");
-  var menu = document.getElementById("#menu");
-  toggle.classList.add("open");
-  menu.classList.add("opened");
-    }
 
+    toggleMenu: function() {
+      var toggle = document.getElementById("#toggle");
+      var menu = document.getElementById("#menu");
+      toggle.classList.add("open");
+      menu.classList.add("opened");
+    }
   }
 };
 </script>
