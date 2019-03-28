@@ -424,7 +424,7 @@ h1
 
 @media all and (max-width: 575px)
   div /deep/ .col_left
-    width: 100%
+    width: 100% !important
   div /deep/ .col_right
     display: none
   div 
