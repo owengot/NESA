@@ -25,6 +25,23 @@ collections:
         fields:
           - {label: Image, name: url, widget: image, default: ""}
           - {label: Caption, name: caption, widget: string, default: ""}
+  - name: "newsletters" # Used in routes, e.g., /admin/collections/pages
+    label: "Newsletters" # Used in the UI
+    files:
+      - label: "Newsletter"
+        name: "Newsletter"
+        file: "static/content/newsletter.json"
+        fields: 
+          - label: Newsletter
+            name: entries
+            widget: list
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Email
+                name: body
+                widget: markdown
   - name: "pages" # Used in routes, e.g., /admin/collections/pages
     label: "Page Content" # Used in the UI
     files:

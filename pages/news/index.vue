@@ -1,67 +1,52 @@
 <template>
-<div>
-
+  <div>
     <div class="main-container">
-
-      <no-ssr>
-        <masonry :gutter="20" :cols="$mq | mq({
-      sm: 1,
-      mounted: 2,
-      lg: 2
-    })" class="posts">
-            <div class="post" v-for="(post, index) in posts" :key="index">
-              
-           <div v-if="post.thumbnail">
-
-              <div
-                class='featured-image'
-                :style="{ backgroundImage: 'url(' + post.thumbnail + ')' }"
-              >
-                <div class="title">
-                  <nuxt-link :to="post._path">
-                    <div class="title">
-                      <div class="post-date">
-                        <h3> {{ post.date | formatDateString }} </h3>
-                      </div>
-                      <div class="post-title">
-                        <h3> {{ post.title }} </h3>
-                      </div>
+      <div class="posts">
+        <div class="post" v-for="(post, index) in posts.documents" :key="index">
+          <div v-if="post.fields.header.stringValue">
+            <div
+              class="featured-image"
+              :style="{ backgroundImage: 'url(' + post.fields.header.stringValue + '/-/resize/900x/-/format/jpeg/-/quality/normal/-/progressive/yes/-/max_icc_size/0/)' }"
+            >
+              <div class="title">
+                <nuxt-link :to="'/' + post.fields.title.stringValue">
+                  <div class="title">
+                    <div class="post-date">
+                      <h3>{{ post.createTime | formatDateString }}</h3>
                     </div>
-                  </nuxt-link>
-                </div>
+                    <div class="post-title">
+                      <h3>{{ post.fields.title.stringValue }}</h3>
+                    </div>
+                  </div>
+                </nuxt-link>
               </div>
             </div>
-            <div v-else>
-              <nuxt-link :to="post._path">
-
-                <div class="title">
-                  <div class="post-date">
-                    <h3> {{ post.date | formatDateString }} </h3>
-                  </div>
-                  <div class="post-title">
-                    <h3> {{ post.title }} </h3>
-                  </div>
-                </div>
-
-              </nuxt-link>
-            </div>
-
-            <p>{{ post.body.substr(0, 300) + '..' }}</p>
-
           </div>
-        </masonry>
-    </no-ssr>
+          <div v-else>
+            <nuxt-link :to="'/' + post.fields.title.stringValue">
+              <div class="title">
+                <div class="post-date">
+                  <h3>{{ post.createTime | formatDateString }}</h3>
+                </div>
+                <div class="post-title">
+                  <h3>{{ post.fields.title.stringValue }}</h3>
+                </div>
+              </div>
+            </nuxt-link>
+          </div>
 
-
-      <SidebarNews :result="title" />
+          <div class="post-content" :inner-html.prop="post.fields.content.stringValue | trim"></div>
+        </div>
+      </div>
+      <SidebarNews :result="title"/>
     </div>
-
   </div>
 </template>
 
 <script>
 import SidebarNews from "~/components/SidebarNews.vue";
 import news from "~/content/pages/news.json";
+import axios from "axios";
 
 export default {
   layout: "about",
@@ -71,31 +56,66 @@ export default {
   pageTitle: news.title,
   pageHeader: news.image,
   bgPosition: "0 -100px",
-  mounted() {
-    if (typeof this.$redrawVueMasonry === "function") {
-      this.$redrawVueMasonry();
-    }
-  },
   data() {
-    // Using webpacks context to gather all files from a folder
-    const context = require.context("~/content/news/posts/", false, /\.json$/);
-    const posts = context.keys().map(key => ({
-      ...context(key),
-      _path: `/news/${key.replace(".json", "").replace("./", "")}`
-    }));
-    posts.reverse();
     return {
-      posts,
       news,
       pageTitle: "Latest News",
       thumbnail: "",
       date: ""
     };
+  },
+  async asyncData({ $axios }) {
+    const posts = await $axios.$get(
+      "https://firestore.googleapis.com/v1/projects/nesa-a1443/databases/(default)/documents/posts"
+    );
+    return { posts };
+  },
+  filters: {
+    trim: function(string) {
+      let newString = string.replace(/<p><br><\/p>/g, "");
+
+      return newString;
+    }
+  },
+  mounted: function() {
+    var imgs = document.querySelectorAll("img");
+    imgs.forEach(function(img) {
+      var oldVal = img.getAttribute("src");
+      var crop =
+        "/-/scale_crop/170x170/center/-/format/jpeg/-/quality/normal/-/progressive/yes/-/max_icc_size/0/";
+      var preview =
+        "/-/scale_crop/500x500/center/-/format/jpeg/-/quality/normal/-/progressive/yes/-/max_icc_size/0/";
+
+      function setAttributes(el, attrs) {
+        for (var key in attrs) {
+          el.setAttribute(key, attrs[key]);
+        }
+      }
+
+      setAttributes(img, {
+        src: oldVal + crop,
+        "data-zoom-src": oldVal + preview
+      });
+    });
   }
 };
 </script>
 
 <style lang="sass" scoped>
+.post-content 
+  padding: 0px 0
+  /deep/ p
+    margin: 20px 50px 20px
+    color: black
+    font-size: 1.15em
+    line-height: 30px
+
+.post-content /deep/ p img
+  float: left
+  border-radius: 10px
+  width: 18% !important
+  height: 120px !important
+  margin: 10px 2% 10px 0
 
 
 @import '~/assets/sass/news.sass'
@@ -117,11 +137,12 @@ export default {
     opacity: 1
 
 .posts
-  width: 70%
+  width: 65%
   float: left
   .post
     width: 100%
-    margin: 0 0 6% 0
+    margin: 0 0 4% 0
+    padding: 0 0 3% 0
 
 .page-leave-active 
   animation: opacity .7s ease-out
@@ -172,13 +193,14 @@ export default {
   height: 230px
   background-size: cover
   border-radius: 10px 10px 0 0
-  background-position: 0 30% 
+  background-position: center 40% !important
   overflow: hidden
   position: relative
   .title
     width: 100%
     position: absolute
-    z-index: 9
+    height: 140px
+    background: none
 
 
 div /deep/ .sidebar
