@@ -33,14 +33,12 @@
           <Board
             :title="about.ab_title"
             :description="about.ab_description"
-            :entries="about.ab_entries"
             :introduction="about.ab_introduction"
           />
 
           <Board
             :title="about.ib_title"
             :description="about.ib_description"
-            :entries="about.ib_entries"
             :introduction="about.ib_introduction"
           />
         </div>
@@ -52,43 +50,18 @@
         <h1>The diplomats</h1>
 
         <p>{{ about.di_introduction }}</p>
-
-        <button
-          id="show-modal"
-          @click="openModal(); modalEntries = about.di_entries; modalTitle = 'Diplomats'; modalIntroduction = about.di_introduction"
-        >View all Diplomats</button>
       </div>
 
       <div class="section partners">
         <h1>{{ about.pa_title }}</h1>
 
         <p>{{ about.pa_introduction }}</p>
-
-        <div class="featured_partners">
-          <a
-            v-for="partner in about.featured_partners"
-            class="partner"
-            v-bind:key="partner.id"
-            :href="partner.url"
-            :style="{ 'background-image': 'url(' + partner.logo + ')' }"
-          ></a>
-        </div>
-
-        <button
-          id="show-modal"
-          @click="openModal(); modalEntries = about.pa_entries; modalTitle = 'Partners'; modalIntroduction = about.pa_introduction"
-        >View all Partners</button>
       </div>
 
       <div class="section representatives">
         <h1>{{ about.cr_title }}</h1>
 
         <p>{{ about.cr_introduction }}</p>
-
-        <button
-          id="show-modal"
-          @click="openModal(); modalEntries = about.cr_entries; modalIntroduction = about.cr_introduction; modalTitle = 'Country Representatives'"
-        >View all Representatives</button>
       </div>
 
       <div class="section members">

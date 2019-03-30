@@ -3,25 +3,134 @@
     <div class="section">
       <h1>Subscribe to our Newsletter</h1>
       <p>Get regular updates on all the latest news and current events from NESA</p>
-      <form name="contact" action="/thank-you" netlify-honeypot="bot-field" method="post" netlify>
-        <input type="hidden" name="form-name" value="contact">
-        <p class="hidden">
-          <label>
-            Don’t fill this out:
-            <input name="bot-field">
-          </label>
-        </p>
-        <input class="form-field" name="name" id="name" placeholder="Your name">
-        <input class="form-field" name="email" id="email" placeholder="Your email address">
-        <input class="form-button" type="submit" value="Subscribe">
-      </form>
+      <div v-if="success === false" class="form">
+        <form name="contact" netlify-honeypot="bot-field" method="post" netlify>
+          <input type="hidden" name="form-name" value="contact">
+          <p class="hidden">
+            <label>
+              Don’t fill this out:
+              <input name="bot-field">
+            </label>
+          </p>
+          <input class="form-field" name="name" id="name" placeholder="Your name">
+          <input class="form-field" name="email" id="email" placeholder="Your email address">
+          <input @click="submit" class="form-button" type="submit" value="Subscribe">
+        </form>
+      </div>
 
-      <p class="gdpr">View our GDPR policy on Data Protection</p>
+      <div v-else class="message">
+        <div class="check-wrap"></div>
+        <p>You Are Subscribed</p>
+      </div>
+
+      <p class="gdpr">
+        <b style="margin-right: 10px">GDPR policy:</b>
+        <a href="/DataProtectionRegulation_GER.docx" target="_blank">German</a> |
+        <a href="/DataProtectionRegulation_EN.pdf" target="_blank">English</a>
+      </p>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
+.message {
+  margin: 20px auto;
+  width: 90%;
+  display: flex;
+  position: relative;
+  background: #fafafa;
+  border-radius: 10px !important;
+  border: #efefef 1px solid;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px 5px;
+  p {
+    float: left !important;
+    color: #066690 !important;
+    font-size: 1.4em;
+    margin: 0 !important;
+    display: inline-block;
+    font-family: "Exo 2" !important;
+    padding: 0 !important;
+    width: auto !important;
+    margin-left: -25px;
+    font-weight: 100 !important;
+  }
+}
+.hidden {
+  display: none;
+}
+.check-wrap {
+  width: 70px;
+  height: 70px;
+  margin-left: -25px;
+  border-radius: 50%;
+  border: 1px solid #066690;
+  position: relative;
+  overflow: hidden;
+  animation: wrap 0.3s ease-in-out forwards;
+  animation-delay: 0.3s;
+  transform: scale(0);
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    width: 0;
+    height: 5px;
+    transform-origin: left;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  &::before {
+    top: 32px;
+    left: 21px;
+    transform: rotate(45deg);
+    animation-name: left;
+    animation-delay: 0.8s;
+  }
+  &::after {
+    top: 42px;
+    left: 29px;
+    transform: rotate(-45deg);
+    animation-name: right;
+    animation-delay: 1.1s;
+  }
+}
+
+@keyframes wrap {
+  0% {
+    background-color: transparent;
+    transform: scale(0);
+  }
+
+  100% {
+    background-color: #066690;
+    transform: scale(0.5);
+  }
+}
+
+@keyframes left {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 15px;
+  }
+}
+
+@keyframes right {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 30px;
+  }
+}
 .hidden {
   display: none;
 }
@@ -129,6 +238,7 @@ export default {
   data() {
     return {
       openMenu: false,
+      success: false,
       menu: [
         { href: "/about", title: "About" },
         { href: "/news", title: "News" },
@@ -142,6 +252,9 @@ export default {
   methods: {
     isActive(link) {
       return this.$route.fullPath === link.href;
+    },
+    submit() {
+      this.success = true;
     }
   },
   props: ["result"]

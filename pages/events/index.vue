@@ -13,31 +13,26 @@
         :links="links"
       />
     </div>
-    <div
-      id="test"
-      class="events"
-    >
-
-      <div
-        v-for="entry in events.entries"
-        v-bind:key="entry.id"
-      >
-   
-        <Event
-          :project="entry"
-          :sidebar="'false'"
-        />
+    <div class="event" v-for="entry in filteredEntries" :key="entry.createTime">
+      <div class="event_header">
+        <h4>{{ entry.fields.name.stringValue }}</h4>
+        <div class="info">
+          <p class="place">{{ entry.fields.location.stringValue }}</p>
+          <p class="date">{{entry.fields.date.stringValue | formatDateString }}</p>
+        </div>
       </div>
-
+      <div class="content">
+        <p>{{ entry.fields.content.stringValue }}</p>
+      </div>
     </div>
-
   </div>
 </template>
 
 <script>
 import Sidebar from "~/components/SidebarProjects.vue";
 import Event from "~/components/FeaturedEvent.vue";
-import events from '~/content/events/combined.js';
+import events from "~/content/pages/events.json";
+import axios from "axios";
 
 export default {
   layout: "about",
@@ -47,18 +42,28 @@ export default {
   },
   pageHeader: events.image,
   bgPosition: "0 -330px",
-  pageTitle: events.title,
+  pageTitle: "Events",
   data() {
     return {
       events,
       links: [
         "Current Events",
-        "Innauguration Ceremony",
         "Nesa Days",
-        "Other Events",
-        "Recommended Events"
+        "Past Events",
+        "Innauguration Ceremony"
       ]
     };
+  },
+  async asyncData({ $axios }) {
+    const entries = await $axios.$get(
+      "https://firestore.googleapis.com/v1/projects/nesa-a1443/databases/(default)/documents/events"
+    );
+    const eventEntries = entries.documents;
+
+    var filteredEntries = eventEntries.filter(function(entry) {
+      return eventEntries[0].fields.userId.stringValue === "1";
+    });
+    return { filteredEntries };
   }
 };
 </script>
@@ -67,6 +72,58 @@ export default {
 <style lang="sass" scoped>
 
 @import '~/assets/sass/news.sass'
+.event
+  font-size: 14px
+  border-radius: 10px
+  overflow: hidden
+  position: relative
+  margin: 0px auto 50px
+  .content
+    border: 1px solid rgba(0,0,0,0.05)
+    border-top: none
+    padding: 15px 20px 20px
+    font-size: 1.3em
+    line-height: 26px
+    width: 95%
+    margin: 0 auto 15px
+    border-radius: 0 0 10px 10px
+  .event_header 
+      height: 70px
+      width: 95%
+      display: block
+      border-radius: 10px 10px 0 0
+      overflow: hidden
+      margin: 5px auto 0
+      border: 1px solid rgba(0,0,0,0.05)
+      background: rgba(0,0,0,0.01)
+      h4
+        float: left
+        padding: 22px 0 0 20px
+        font-family: "Exo 2"
+        font-weight: 300
+        color: #066690
+        font-weight: bold
+        font-size: 1.6em
+      .info
+          float: right
+          height: auto
+          margin: 0 0px 0 0
+          width: auto
+          font-size: 1.1em
+          height: 100%
+          padding: 15px 20px 10px 53px !important
+          background: url("data:image/svg+xml,%3Csvg aria-hidden='true' data-prefix='fas' data-icon='map-marker-alt' class='svg-inline--fa fa-map-marker-alt fa-w-12' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath fill='%23066690' d='M172.3 501.7C27 291 0 269.4 0 192a192 192 0 1 1 384 0c0 77.4-27 99-172.3 309.7a24 24 0 0 1-39.4 0zM192 272a80 80 0 1 0 0-160 80 80 0 0 0 0 160z'/%3E%3C/svg%3E%0A") no-repeat 17px 18px #eaf1f4
+          background-size: 23px
+          p
+            width: auto
+            color: #066690 !important
+            clear: both
+            float: none
+            margin: 0
+            display: block
+            &:first-child
+              font-weight: bold
+              font-size: 1.1em
 
 .events 
   column-count: 2
@@ -166,25 +223,9 @@ h1
   border-radius: 20px
   margin: 0 0 20px 20px
 
-@media all and (max-width: 575px)
-  .events 
-    column-count: 1
-    column-gap: 0px
-  div /deep/ .publication
-    border-radius: 12px
-    border: 1px solid #efefef
-    display: inline-block
-    margin: 20px 0 0
-    -webkit-column-break-inside: avoid !important
-    break-inside: avoid !important
-    max-width: auto !important
-    min-width: auto !important
-    width: 100% !important
-    min-height: 60px
-    padding-bottom: 10px
-  #test
-    clear: both
-    display: block
+@media all and (max-width: 775px)
+  .event
+    width: 100%
   .mains
     width: 90% !important
     overflow: hidden
@@ -238,4 +279,43 @@ h1
         background: none
         color: white
 
+@media all and (max-width: 775px)
+  .event_header 
+      height: auto !important
+      width: 95%
+      display: block
+      border-radius: 10px 10px 0 0
+      overflow: hidden
+      margin: 5px auto 0
+      border: 1px solid rgba(0,0,0,0.05)
+      background: rgba(0,0,0,0.01)
+      h4
+        float: none !important
+        padding: 22px 0 20px 20px !important
+        font-family: "Exo 2"
+        font-weight: 300
+        color: #066690
+        width: 100%
+        display: block
+        font-weight: bold
+        font-size: 1.6em
+      .info
+          float: none !important
+          height: auto
+          margin: 0 0px 0 0
+          width: 100%
+          font-size: 1.1em
+          padding: 15px 20px 10px 53px !important
+          background: url("data:image/svg+xml,%3Csvg aria-hidden='true' data-prefix='fas' data-icon='map-marker-alt' class='svg-inline--fa fa-map-marker-alt fa-w-12' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath fill='%23066690' d='M172.3 501.7C27 291 0 269.4 0 192a192 192 0 1 1 384 0c0 77.4-27 99-172.3 309.7a24 24 0 0 1-39.4 0zM192 272a80 80 0 1 0 0-160 80 80 0 0 0 0 160z'/%3E%3C/svg%3E%0A") no-repeat 17px 18px #eaf1f4
+          background-size: 23px
+          p
+            width: auto
+            color: #066690 !important
+            clear: both
+            float: none
+            margin: 0
+            display: block
+            &:first-child
+              font-weight: bold
+              font-size: 1.1em
 </style>

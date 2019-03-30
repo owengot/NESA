@@ -14,17 +14,14 @@
       />
     </div>
     <div id="test">
-
       <div class="introduction">
-        <p> {{ innaugurationCeremony.introduction }} </p>
+        <p>{{ innaugurationCeremony.introduction }}</p>
       </div>
 
       <div class="section">
-                <Gallery :project="innaugurationCeremony.gallery" />
-
+        <Gallery :project="innaugurationCeremony.gallery"/>
       </div>
     </div>
-
   </div>
 </template>
 
@@ -34,8 +31,8 @@
 import Sidebar from "~/components/SidebarProjects.vue";
 import Gallery from "~/components/Gallery.vue";
 import JQuery from "jquery";
-import events from '~/content/pages/events.json';
-import innaugurationCeremony from '~/content/events/innauguration-ceremony.json';
+import events from "~/content/pages/events.json";
+import innaugurationCeremony from "~/content/events/innauguration-ceremony.json";
 let $ = JQuery;
 
 export default {
@@ -53,10 +50,9 @@ export default {
       innaugurationCeremony,
       links: [
         "Current Events",
-        "Innauguration Ceremony",
         "Nesa Days",
-        "Other Events",
-        "Recommended Events"
+        "Past Events",
+        "Innauguration Ceremony"
       ]
     };
   },

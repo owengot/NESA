@@ -8,12 +8,11 @@
         </div>
       </a>
 
-      <div
-        id="toggle"
-        :class="{ open: showMobileMenu }"
-        v-on:click="showMobileMenu = !showMobileMenu"
-      >
-        <span></span>
+      <div class="mobileMenu" v-on:click="showMobileMenu = !showMobileMenu">
+        <p>Menu</p>
+        <div id="toggle" :class="{ open: showMobileMenu }">
+          <span></span>
+        </div>
       </div>
       <ul id="menu" v-bind:class="{ opened: showMobileMenu }">
         <li v-for="link in menu" :key="link.title" v-on:click="showMobileMenu = !showMobileMenu">
@@ -74,7 +73,7 @@ header {
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='221' height='221'%3E%3Cdefs%3E%3Cpath id='a' d='M77 105H11V77h38a16.6 16.6 0 0 0-2.7 9c0 10 12.8 14.7 30.7 17v2z'/%3E%3Cpath id='b' d='M77 144H11v-28h38a16.6 16.6 0 0 0-2.7 9c0 10 12.8 14.7 30.7 17v2z'/%3E%3C/defs%3E%3Cg fill='%23016895' fill-rule='evenodd'%3E%3Cpath d='M40.7 105H0a110.5 110.5 0 1 1 0 11h40.7a71.1 71.1 0 1 0 0-11z'/%3E%3Cuse xlink:href='%23a'/%3E%3Cuse transform='matrix(1 0 0 -1 0 260)' xlink:href='%23b'/%3E%3C/g%3E%3C/svg%3E")
     no-repeat 10px center;
   background-size: 53px;
-  width: 390px;
+  width: 350px;
   height: 70px;
   padding-left: 74px;
   display: -webkit-box;
@@ -230,36 +229,44 @@ header {
   color: #016895;
 }
 
-@media all and (max-width: 1000px) {
-  #main-menu h1 {
-    margin-top: 23px;
-  }
-
-  #main-menu #title {
-    width: 70px;
-  }
-
-  #main-menu #title p {
-    display: none;
-  }
+.mobileMenu {
+  display: none;
 }
 
-@media all and (max-width: 575px) {
-  #main-menu h1.title {
-    margin: 15px 0 0 0 !important;
-    font-weight: 800;
-  }
-
+@media all and (max-width: 1280px) {
   #main-menu #logo {
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='221' height='221'%3E%3Cdefs%3E%3Cpath id='a' d='M77 105H11V77h38a16.6 16.6 0 0 0-2.7 9c0 10 12.8 14.7 30.7 17v2z'/%3E%3Cpath id='b' d='M77 144H11v-28h38a16.6 16.6 0 0 0-2.7 9c0 10 12.8 14.7 30.7 17v2z'/%3E%3C/defs%3E%3Cg fill='%23016895' fill-rule='evenodd'%3E%3Cpath d='M40.7 105H0a110.5 110.5 0 1 1 0 11h40.7a71.1 71.1 0 1 0 0-11z'/%3E%3Cuse xlink:href='%23a'/%3E%3Cuse transform='matrix(1 0 0 -1 0 260)' xlink:href='%23b'/%3E%3C/g%3E%3C/svg%3E")
       no-repeat 10px center;
     background-size: 45px;
-    width: 310px;
     padding-left: 65px;
+    width: 110px !important;
+  }
+  #main-menu h1.title {
+    width: 70px;
+    margin: 25px 0 0 !important;
   }
 
-  #main-menu #title {
-    width: 240px;
+  #main-menu .caption {
+    display: none !important;
+  }
+}
+
+@media all and (max-width: 1070px) {
+  #main-menu h1.title {
+    margin: 18px 0 0 0 !important;
+    width: 270px;
+  }
+
+  #main-menu .caption {
+    display: block !important;
+  }
+
+  .mobileMenu {
+    display: block;
+  }
+
+  #main-menu #logo {
+    width: 320px !important;
   }
 
   #main-menu p.caption {
@@ -268,21 +275,40 @@ header {
     margin-top: 6px !important;
   }
 
+  .mobileMenu {
+    width: 150px;
+    float: right;
+    height: 100%;
+
+    p {
+      margin: 20px 22px 0 0;
+      font-size: 1.4em;
+      float: right;
+      color: rgba(6, 102, 144, 1);
+      font-weight: 800;
+      position: relative;
+      z-index: 999999;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
   #toggle {
     position: absolute;
     z-index: 3;
     width: 1.8em;
     display: block;
     height: 1em !important;
-    top: 20px;
-    right: 25px;
+    top: 22px;
+    right: 110px;
     cursor: pointer;
   }
+
   #toggle span {
     display: block;
     position: absolute;
     width: 100%;
-    height: 0.2em;
+    height: 0.14em;
     margin: 1.05em 0 0 0;
     background: #016895;
     border-radius: 20px;
@@ -296,7 +322,7 @@ header {
     position: absolute;
     border-radius: 20px;
     width: 100%;
-    height: 0.2em;
+    height: 0.14em;
     background: #016895;
     -webkit-transition: 350ms ease transform;
     -moz-transition: 350ms ease transform;
@@ -390,6 +416,50 @@ header {
     background: none;
   }
 }
+
+@media all and (max-width: 500px) {
+  #main-menu .caption {
+    display: none !important;
+  }
+  #main-menu h1.title {
+    margin: 25px 0 0 0 !important;
+    width: 70px;
+  }
+  #main-menu #logo {
+    width: 100px !important;
+  }
+  .mobileMenu {
+    width: 110px;
+    float: right;
+    height: 40px;
+    padding: 9px 12px 10px;
+    border: 1.4px solid rgba(6, 102, 144, 1);
+    border-radius: 10px;
+    margin: 16px 20px 0px 0 !important;
+    position: relative;
+    z-index: 9999;
+    p {
+      padding: 0;
+      margin: 0;
+      text-transform: uppercase;
+      font-size: 1em;
+      font-weight: 400;
+    }
+  }
+  #toggle {
+    position: relative;
+    z-index: 3;
+    width: 1.8em;
+    display: block;
+    height: 1em !important;
+    float: left;
+    margin: 0 !important;
+    left: 0px !important;
+    top: -6px !important;
+    transform: scale(0.8);
+    cursor: pointer;
+  }
+}
 </style>
 
 <script>
@@ -404,7 +474,8 @@ export default {
         { href: "/projects", title: "Projects" },
         { href: "/pedagogy", title: "Pedagogy" },
         { href: "/events", title: "Events" },
-        { href: "/publications", title: "Publications" }
+        { href: "/publications", title: "Publications" },
+        { href: "/contact", title: "Contact" }
       ]
     };
   },

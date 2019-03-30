@@ -1,45 +1,37 @@
 <template>
   <div>
-
     <div v-if="vertical === 'true'" class="sidebar">
-      
       <div class="section">
-
-      <nuxt-link v-for="link in links" v-bind:key="link" :to="'/' + title.toLowerCase() + '/' + link.replace(/\W+/g, '-').toLowerCase()" :class="link.replace(/\W+/g, '-').toLowerCase()">
-        {{ link }}
-      </nuxt-link>
-
-     </div>
-
+        <nuxt-link
+          v-for="link in links"
+          v-bind:key="link"
+          :to="'/' + title.toLowerCase() + '/' + link.replace(/\W+/g, '-').toLowerCase()"
+          :class="link.replace(/\W+/g, '-').toLowerCase()"
+        >{{ link }}</nuxt-link>
+      </div>
     </div>
 
     <div v-if="vertical === 'false'" class="horizontal">
-
       <div class="section">
-      
-     
-      <nuxt-link v-for="link in links" v-bind:key="link" :to="'/projects/' + link.replace(/\W+/g, '-').toLowerCase()">
-         <div class="discipline" :id="link.replace(/\W+/g, '-').toLowerCase()"></div>
-         <h4>{{ link }}</h4>
-      </nuxt-link>
-
-      
-
+        <nuxt-link
+          v-for="link in links"
+          v-bind:key="link"
+          :to="'/projects/' + link.replace(/\W+/g, '-').toLowerCase()"
+        >
+          <div class="discipline" :id="link.replace(/\W+/g, '-').toLowerCase()"></div>
+          <h4>{{ link }}</h4>
+        </nuxt-link>
+      </div>
     </div>
 
+    <div v-if="mobile === 'true'" class="mobile">
+      <nuxt-link
+        v-for="link in links"
+        v-bind:key="link"
+        :to="'/' + title + '/' + link.replace(/\W+/g, '-').toLowerCase()"
+        :class="link.replace(/\W+/g, '-').toLowerCase()"
+      >{{ link }}</nuxt-link>
     </div>
-
-    <div v-if="mobile === 'true'" class="mobile">      
-     
-       <nuxt-link v-for="link in links" v-bind:key="link" :to="'/' + title + '/' + link.replace(/\W+/g, '-').toLowerCase()" :class="link.replace(/\W+/g, '-').toLowerCase()">
-        {{ link }}
-      </nuxt-link>
-
-    </div>
-
-
-
-
   </div>
 </template>
 
@@ -102,7 +94,7 @@ div.mobile
       background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='221' height='221'%3E%3Cdefs%3E%3Cpath id='a' d='M77 105H11V77h38a16.6 16.6 0 0 0-2.7 9c0 10 12.8 14.7 30.7 17v2z'/%3E%3Cpath id='b' d='M77 144H11v-28h38a16.6 16.6 0 0 0-2.7 9c0 10 12.8 14.7 30.7 17v2z'/%3E%3C/defs%3E%3Cg fill='%23016895' fill-rule='evenodd'%3E%3Cpath d='M40.7 105H0a110.5 110.5 0 1 1 0 11h40.7a71.1 71.1 0 1 0 0-11z'/%3E%3Cuse xlink:href='%23a'/%3E%3Cuse transform='matrix(1 0 0 -1 0 260)' xlink:href='%23b'/%3E%3C/g%3E%3C/svg%3E")
       background-size: 33px !important
       background-position: 19px 21px !important
-    &.other-events
+    &.past-events
       background: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 421.1 526.3'%3e%3cg fill='%23006895'%3e%3ccircle cx='99.4' cy='315.4' r='20.3'/%3e%3ccircle cx='173.9' cy='315.4' r='20.3'/%3e%3ccircle cx='247.1' cy='315.4' r='20.3'/%3e%3ccircle cx='328.4' cy='315.4' r='20.3'/%3e%3ccircle cx='247.1' cy='246.3' r='20.3'/%3e%3cpath d='M351.2 40.6h-2.5a40.6 40.6 0 0 0-81.3 0h-107a40.6 40.6 0 0 0-81.3 0h-9.3c-35 0-63.4 28.5-63.4 63.4v253.7c0 35 28.3 63.4 63.4 63.4h281.4c35 0 63.5-28.4 63.5-63.4V104c0-35-28.5-63.5-63.5-63.5zm20.9 315.9a19 19 0 0 1-19 19H70.6a19 19 0 0 1-19-19V192.8h320.6v163.7z'/%3e%3ccircle cx='328.4' cy='246.3' r='20.3'/%3e%3c/g%3e%3c/svg%3e")
       background-size: 31px !important
       background-position: 20px 22px !important
@@ -229,7 +221,7 @@ div.mobile
         background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='221' height='221'%3E%3Cdefs%3E%3Cpath id='a' d='M77 105H11V77h38a16.6 16.6 0 0 0-2.7 9c0 10 12.8 14.7 30.7 17v2z'/%3E%3Cpath id='b' d='M77 144H11v-28h38a16.6 16.6 0 0 0-2.7 9c0 10 12.8 14.7 30.7 17v2z'/%3E%3C/defs%3E%3Cg fill='%23016895' fill-rule='evenodd'%3E%3Cpath d='M40.7 105H0a110.5 110.5 0 1 1 0 11h40.7a71.1 71.1 0 1 0 0-11z'/%3E%3Cuse xlink:href='%23a'/%3E%3Cuse transform='matrix(1 0 0 -1 0 260)' xlink:href='%23b'/%3E%3C/g%3E%3C/svg%3E")
         background-size: 33px !important
         background-position: 19px 21px !important
-      &.other-events
+      &.past-events
         background: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 421.1 526.3'%3e%3cg fill='%23006895'%3e%3ccircle cx='99.4' cy='315.4' r='20.3'/%3e%3ccircle cx='173.9' cy='315.4' r='20.3'/%3e%3ccircle cx='247.1' cy='315.4' r='20.3'/%3e%3ccircle cx='328.4' cy='315.4' r='20.3'/%3e%3ccircle cx='247.1' cy='246.3' r='20.3'/%3e%3cpath d='M351.2 40.6h-2.5a40.6 40.6 0 0 0-81.3 0h-107a40.6 40.6 0 0 0-81.3 0h-9.3c-35 0-63.4 28.5-63.4 63.4v253.7c0 35 28.3 63.4 63.4 63.4h281.4c35 0 63.5-28.4 63.5-63.4V104c0-35-28.5-63.5-63.5-63.5zm20.9 315.9a19 19 0 0 1-19 19H70.6a19 19 0 0 1-19-19V192.8h320.6v163.7z'/%3e%3ccircle cx='328.4' cy='246.3' r='20.3'/%3e%3c/g%3e%3c/svg%3e")
         background-size: 31px !important
         background-position: 20px 22px !important
@@ -260,7 +252,7 @@ div.mobile
         background: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 125'%3e%3cg fill-rule='evenodd' fill='%23fff' clip-rule='evenodd'%3e%3cpath d='M77 72.1v-.3a188 188 0 0 0-1.5-9.1v-.2l-.9-4.3c-1-5.4-2-10.9-2.7-16.3l16.8-11.6-7.4-2.8-8.8 5-14 8.1-8 4.7-10 5.7-22.8 13.2A15.9 15.9 0 1 0 37 65.9l13.3-9.1 10 5.7-.8-4.5-1-6.8 2.7-1.9.6 4v.1a1290 1290 0 0 0 1.2 7.6l.3 1.4c1.2 7.7 2.3 16 2.8 24.8L77 94.5h.2a62.2 62.2 0 0 0 0-22.4zM30.6 85a8.4 8.4 0 1 1-7.5-15l.3-.1.7-.3h.3c.6-.2 1.3-.3 2-.3h1l.2.1 1.9.5.3.1.6.3a8.4 8.4 0 0 1 .2 14.7zm20.2-32.3a2 2 0 1 1 0-4 2 2 0 0 1 0 4z'/%3e%3cpath d='M79 65c.5 3 1 6 1.3 9l1.9 1 7.4-2.7-10.7-7.4zM18.6 38.3l19 11 10-5.8-9.7-6.8a15.8 15.8 0 0 0-2.7-25.5 15.9 15.9 0 0 0-16.6 27.1zm1.3-17.5a8.4 8.4 0 1 1 10.6 11.9h-.2c-.6.3-1.2.5-1.9.6h-1-1.3l-.9-.2h-.3a9 9 0 0 1-.7-.3l-.3-.1a8.4 8.4 0 0 1-4-12zM70.9 30a52 52 0 0 1 4.8-24.5l-13.5 7.8c-2.6 7.5-3 15.1-2.5 23.2l11.2-6.4z'/%3e%3c/g%3e%3c/svg%3e")
       &.nesa-days
         background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='221' height='221'%3E%3Cdefs%3E%3Cpath id='a' d='M77 105H11V77h38a16.6 16.6 0 0 0-2.7 9c0 10 12.8 14.7 30.7 17v2z'/%3E%3Cpath id='b' d='M77 144H11v-28h38a16.6 16.6 0 0 0-2.7 9c0 10 12.8 14.7 30.7 17v2z'/%3E%3C/defs%3E%3Cg fill='%23fff' fill-rule='evenodd'%3E%3Cpath d='M40.7 105H0a110.5 110.5 0 1 1 0 11h40.7a71.1 71.1 0 1 0 0-11z'/%3E%3Cuse xlink:href='%23a'/%3E%3Cuse transform='matrix(1 0 0 -1 0 260)' xlink:href='%23b'/%3E%3C/g%3E%3C/svg%3E")
-      &.other-events
+      &.past-events
         background: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 421.1 526.3'%3e%3cg fill='%23fff'%3e%3ccircle cx='99.4' cy='315.4' r='20.3'/%3e%3ccircle cx='173.9' cy='315.4' r='20.3'/%3e%3ccircle cx='247.1' cy='315.4' r='20.3'/%3e%3ccircle cx='328.4' cy='315.4' r='20.3'/%3e%3ccircle cx='247.1' cy='246.3' r='20.3'/%3e%3cpath d='M351.2 40.6h-2.5a40.6 40.6 0 0 0-81.3 0h-107a40.6 40.6 0 0 0-81.3 0h-9.3c-35 0-63.4 28.5-63.4 63.4v253.7c0 35 28.3 63.4 63.4 63.4h281.4c35 0 63.5-28.4 63.5-63.4V104c0-35-28.5-63.5-63.5-63.5zm20.9 315.9a19 19 0 0 1-19 19H70.6a19 19 0 0 1-19-19V192.8h320.6v163.7z'/%3e%3ccircle cx='328.4' cy='246.3' r='20.3'/%3e%3c/g%3e%3c/svg%3e")
       &.recommended-events
         background: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 80'%3e%3cpath fill='%23fff' d='M48.2 22.9c-.4-1.2-1.5-2.1-2.7-2.3l-7.3-1-3.3-6.5c-1.1-2.2-4.7-2.2-5.8 0l-3.3 6.5-7.3 1a3.3 3.3 0 0 0-1.8 5.6l5.3 5-1.3 7a3.3 3.3 0 0 0 4.7 3.5l6.6-3.4 6.6 3.4a3.3 3.3 0 0 0 4.7-3.4l-1.3-7 5.3-5c.9-1 1.2-2.2.9-3.4z'/%3e%3cpath fill='%23fff' d='M54.8.7H9.2A6.4 6.4 0 0 0 2.8 7v40c0 3.5 2.9 6.4 6.4 6.4h12.5l.5.6 6.6 7.8a4.2 4.2 0 0 0 6.4 0l6.6-7.8.5-.6h12.5c3.5 0 6.4-2.9 6.4-6.4V7c0-3.5-2.9-6.3-6.4-6.3zm-.5 46H40.7a4 4 0 0 0-3.1 1.5l-.4.5-.4.5-4.8 5.6-4.8-5.6-.9-1.2a4 4 0 0 0-3-1.4H9.7V7.4h44.6v39.2z'/%3e%3c/svg%3e")
@@ -274,10 +266,9 @@ div.mobile
 </style>
 
 <script>
-
 export default {
   data() {
-    return { pageTitle: '' }
+    return { pageTitle: "" };
   },
   methods: {
     isActive(link) {
@@ -292,11 +283,11 @@ export default {
           : r.components.default.pageTitle;
       })[0];
     }
-},
-props: {
-  links: [],
-  vertical: { type: String, default: "'true'" },
-  mobile: { type: String, default: "'false'" }
-}
-}
+  },
+  props: {
+    links: [],
+    vertical: { type: String, default: "'true'" },
+    mobile: { type: String, default: "'false'" }
+  }
+};
 </script>

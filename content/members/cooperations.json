@@ -2,82 +2,112 @@
   "co_title": "Cooperations",
   "co_introduction": "The NESA has cooperation agreements with the following institutions",
   "co_entries": [{
-      "title": "Academics without Borders (AWB/USF)"
+      "title": "Academics without Borders (AWB/USF)",
+      "url": ""
     },
     {
-      "title": "ACMIT – Austrian Center for Medical Innovation and Technology (Wiener Neustadt, Austria)"
+      "title": "ACMIT – Austrian Center for Medical Innovation and Technology (Wiener Neustadt, Austria)",
+      "url": ""
     },
     {
-      "title": "The Centro Chemis Iaccarino (Naples, Italy)"
+      "title": "The Centro Chemis Iaccarino (Naples, Italy)",
+      "url": ""
     },
     {
-      "title": "The Spanish Institute of Micro-Immunotherapy (Spain)"
+      "title": "The Spanish Institute of Micro-Immunotherapy (Spain)",
+      "url": ""
     },
     {
-      "title": "The Dansk Kirurgisk Selskab (DKS, Danish Surgical Society)"
+      "title": "The Dansk Kirurgisk Selskab (DKS, Danish Surgical Society)",
+      "url": ""
     },
     {
-      "title": "The Deutsche Gesellschaft für Gynäkologie und Geburtshilfe (DGGG, German Society of Obstetrics and Gynecology)"
+      "title": "The Deutsche Gesellschaft für Gynäkologie und Geburtshilfe (DGGG, German Society of Obstetrics and Gynecology)",
+      "url": ""
     },
     {
-      "title": "The European School of Transfusion Medicine (ESTM)"
+      "title": "The European School of Transfusion Medicine (ESTM)",
+      "url": ""
     },
     {
-      "title": "European Society of Young Surgeons (ESYS-ECS)"
+      "title": "European Society of Young Surgeons (ESYS-ECS)",
+      "url": ""
     },
     {
-      "title": "Frauengesundheit in der Entwicklungszusammenarbeit e.V. (FIDE, Woman’s health in development cooperation)"
+      "title": "Frauengesundheit in der Entwicklungszusammenarbeit e.V. (FIDE, Woman’s health in development cooperation)",
+      "url": ""
     },
     {
-      "title": "FIGO (International Federation of Gynecology and Obstetrics)"
+      "title": "FIGO (International Federation of Gynecology and Obstetrics)",
+      "url": ""
     },
     {
-      "title": "GeneSort"
+      "title": "GeneSort",
+      "url": ""
     },
     {
-      "title": "Geniplet Palma SL (Palma de Mallorca, Spain)"
+      "title": "Geniplet Palma SL (Palma de Mallorca, Spain)",
+      "url": ""
     },
     {
-      "title": "The Hong Kong Academy of Medicine (HKAM)"
+      "title": "The Hong Kong Academy of Medicine (HKAM)",
+      "url": ""
     },
     {
-      "title": "International Academy for Laser Medicine and Surgery (IALMS)"
+      "title": "International Academy for Laser Medicine and Surgery (IALMS)",
+      "url": ""
     },
     {
-      "title": "Institut für Gesundheitsvorsorge, Ernährungswissenschaften und Better-Aging-Medizin (IGEB, Institute for Health Science, Nutrition Science and Better-Aging-Medicine)"
+      "title": "Institut für Gesundheitsvorsorge, Ernährungswissenschaften und Better-Aging-Medizin (IGEB, Institute for Health Science, Nutrition Science and Better-Aging-Medicine)",
+      "url": ""
     },
     {
-      "title": "Institut für Transkulturelle Gesundheitswissenschaften der Europa-Universität Viadrina, Frankfurt/Oder (IntraG, Institute for Transcultural Medical Sciences of the European University Viadrina)"
+      "title": "Institut für Transkulturelle Gesundheitswissenschaften der Europa-Universität Viadrina, Frankfurt/Oder (IntraG, Institute for Transcultural Medical Sciences of the European University Viadrina)",
+      "url": ""
     },
     {
-      "title": "The International Society for Laser Surgery and Medicine (ISLSM)"
+      "title": "The International Society for Laser Surgery and Medicine (ISLSM)",
+      "url": ""
     },
     {
-      "title": "ISGE (International Society for Gynecologic Endoscopy)"
+      "title": "ISGE (International Society for Gynecologic Endoscopy)",
+      "url": ""
     },
     {
-      "title": "Northside Hospital (sponsor of World Symposium on Endometriosis 2011)"
+      "title": "Northside Hospital (sponsor of World Symposium on Endometriosis 2011)",
+      "url": ""
     },
     {
-      "title": "The Society of Laparoendoscopic Surgeons (SLS)"
+      "title": "The Society of Laparoendoscopic Surgeons (SLS)",
+      "url": ""
     },
     {
-      "title": "Turkish Association of Maternal Fetal Medicine and Perinatology"
+      "title": "Turkish Association of Maternal Fetal Medicine and Perinatology",
+      "url": ""
     },
     {
-      "title": "The University of Cukurova (Adana, Turkey)"
+      "title": "The University of Cukurova (Adana, Turkey)",
+      "url": ""
     },
     {
-      "title": "The USP Clínica Palmaplanas, a teaching hospital of the NESA (Palma de Mallorca, Spain)"
+      "title": "The USP Clínica Palmaplanas, a teaching hospital of the NESA (Palma de Mallorca, Spain)",
+      "url": ""
     },
     {
-      "title": "The World Academy of Laser Applications (WALA)"
+      "title": "The World Academy of Laser Applications (WALA)",
+      "url": ""
     },
     {
-      "title": "World of Medicine (W.O.M.)"
+      "title": "World of Medicine (W.O.M.)",
+      "url": ""
     },
     {
-      "title": "International Network for Health Workforce Education (INHWE)"
+      "title": "International Network for Health Workforce Education (INHWE)",
+      "url": ""
+    },
+    {
+      "title": "European Artist Guild for Medicine and Culture",
+      "url": ""
     }
   ]
 }

@@ -2,7 +2,7 @@
   <div>
     <div class="main-container">
       <div class="posts">
-        <div class="post" v-for="(post, index) in posts.documents" :key="index">
+        <div class="post" v-for="(post, index) in filteredEntries" :key="index">
           <div v-if="post.fields.header.stringValue">
             <div
               class="featured-image"
@@ -64,7 +64,12 @@ export default {
     const posts = await $axios.$get(
       "https://firestore.googleapis.com/v1/projects/nesa-a1443/databases/(default)/documents/posts"
     );
-    return { posts };
+    const postEntries = posts.documents;
+
+    var filteredEntries = postEntries.filter(function(entry) {
+      return postEntries[0].fields.userId.stringValue === "1";
+    });
+    return { filteredEntries };
   },
   filters: {
     trim: function(string) {
@@ -78,9 +83,9 @@ export default {
     imgs.forEach(function(img) {
       var oldVal = img.getAttribute("src");
       var crop =
-        "/-/scale_crop/170x170/center/-/format/jpeg/-/quality/normal/-/progressive/yes/-/max_icc_size/0/";
+        "-/scale_crop/170x170/center/-/format/jpeg/-/quality/normal/-/progressive/yes/-/max_icc_size/0/";
       var preview =
-        "/-/scale_crop/500x500/center/-/format/jpeg/-/quality/normal/-/progressive/yes/-/max_icc_size/0/";
+        "-/scale_crop/500x500/center/-/format/jpeg/-/quality/normal/-/progressive/yes/-/max_icc_size/0/";
 
       function setAttributes(el, attrs) {
         for (var key in attrs) {

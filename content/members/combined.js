@@ -8,4 +8,14 @@ import file6 from './country_representatives.json';
 import file7 from './honorary_members.json';
 import file8 from './cooperations.json';
 
-export default { ...file0, ...file1, ...file2, ...file3, ...file4, ...file5, ...file6, ...file7, ...file8 };
+export default {
+  ...file0,
+  ...file1,
+  ...file2,
+  ...file3,
+  ...file4,
+  ...file5,
+  ...file6,
+  ...file7,
+  ...file8
+};

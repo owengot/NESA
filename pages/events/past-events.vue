@@ -1,6 +1,5 @@
 <template>
-  <div class="mains">
-    <div class="main_left" v-html="$md.render(nesaDays.description)"></div>
+  <div class="section">
     <div id="sidebar">
       <Sidebar
         :links="links"
@@ -14,33 +13,52 @@
     })"
       />
     </div>
-    <div id="test">
-      <div v-for="entry in nesaDays.entries" v-bind:key="entry.id">
-        <Event :project="entry"/>
+
+    <div class="main">
+      <h1>Timeline</h1>
+      <div class="timeline">
+        <div class="entry" v-for="entry in otherEvents.entries" :key="entry">
+          <h2>{{ entry.date }}</h2>
+          <p v-html="$md.render(entry.entry)"></p>
+
+          <div v-for="item in entry.links" v-bind:key="item">
+            <Link :title="item.title" :url="item.url" :description="item.description"/>
+          </div>
+
+          <Gallery :project="entry.gallery"/>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
+
+
 <script>
 import Sidebar from "~/components/SidebarProjects.vue";
-import Event from "~/components/NesaDays.vue";
+import Link from "~/components/Link.vue";
+import Gallery from "~/components/Gallery.vue";
+import JQuery from "jquery";
+
 import events from "~/content/pages/events.json";
-import nesaDays from "~/content/events/nesa-days.json";
+import otherEvents from "~/content/events/other-events.json";
+
+let $ = JQuery;
 
 export default {
   layout: "about",
   components: {
     Sidebar,
-    Event
+    Link,
+    Gallery
   },
   pageHeader: events.image,
-  bgPosition: "0 -330px",
   pageTitle: events.title,
+  bgPosition: "0 -330px",
   data() {
     return {
       events,
-      nesaDays,
+      otherEvents,
       links: [
         "Current Events",
         "Nesa Days",
@@ -55,76 +73,6 @@ export default {
 <style lang="sass" scoped>
 
 @import '~/assets/sass/news.sass'
-
-.main_left
-  width: 60% !important
-  float: left
-  margin: 0 0 20px 0
-  color: black !important
-  /deep/ h2
-    font-size: 1.65em
-    line-height: 46px !important
-    font-family: 'Open Sans', sans-serif
-    font-weight: 800
-    color: black
-    width: 95%
-    float: none
-    clear: both !important
-    border-bottom: 1px solid #DDD
-    padding-bottom: 20px
-    margin-bottom: 0px
-  /deep/ p
-    font-size: 1.35em !important
-    line-height: 40px
-    margin: 0 !important
-    color: #000
-    width: 95%
-    display: inline-block
-    padding: 20px 0 0 0
-
-.mains
-  width: 75% !important
-  overflow: hidden
-  margin: 40px auto !important
-  position: relative
-  display: block !important
-
-.main_left
-  width: 64%
-  float: left
-
-
-#sidebar
-  width: 360px
-  float: right
-  margin: 0 0 0 30px
-
-
-.project_sidebar 
-  display: block
-  width: 100%
-  h1
-    width: 100%
-    display: block
-
-.project
-  display: flex
-  flex-direction: column
-  align-items: flex-start
-  white-space: pre-line
-  margin: 0 0 40px 0
-
-h1, .desc, .photo, p
-  color: black !important
-  display: inline-block
-
-intro 
-  font-size: 1.5em
-  line-height: 1.9em
-  margin-bottom: 30px
-  font-family: 'Open Sans', sans-serif
-  font-weight: 800
-  color: black
 
 h1
   font-size: 2.1em
@@ -143,41 +91,96 @@ h1
     display: table
     clear: both
 
-.desc, p
-  display: inline
-  clear: both !important
-  float: none
+.events 
+  column-count: 2
+  column-gap: 30px
+  
+.section
+  width: 75% !important
+  margin: 40px auto !important
+  position: relative
+  display: block !important
 
-.desc /deep/ p 
-  font-size: 1.25em !important
-  line-height: 40px
-  color: #000
-  display: inline
-  &:before
-    content: ""
+.main
+  width: 60%
+  float: left
+
+.timeline
+  width: 100%
+  border-left: 1px solid #efefef
+
+#sidebar
+  width: 360px
+  float: right
+  margin: 0 0 0 30px
+
+
+.project_sidebar 
+  display: block
+  width: 100%
+  h1
+    width: 100%
+    display: block
+
+
+div /deep/ .gallery 
+  margin: 10px 0 0 5px
+  a
+    width: 23% !important
+    margin: 0 2% 2% 0 !important
+    height: auto
+    &:nth-child(4n)
+      margin: 0 0 2% 0 !important
+    img
+      height: auto
+
+.entry
+  color: black
+  font-family: 'Open Sans', sans-serif
+  margin-bottom: 20px
+  display: inline-block
+  margin-left: 25px
+  h2  
+    position: relative
+    border: 1px solid #efefef
+    color: #006895
+    padding: 13px 15px 11px
+    font-size: 22px
     display: inline-block
+    border-radius: 10px
     clear: both
+    margin-bottom: 10px
+    &:before
+      background: #efefef
+      height: 11px
+      width: 11px
+      border-radius: 40px
+      content: ''
+      position: absolute
+      left: -32px
+      top: 18px
+    &:after
+      clear: both
+      content: ''
+      position: absolute
 
-.photo 
-  display: flex
-  flex-direction: row
-  margin: 1.4em 0 0 0 
-  font-size: 1.25em
-  line-height: 40px
-  color: #000
-
-.photo /deep/ p 
-  &:first-child
-    flex: 0 0 64%
-    padding-right: 30px
-
-.photo /deep/ img 
-  width: 100% !important
-  border-radius: 20px
-  margin: 0 0 20px 20px
-
+  p
+    margin-left: 5px
+    margin-bottom: 10px
+    font-size: 1.25em !important
+    clear: both
+    display: inline-block
+    line-height: 35px !important
 
 @media all and (max-width: 575px)
+  .main
+    width: 100% !important
+    float: none
+  .section
+    width: 90% !important
+    float: none
+  .timeline
+    margin-top: 20px
   div /deep/ .gallery 
     margin: 0px 0px
     display: inline-block
@@ -218,7 +221,6 @@ h1
     width: 100% !important
   div /deep/ .desc h2
     font-size: 1.35em !important
-    line-height: 1.3em !important
   div /deep/ .project h1
     font-size: 1.35em !important
     line-height: 1.4em !important
@@ -263,5 +265,4 @@ h1
       textarea
         background: none
         color: white
-
 </style>

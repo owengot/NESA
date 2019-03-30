@@ -1,4 +1,4 @@
 import Vue from 'vue'
-import Flickity from 'vue-flickity'
+import VueCarousel from 'vue-carousel'
 
-Vue.component('Flickity', Flickity)
+Vue.use(VueCarousel)

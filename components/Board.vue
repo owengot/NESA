@@ -1,13 +1,10 @@
 <template>
-
   <div class="board">
     <h1>{{ title }}</h1>
-    <div
-      class="description"
-      v-html="$md.render(description)"
-    > </div>
+    <div class="description" v-html="$md.render(description)"></div>
 
     <button
+      v-if="entries"
       id="show-modal"
       @click="openModal(); modalEntries = entries; modalTitle = title; modalIntroduction = introduction"
     >View Members</button>
@@ -15,15 +12,11 @@
     <CustomComponentModal
       v-if="showModal"
       @close="showModal = false"
-      :title='modalTitle'
-      :entries='modalEntries'
-      :introduction='modalIntroduction'
-    >
-
-    </CustomComponentModal>
-
+      :title="modalTitle"
+      :entries="modalEntries"
+      :introduction="modalIntroduction"
+    ></CustomComponentModal>
   </div>
-
 </template>
 
 <script>

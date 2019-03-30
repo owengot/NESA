@@ -8,96 +8,62 @@ media_library:
   config:
     publicKey: cd41734ed0e5fd81a20c
 collections:
-  - name: "news" # Used in routes, e.g., /admin/collections/blog
-    label: "News" # Used in the UI
-    folder: "content/news/posts" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    format: 'json'
-    fields: # The fields for each document, usually in front matter
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - label: "Gallery"
-        name: "gallery"
-        widget: "list"
-        fields:
-          - {label: Image, name: url, widget: image, default: ""}
-          - {label: Caption, name: caption, widget: string, default: ""}
-  - name: "newsletters" # Used in routes, e.g., /admin/collections/pages
-    label: "Newsletters" # Used in the UI
-    files:
-      - label: "Newsletter"
-        name: "Newsletter"
-        file: "static/content/newsletter.json"
-        fields: 
-          - label: Newsletter
-            name: entries
-            widget: list
-            fields:
-              - label: Title
-                name: title
-                widget: string
-              - label: Email
-                name: body
-                widget: markdown
   - name: "pages" # Used in routes, e.g., /admin/collections/pages
     label: "Page Content" # Used in the UI
     files:
       - label: "Home"
         name: "home"
         file: "content/pages/home.json"
-        fields: 
+        fields:
           - label: Slide 1
             name: slide1
             widget: object
             fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Caption, name: caption, widget: text}
-              - {label: Image, name: image, widget: image}
+              - { label: Name, name: name, widget: string }
+              - { label: Caption, name: caption, widget: text }
+              - { label: Image, name: image, widget: image }
           - label: Slide 2
             name: slide2
             widget: object
             fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Caption, name: caption, widget: text}
-              - {label: Image, name: image, widget: image}
+              - { label: Name, name: name, widget: string }
+              - { label: Caption, name: caption, widget: text }
+              - { label: Image, name: image, widget: image }
           - label: Slide 3
             name: slide3
             widget: object
             fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Caption, name: caption, widget: text}
-              - {label: Image, name: image, widget: image}
+              - { label: Name, name: name, widget: string }
+              - { label: Caption, name: caption, widget: text }
+              - { label: Image, name: image, widget: image }
       - label: "About"
         name: "about"
         file: "content/pages/about.json"
-        fields: 
-          - {label: Title, name: title, widget: string, default: 'about'}
-          - {label: Header Image, name: image, widget: image}
-          - {label: Introduction, name: description, widget: text}
-          - {label: Quote, name: quote, widget: text}
+        fields:
+          - { label: Title, name: title, widget: string, default: "about" }
+          - { label: Header Image, name: image, widget: image }
+          - { label: Introduction, name: description, widget: text }
+          - { label: Quote, name: quote, widget: text }
       - label: "News"
         name: "news"
         file: "content/pages/news.json"
-        fields: 
-          - {label: Title, name: title, widget: string, default: 'about'}
-          - {label: Header Image, name: image, widget: image}
+        fields:
+          - { label: Title, name: title, widget: string, default: "about" }
+          - { label: Header Image, name: image, widget: image }
       - label: "Projects"
         name: "projects"
         file: "content/pages/projects.json"
-        fields: 
-          - {label: Title, name: title, widget: string, default: 'Projects'}
-          - {label: Header Image, name: image, widget: image}
-          - {label: Introduction, name: introduction, widget: text}
+        fields:
+          - { label: Title, name: title, widget: string, default: "Projects" }
+          - { label: Header Image, name: image, widget: image }
+          - { label: Introduction, name: introduction, widget: text }
       - label: "Pedagogy"
         name: "pedagogy"
         file: "content/pages/pedagogy.json"
-        fields: 
-          - {label: Title, name: title, widget: string, default: 'Projects'}
-          - {label: Header Image, name: image, widget: image}
-          - {label: Introduction, name: description, widget: text}
+        fields:
+          - { label: Title, name: title, widget: string, default: "Projects" }
+          - { label: Header Image, name: image, widget: image }
+          - { label: Introduction, name: description, widget: text }
           - label: Images
             name: images
             widget: image
@@ -109,60 +75,60 @@ collections:
             name: "entries"
             widget: "list"
             fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Description, name: description, widget: text}
+              - { label: Name, name: name, widget: string }
+              - { label: Description, name: description, widget: text }
       - label: "Events"
         name: "events"
         file: "content/pages/events.json"
-        fields: 
-          - {label: Title, name: title, widget: string, default: 'Projects'}
-          - {label: Header Image, name: image, widget: image}
+        fields:
+          - { label: Title, name: title, widget: string, default: "Projects" }
+          - { label: Header Image, name: image, widget: image }
       - label: "Publications"
         name: "publications"
         file: "content/pages/publications.json"
-        fields: 
-          - {label: Title, name: title, widget: string, default: 'Projects'}
-          - {label: Header Image, name: image, widget: image}
+        fields:
+          - { label: Title, name: title, widget: string, default: "Projects" }
+          - { label: Header Image, name: image, widget: image }
   - name: "projects"
     label: "Projects" # Used in the UI
     files:
       - label: "Featured Projects"
         name: "featured_projects"
         file: "content/projects/featured_projects.json"
-        fields: 
+        fields:
           - label: "Featured Projects"
             name: "entries"
             widget: "list"
             fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Description, name: description, widget: text}
+              - { label: Name, name: name, widget: string }
+              - { label: Description, name: description, widget: text }
               - label: Images
                 name: images
                 widget: list
                 required: false
                 fields:
-                  - {label: Image, name: image, widget: string}
+                  - { label: Image, name: image, widget: string }
               - label: Resources (Research Papers, External Links)
                 name: links
                 widget: list
                 required: false
                 fields:
-                  - {label: Title, name: title, widget: string}
-                  - {label: Description, name: description, widget: string}
-                  - {label: URL, name: url, widget: string}
-              - label: Video 
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: description, widget: string }
+                  - { label: URL, name: url, widget: string }
+              - label: Video
                 name: video
                 widget: list
                 required: false
                 fields:
-                  - {label: Caption, name: caption, widget: string}
-                  - {label: URL, name: url, widget: string}
-              - label: Gallery 
+                  - { label: Caption, name: caption, widget: string }
+                  - { label: URL, name: url, widget: string }
+              - label: Gallery
                 name: gallery
                 widget: object
                 required: false
                 fields:
-                  - {label: Caption, name: caption, widget: string}
+                  - { label: Caption, name: caption, widget: string }
                   - label: Images
                     name: url
                     widget: image
@@ -173,40 +139,40 @@ collections:
       - label: "Anaesthesiology"
         name: "anaesthesiology"
         file: "content/projects/posts/anaesthesiology.json"
-        fields: 
+        fields:
           - label: "Projects"
             name: "entries"
             widget: "list"
             fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Description, name: description, widget: text}
+              - { label: Name, name: name, widget: string }
+              - { label: Description, name: description, widget: text }
               - label: Images
                 name: images
                 widget: list
                 required: false
                 fields:
-                  - {label: Image, name: image, widget: string}
+                  - { label: Image, name: image, widget: string }
               - label: Resources (Research Papers, External Links)
                 name: links
                 widget: list
                 required: false
                 fields:
-                  - {label: Title, name: title, widget: string}
-                  - {label: Description, name: description, widget: string}
-                  - {label: URL, name: url, widget: string}
-              - label: Video 
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: description, widget: string }
+                  - { label: URL, name: url, widget: string }
+              - label: Video
                 name: video
                 widget: list
                 required: false
                 fields:
-                  - {label: Caption, name: caption, widget: string}
-                  - {label: URL, name: url, widget: string}
-              - label: Gallery 
+                  - { label: Caption, name: caption, widget: string }
+                  - { label: URL, name: url, widget: string }
+              - label: Gallery
                 name: gallery
                 widget: object
                 required: false
                 fields:
-                  - {label: Caption, name: caption, widget: string}
+                  - { label: Caption, name: caption, widget: string }
                   - label: Images
                     name: url
                     widget: image
@@ -217,40 +183,40 @@ collections:
       - label: "General Surgery"
         name: "general-surgery"
         file: "content/projects/posts/general-surgery.json"
-        fields: 
+        fields:
           - label: "Projects"
             name: "entries"
             widget: "list"
             fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Description, name: description, widget: text}
+              - { label: Name, name: name, widget: string }
+              - { label: Description, name: description, widget: text }
               - label: Images
                 name: images
                 widget: list
                 required: false
                 fields:
-                  - {label: Image, name: image, widget: string}
+                  - { label: Image, name: image, widget: string }
               - label: Resources (Research Papers, External Links)
                 name: links
                 widget: list
                 required: false
                 fields:
-                  - {label: Title, name: title, widget: string}
-                  - {label: Description, name: description, widget: string}
-                  - {label: URL, name: url, widget: string}
-              - label: Video 
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: description, widget: string }
+                  - { label: URL, name: url, widget: string }
+              - label: Video
                 name: video
                 widget: list
                 required: false
                 fields:
-                  - {label: Caption, name: caption, widget: string}
-                  - {label: URL, name: url, widget: string}
-              - label: Gallery 
+                  - { label: Caption, name: caption, widget: string }
+                  - { label: URL, name: url, widget: string }
+              - label: Gallery
                 name: gallery
                 widget: object
                 required: false
                 fields:
-                  - {label: Caption, name: caption, widget: string}
+                  - { label: Caption, name: caption, widget: string }
                   - label: Images
                     name: url
                     widget: image
@@ -261,40 +227,40 @@ collections:
       - label: "Interdisciplinary"
         name: "interdisciplinary"
         file: "content/projects/posts/interdisciplinary.json"
-        fields: 
+        fields:
           - label: "Projects"
             name: "entries"
             widget: "list"
             fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Description, name: description, widget: text}
+              - { label: Name, name: name, widget: string }
+              - { label: Description, name: description, widget: text }
               - label: Images
                 name: images
                 widget: list
                 required: false
                 fields:
-                  - {label: Image, name: image, widget: string}
+                  - { label: Image, name: image, widget: string }
               - label: Resources (Research Papers, External Links)
                 name: links
                 widget: list
                 required: false
                 fields:
-                  - {label: Title, name: title, widget: string}
-                  - {label: Description, name: description, widget: string}
-                  - {label: URL, name: url, widget: string}
-              - label: Video 
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: description, widget: string }
+                  - { label: URL, name: url, widget: string }
+              - label: Video
                 name: video
                 widget: list
                 required: false
                 fields:
-                  - {label: Caption, name: caption, widget: string}
-                  - {label: URL, name: url, widget: string}
-              - label: Gallery 
+                  - { label: Caption, name: caption, widget: string }
+                  - { label: URL, name: url, widget: string }
+              - label: Gallery
                 name: gallery
                 widget: object
                 required: false
                 fields:
-                  - {label: Caption, name: caption, widget: string}
+                  - { label: Caption, name: caption, widget: string }
                   - label: Images
                     name: url
                     widget: image
@@ -305,40 +271,40 @@ collections:
       - label: "Obstetrics & Gynaecology"
         name: "obstetrics-gynaecology"
         file: "content/projects/posts/obstetrics-gynaecology.json"
-        fields: 
+        fields:
           - label: "Projects"
             name: "entries"
             widget: "list"
             fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Description, name: description, widget: text}
+              - { label: Name, name: name, widget: string }
+              - { label: Description, name: description, widget: text }
               - label: Images
                 name: images
                 widget: list
                 required: false
                 fields:
-                  - {label: Image, name: image, widget: string}
+                  - { label: Image, name: image, widget: string }
               - label: Resources (Research Papers, External Links)
                 name: links
                 widget: list
                 required: false
                 fields:
-                  - {label: Title, name: title, widget: string}
-                  - {label: Description, name: description, widget: string}
-                  - {label: URL, name: url, widget: string}
-              - label: Video 
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: description, widget: string }
+                  - { label: URL, name: url, widget: string }
+              - label: Video
                 name: video
                 widget: list
                 required: false
                 fields:
-                  - {label: Caption, name: caption, widget: string}
-                  - {label: URL, name: url, widget: string}
-              - label: Gallery 
+                  - { label: Caption, name: caption, widget: string }
+                  - { label: URL, name: url, widget: string }
+              - label: Gallery
                 name: gallery
                 widget: object
                 required: false
                 fields:
-                  - {label: Caption, name: caption, widget: string}
+                  - { label: Caption, name: caption, widget: string }
                   - label: Images
                     name: url
                     widget: image
@@ -349,40 +315,40 @@ collections:
       - label: "Otolaryngology"
         name: "otolaryngology"
         file: "content/projects/posts/otolaryngology.json"
-        fields: 
+        fields:
           - label: "Projects"
             name: "entries"
             widget: "list"
             fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Description, name: description, widget: text}
+              - { label: Name, name: name, widget: string }
+              - { label: Description, name: description, widget: text }
               - label: Images
                 name: images
                 widget: list
                 required: false
                 fields:
-                  - {label: Image, name: image, widget: string}
+                  - { label: Image, name: image, widget: string }
               - label: Resources (Research Papers, External Links)
                 name: links
                 widget: list
                 required: false
                 fields:
-                  - {label: Title, name: title, widget: string}
-                  - {label: Description, name: description, widget: string}
-                  - {label: URL, name: url, widget: string}
-              - label: Video 
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: description, widget: string }
+                  - { label: URL, name: url, widget: string }
+              - label: Video
                 name: video
                 widget: list
                 required: false
                 fields:
-                  - {label: Caption, name: caption, widget: string}
-                  - {label: URL, name: url, widget: string}
-              - label: Gallery 
+                  - { label: Caption, name: caption, widget: string }
+                  - { label: URL, name: url, widget: string }
+              - label: Gallery
                 name: gallery
                 widget: object
                 required: false
                 fields:
-                  - {label: Caption, name: caption, widget: string}
+                  - { label: Caption, name: caption, widget: string }
                   - label: Images
                     name: url
                     widget: image
@@ -393,40 +359,40 @@ collections:
       - label: "Urology"
         name: "urology"
         file: "content/projects/posts/urology.json"
-        fields: 
+        fields:
           - label: "Projects"
             name: "entries"
             widget: "list"
             fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Description, name: description, widget: text}
+              - { label: Name, name: name, widget: string }
+              - { label: Description, name: description, widget: text }
               - label: Images
                 name: images
                 widget: list
                 required: false
                 fields:
-                  - {label: Image, name: image, widget: string}
+                  - { label: Image, name: image, widget: string }
               - label: Resources (Research Papers, External Links)
                 name: links
                 widget: list
                 required: false
                 fields:
-                  - {label: Title, name: title, widget: string}
-                  - {label: Description, name: description, widget: string}
-                  - {label: URL, name: url, widget: string}
-              - label: Video 
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: description, widget: string }
+                  - { label: URL, name: url, widget: string }
+              - label: Video
                 name: video
                 widget: list
                 required: false
                 fields:
-                  - {label: Caption, name: caption, widget: string}
-                  - {label: URL, name: url, widget: string}
-              - label: Gallery 
+                  - { label: Caption, name: caption, widget: string }
+                  - { label: URL, name: url, widget: string }
+              - label: Gallery
                 name: gallery
                 widget: object
                 required: false
                 fields:
-                  - {label: Caption, name: caption, widget: string}
+                  - { label: Caption, name: caption, widget: string }
                   - label: Images
                     name: url
                     widget: image
@@ -437,40 +403,40 @@ collections:
       - label: "General Surgery"
         name: "general-surgery"
         file: "content/projects/posts/general-surgery.json"
-        fields: 
+        fields:
           - label: "Projects"
             name: "entries"
             widget: "list"
             fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Description, name: description, widget: text}
+              - { label: Name, name: name, widget: string }
+              - { label: Description, name: description, widget: text }
               - label: Images
                 name: images
                 widget: list
                 required: false
                 fields:
-                  - {label: Image, name: image, widget: string}
+                  - { label: Image, name: image, widget: string }
               - label: Resources (Research Papers, External Links)
                 name: links
                 widget: list
                 required: false
                 fields:
-                  - {label: Title, name: title, widget: string}
-                  - {label: Description, name: description, widget: string}
-                  - {label: URL, name: url, widget: string}
-              - label: Video 
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: description, widget: string }
+                  - { label: URL, name: url, widget: string }
+              - label: Video
                 name: video
                 widget: list
                 required: false
                 fields:
-                  - {label: Caption, name: caption, widget: string}
-                  - {label: URL, name: url, widget: string}
-              - label: Gallery 
+                  - { label: Caption, name: caption, widget: string }
+                  - { label: URL, name: url, widget: string }
+              - label: Gallery
                 name: gallery
                 widget: object
                 required: false
                 fields:
-                  - {label: Caption, name: caption, widget: string}
+                  - { label: Caption, name: caption, widget: string }
                   - label: Images
                     name: url
                     widget: image
@@ -484,15 +450,15 @@ collections:
       - label: Featured Publication
         name: featured_publication
         file: "content/publications/featured_publication.json"
-        fields: 
+        fields:
           - label: Featured Publication
             name: featured_pub
             widget: object
-            fields: 
-              - {label: Title, name: title, widget: string}
-              - {label: Description, name: description, widget: text}
-              - {label: Editors, name: editors, widget: string}
-              - {label: Journal, name: journal, widget: string}
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Editors, name: editors, widget: string }
+              - { label: Journal, name: journal, widget: string }
               - label: Images
                 name: images
                 widget: image
@@ -500,66 +466,42 @@ collections:
                   config:
                     multiple: true
                     previewStep: false
-              - {label: Link, name: url, widget: string}
-      - label: Publications
-        name: publications
-        file: "content/publications/publications.json"
-        fields:
-          - label: Publications
-            name: entries
-            widget: list
-            fields: 
-              - {label: Author, name: author, widget: string}
-              - {label: Topic, name: topic, widget: string}
-              - {label: Link, name: url, widget: string}
-              - {label: Journal, name: journal, widget: string}
+              - { label: Link, name: url, widget: string }
   - name: "events" # Used in routes, e.g., /admin/collections/pages
     label: "Events"
     files:
-      - label: "Current Events"
-        name: "current_events"
-        file: "content/events/current-events.json"
-        fields:
-          - label: "Events"
-            name: "entries"
-            widget: "list"
-            fields:
-              - {label: Name, name: title, widget: string}
-              - {label: Date, name: date, widget: string}
-              - {label: Image, name: image, widget: image}
-              - {label: Link, name: url, widget: string}
       - label: "Innauguration Ceremony"
         name: "innauguration_ceremony"
         file: "content/events/innauguration-ceremony.json"
         fields:
-          - {label: Introduction, name: introduction, widget: text}
+          - { label: Introduction, name: introduction, widget: text }
           - label: Gallery
             name: gallery
             widget: list
-            fields: 
+            fields:
               - label: Image
                 name: url
                 widget: image
-              - {label: Caption, name: caption, widget: string}
+              - { label: Caption, name: caption, widget: string }
       - label: "Nesa Days"
         name: "nesa_days"
         file: "content/events/nesa-days.json"
         fields:
-          - {label: Introduction, name: description, widget: text}
+          - { label: Introduction, name: description, widget: text }
           - label: Events
             name: entries
             widget: list
-            fields: 
-              - {label: Title, name: title, widget: string}
-              - {label: Description, name: description, widget: text}
-              - {label: Location, name: location, widget: string}
-              - {label: Date, name: date, widget: string}
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Location, name: location, widget: string }
+              - { label: Date, name: date, widget: string }
               - label: Links
                 name: links
                 widget: list
-                fields: 
-                  - {label: Description, name: description, widget: string}
-                  - {label: Link, name: url, widget: string}
+                fields:
+                  - { label: Description, name: description, widget: string }
+                  - { label: Link, name: url, widget: string }
               - label: Sidebar Gallery
                 name: slider
                 widget: image
@@ -570,158 +512,71 @@ collections:
               - label: Images
                 name: gallery
                 widget: list
-                fields: 
+                fields:
                   - label: Image
                     name: url
                     widget: image
-                  - {label: Caption, name: caption, widget: string}
-      - label: "Other Events"
+                  - { label: Caption, name: caption, widget: string }
+      - label: "Past Events"
         name: "other_events"
         file: "content/events/other-events.json"
-        fields: 
+        fields:
           - label: Events
             name: entries
             widget: list
-            fields: 
-              - {label: Date, name: date, widget: string}
-              - {label: Description, name: entry, widget: text}
+            fields:
+              - { label: Date, name: date, widget: string }
+              - { label: Description, name: entry, widget: text }
               - label: Links
                 name: info
                 widget: list
-                fields: 
-                  - {label: Description, name: description, widget: text}
-                  - {label: Link, name: url, widget: string}
+                fields:
+                  - { label: Description, name: description, widget: text }
+                  - { label: Link, name: url, widget: string }
               - label: Gallery
                 name: gallery
                 widget: list
-                fields: 
+                fields:
                   - label: Image
                     name: url
                     widget: image
-                  - {label: Caption, name: caption, widget: string}
-      - label: "Recommended Events"
-        name: "recommended_events"
-        file: "content/events/recommended-events.json"
-        fields:
-            - label: "Events"
-              name: "entries"
-              widget: "list"
-              fields:
-                - {label: Title, name: title, widget: string}
-                - {label: Date, name: date, widget: string}
-                - {label: Image, name: image, widget: image}
-                - {label: Link, name: url, widget: string}
+                  - { label: Caption, name: caption, widget: string }
   - name: "members" # Used in routes, e.g., /admin/collections/pages
     label: "Members" # Used in the UI
     files:
       - label: "The Executive Board"
         name: "Executive_Board"
         file: "content/members/executive-board.json"
-        fields: 
-          - {label: Title, name: ex_title, widget: string, default: ""}
-          - {label: Description, name: ex_description, widget: text, default: ""}
-          - {label: Introduction, name: ex_introduction, widget: text, default: ""}
+        fields:
+          - { label: Title, name: ex_title, widget: string, default: "" }
+          - {
+              label: Description,
+              name: ex_description,
+              widget: text,
+              default: "",
+            }
+          - {
+              label: Introduction,
+              name: ex_introduction,
+              widget: text,
+              default: "",
+            }
           - label: Members
             name: ex_entries
             widget: list
             fields:
-              - {label: First Name, name: first_name, widget: string}
-              - {label: Last Name, name: last_name, widget: string}
-              - {label: Title, name: title, widget: string}
-              - {label: Position, name: position, widget: string}
-      - label: "The Advisory Board"
-        name: "Advisory_Board"
-        file: "content/members/advisory-board.json"
-        fields: 
-          - {label: Title, name: ab_title, widget: string, default: ""}
-          - {label: Description, name: ab_description, widget: text, default: ""}
-          - {label: Introduction, name: ab_introduction, widget: text, default: ""}
-          - label: Members
-            name: ab_entries
-            widget: list
-            fields:
-              - {label: First Name, name: first_name, widget: string}
-              - {label: Last Name, name: last_name, widget: string}
-              - {label: Location, name: location, widget: string}
-              - {label: Discipline, name: discipline, widget: string}
-      - label: "The International Board"
-        name: "International_Board"
-        file: "content/members/international-board.json"
-        fields: 
-          - {label: Title, name: ib_title, widget: string, default: ""}
-          - {label: Description, name: ib_description, widget: text, default: ""}
-          - {label: Introduction, name: ib_introduction, widget: text, default: ""}
-          - label: Members
-            name: ib_entries
-            widget: list
-            fields:
-              - {label: First Name, name: first_name, widget: string}
-              - {label: Last Name, name: last_name, widget: string}
-              - {label: Title, name: title, widget: string}
-              - {label: Position, name: position, widget: string}
-      - label: "Diplomats"
-        name: "Diplomats"
-        file: "content/members/diplomats.json"
-        fields: 
-          - {label: Introduction, name: di_introduction, widget: text, default: ""}
-          - label: Members
-            name: di_entries
-            widget: list
-            fields:
-              - {label: First Name, name: first_name, widget: string}
-              - {label: Last Name, name: last_name, widget: string}
-              - {label: Location, name: location, widget: string}
-              - {label: Discipline, name: discipline, widget: string}
-      - label: "Partners"
-        name: "Partners"
-        file: "content/members/partners.json"
-        fields: 
-          - {label: Title, name: pa_title, widget: string, default: ""}
-          - {label: Introduction, name: pa_introduction, widget: text, default: ""}
-          - label: Featured Partners
-            name: featured_partners
-            widget: list
-            fields:
-              - {label: Organisation Name, name: name, widget: string}
-              - {label: Logo, name: logo, widget: image}
-              - {label: Website, name: url, widget: string}
-          - label: Partners
-            name: pa_entries
-            widget: list
-            fields:
-              - {label: First Name, name: first_name, widget: string}
-              - {label: Last Name, name: last_name, widget: string}
-              - {label: Location, name: title, widget: string, required: false}
-              - {label: Member Profile ID, name: url, widget: string, hint: "The last number in the URL for a NESA member profile, for example 326 for memberprofile.php?id=326", required: false}
-              - {label: Discipline, name: discipline, widget: string, required: false}
-      - label: "Country Representatives"
-        name: "Country Representatives"
-        file: "content/members/country_representatives.json"
-        fields: 
-          - {label: Title, name: cr_title, widget: string, default: ""}
-          - {label: Introduction, name: cr_introduction, widget: text, default: ""}
-          - label: Members
-            name: cr_entries
-            widget: list
-            fields:
-              - {label: First Name, name: first_name, widget: string}
-              - {label: Last Name, name: last_name, widget: string}
-              - {label: Location, name: location, widget: string, required: false}
-              - {label: Country, name: country, widget: string, required: false}
-              - {label: Discipline, name: discipline, widget: string, required: false}
-      - label: "Honorary Members"
-        name: "Honorary Members"
-        file: "content/members/honorary_members.json"
-        fields: 
-          - {label: Title, name: hr_title, widget: string, default: ""}
-          - {label: Introduction, name: hr_introduction, widget: text, default: ""}
+              - { label: First Name, name: first_name, widget: string }
+              - { label: Last Name, name: last_name, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Position, name: position, widget: string }
       - label: "Cooperations"
         name: "Cooperations"
         file: "content/members/cooperations.json"
-        fields: 
-          - {label: Title, name: co_title, widget: string, default: ""}
+        fields:
+          - { label: Title, name: co_title, widget: string, default: "" }
           - label: Organisations
             name: co_entries
             widget: list
             fields:
-              - {label: Organisation, name: title, widget: string}
+              - { label: Organisation, name: title, widget: string }
+              - { label: Link, name: url, widget: string }
