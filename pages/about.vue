@@ -5,6 +5,11 @@
         <div class="col_left">
           <h1>{{ about.title }}</h1>
           <p v-html="$md.render(about.description)"></p>
+          <a
+            href="/Presentation-NESA.ppt"
+            target="_blank"
+            class="presentation"
+          >View the NESA Presentation</a>
         </div>
         <div class="col_right">
           <blockquote>{{ about.quote }}</blockquote>
@@ -135,6 +140,17 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.presentation
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 40'%3E%3Cpath fill='rgba(1, 104, 149, 1.0000)' d='M12 10.2a.7.7 0 0 0 .5-.7c0-.1 0-.3-.2-.4a.7.7 0 0 0-.4-.2 5 5 0 0 0-.7 0h-.5v1.4h.6l.8-.1zM16.7 10.2a.7.7 0 0 0 .5-.7c0-.1 0-.3-.2-.4a.7.7 0 0 0-.4-.2 5 5 0 0 0-.7 0h-.5v1.4h.5l.8-.1z'/%3E%3Cpath fill='rgba(1, 104, 149, 1.0000)' d='M26.5 0h-21a2 2 0 0 0-2 2v28c0 1.1.9 2 2 2h21a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-7.8 8h4v.8h-1.5V13h-1V8.8h-1.5V8zm-4.3 0h2.8c.3.1.5.3.7.6.2.2.3.5.3 1 0 .2 0 .5-.2.7 0 .2-.2.4-.4.5l-.5.2-1 .1h-.7V13h-1V8zM9.7 8h2.8c.3.1.6.3.7.6.2.2.3.5.3 1l-.1.7-.5.5-.5.2-1 .1h-.7V13h-1V8zm13.8 17.5h-15v-1h15v1zm0-3.5h-15v-1h15v1z'/%3E%3C/svg%3E") no-repeat 10px 10px
+  background-size: 40px
+  padding: 20px 20px 20px 57px
+  margin: 20px 0 10px 0
+  display: inline-block
+  text-decoration: none
+  color: rgba(1, 104, 149, 1.0000)
+  font-weight: bold
+  border: 1px solid rgba(1, 104, 149, 1.0000)
+  border-radius: 10px
 
 .block 
   display: flex
