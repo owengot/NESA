@@ -3,9 +3,9 @@
     <div class="section">
       <h1>Subscribe to our Newsletter</h1>
       <p>Get regular updates on all the latest news and current events from NESA</p>
-      <div v-if="success === false" class="form">
+      <div class="form">
         <form name="subscribe" action="/news" netlify-honeypot="bot-field" method="post" netlify>
-          <input type="hidden" name="form-name" value="contact">
+          <input type="hidden" name="hidden-form" value="subscribe">
           <p class="hidden">
             <label>
               Don’t fill this out:
@@ -16,11 +16,6 @@
           <input class="form-field" placeholder="Your email" name="email" id="email">
           <input class="form-button" type="submit" value="Subscribe">
         </form>
-      </div>
-
-      <div v-else class="message">
-        <div class="check-wrap"></div>
-        <p>You Are Subscribed</p>
       </div>
 
       <p class="gdpr">
