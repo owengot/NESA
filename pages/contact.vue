@@ -5,14 +5,16 @@
         <div class="contact">
           <h1>Send Us a Message</h1>
           <div class="form">
-            <form name="contact" method="POST" data-netlify="true" netlify action="/">
+            <form name="email" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+              <input type="hidden" name="form-name" value="ask-question">
+
               <input type="text" placeholder="Your name" name="name">
 
               <input type="email" placeholder="Your email" name="email">
 
-              <textarea name="message" placeholder="Your message"></textarea>
+              <textarea type="text" name="message" placeholder="Your message"></textarea>
 
-              <button type="submit">Send</button>
+              <input type="submit" class="form-button">Send</input>
             </form>
           </div>
         </div>
