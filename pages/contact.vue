@@ -4,8 +4,8 @@
       <div class="posts">
         <div class="contact">
           <h1>Send Us a Message</h1>
-          <div v-if="success === false" class="form">
-            <form name="contact" netlify-honeypot="bot-field" method="post" netlify>
+          <div class="form">
+            <form name="email" netlify-honeypot="bot-field" method="post" netlify>
               <input type="hidden" name="form-name" value="contact">
               <p class="hidden">
                 <label>
@@ -18,11 +18,6 @@
               <textarea rows="4" cols="50" name="message" id="message" placeholder="Your message"></textarea>
               <input @click="submit" class="form-button" type="submit" value="Send">
             </form>
-          </div>
-
-          <div v-else class="message">
-            <div class="check-wrap"></div>
-            <p>Message Sent</p>
           </div>
         </div>
       </div>
