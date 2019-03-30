@@ -5,13 +5,7 @@
         <div class="contact">
           <h1>Send Us a Message</h1>
           <div class="form">
-            <form name="contact" method="POST" data-netlify="true">
-              <p class="hidden">
-                <label>
-                  Don’t fill this out:
-                  <input name="bot-field">
-                </label>
-              </p>
+            <form name="contact" method="POST" data-netlify="true" netlify action="/">
               <input type="text" placeholder="Your name" name="name">
 
               <input type="email" placeholder="Your email" name="email">
