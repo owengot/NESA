@@ -11,7 +11,7 @@
               <div class="title">
                 <div class="title">
                   <div class="post-date">
-                    <h3>{{ post.createTime | formatDateString }}</h3>
+                    <h3>{{ post.fields.createdOn.timestampValue | formatDateString }}</h3>
                   </div>
                   <div class="post-title">
                     <h3>{{ post.fields.title.stringValue }}</h3>
@@ -23,7 +23,7 @@
           <div v-else>
             <div class="title">
               <div class="post-date">
-                <h3>{{ post.createTime | formatDateString }}</h3>
+                <h3>{{ post.fields.createdOn.timestampValue | formatDateString }}</h3>
               </div>
               <div class="post-title">
                 <h3>{{ post.fields.title.stringValue }}</h3>
@@ -66,9 +66,19 @@ export default {
     );
     const postEntries = posts.documents;
 
+    function time(a, b) {
+      if (a.fields.createdOn.timestampValue < b.fields.createdOn.timestampValue)
+        return 1;
+      if (a.fields.createdOn.timestampValue > b.fields.createdOn.timestampValue)
+        return -1;
+      return 0;
+    }
+
     var filteredEntries = postEntries.filter(function(entry) {
       return postEntries[0].fields.userId.stringValue === "1";
     });
+
+    var sortedEntries = filteredEntries.sort(time);
     return { filteredEntries };
   },
   filters: {
@@ -103,6 +113,7 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+
 .post-content 
   padding: 0px 0
   /deep/ p
@@ -227,8 +238,14 @@ div /deep/ .sidebar
   width: 93%
   margin: 20px auto
 
+.post /deep/ .title .post-date h3
+    padding: 15px 20px 3px
+
+.post /deep/ .title 
+  padding: 0px 20px 0px
 
 @media all and (max-width: 575px)
+
   .container
     margin: 0 auto !important
   /deep/ .container

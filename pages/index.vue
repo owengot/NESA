@@ -4,7 +4,9 @@
 
     <div class="ia-container">
       <figure class="slide1" @click="selected = 1" :class="{ highlight:selected == 1 }">
-        <img :src="home.slide1.image">
+        <img
+          :src="home.slide1.image + '-/preview/1100x1100/-/format/jpeg/-/quality/normal/-/progressive/yes/-/max_icc_size/0/'"
+        >
         <figcaption>
           <h1>{{ home.slide1.name }}</h1>
           <p>{{ home.slide1.caption }}</p>
@@ -15,7 +17,9 @@
       </figure>
 
       <figure class="slide2" @click="selected = 2" :class="{highlight:selected == 2}">
-        <img :src="home.slide2.image">
+        <img
+          :src="home.slide2.image + '-/preview/1100x1100/-/format/jpeg/-/quality/normal/-/progressive/yes/-/max_icc_size/0/'"
+        >
         <div class="legend">
           <h1 class="title">{{ home.slide2.name }}</h1>
         </div>
@@ -27,7 +31,9 @@
       </figure>
 
       <figure class="slide3" @click="selected = 3" :class="{highlight:selected == 3}">
-        <img :src="home.slide3.image">
+        <img
+          :src="home.slide3.image + '-/preview/1100x1100/-/format/jpeg/-/quality/normal/-/progressive/yes/-/max_icc_size/0/'"
+        >
         <figcaption>
           <h1>{{ home.slide3.name }}</h1>
           <p>{{ home.slide3.caption }}</p>
@@ -125,11 +131,12 @@ export default {
         font-size: 1.4em
     img
       filter: grayscale(100%) blur(2px)
-      transition: all 0.8s ease
+      transition: all 0.8s ease 1s
+      width: 100vw !important
     &.highlight
       flex-grow: 1
       img
-        filter: grayscale(0%)
+        filter: grayscale(0%) blur(0)
       &:hover
         transform: none
       .legend
