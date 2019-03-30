@@ -5,18 +5,20 @@
         <div class="contact">
           <h1>Send Us a Message</h1>
           <div class="form">
-            <form name="email" netlify-honeypot="bot-field" method="post" netlify>
-              <input type="hidden" name="form-name" value="contact">
+            <form name="contact" method="POST" data-netlify="true">
               <p class="hidden">
                 <label>
                   Don’t fill this out:
                   <input name="bot-field">
                 </label>
               </p>
-              <input class="form-field" name="name" id="name" placeholder="Your name">
-              <input class="form-field" name="email" id="email" placeholder="Your email address">
-              <textarea rows="4" cols="50" name="message" id="message" placeholder="Your message"></textarea>
-              <input @click="submit" class="form-button" type="submit" value="Send">
+              <input type="text" placeholder="Your name" name="name">
+
+              <input type="email" placeholder="Your email" name="email">
+
+              <textarea name="message" placeholder="Your message"></textarea>
+
+              <button type="submit">Send</button>
             </form>
           </div>
         </div>
