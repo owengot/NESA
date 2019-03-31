@@ -59,11 +59,12 @@ export default {
       "https://firestore.googleapis.com/v1/projects/nesa-a1443/databases/(default)/documents/events"
     );
     const eventEntries = entries.documents;
-
-    var filteredEntries = eventEntries.filter(function(entry) {
-      return eventEntries[0].fields.userId.stringValue === "1";
-    });
-    return { filteredEntries };
+    if (eventEntries) {
+      var filteredEntries = eventEntries.filter(function(entry) {
+        return eventEntries[0].fields.userId.stringValue === "1";
+      });
+      return { filteredEntries };
+    }
   }
 };
 </script>

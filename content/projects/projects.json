@@ -6,12 +6,12 @@
       "links": [{
           "title": "Stark M., Baberg H.",
           "description": "Primum non nocere. The WHO Surgery Safety Checklist (Laparoscopy Today, 2008, 7(2): 15-8)",
-          "url": "http://www.nesacademy.org/downloads/PrimumNonNocere.pdf"
+          "url": "/PrimumNonNocere.pdf"
         },
         {
           "title": "Stark M., Baberg H.",
           "description": "Primum non nocere. The WHO Surgery Safety Checklist (Laparoscopy Today, 2008, 7(2): 15-8)",
-          "url": "http://www.nesacademy.org/downloads/PrimumNonNocere.pdf"
+          "url": "/PrimumNonNocere.pdf"
         }
       ]
     },
@@ -26,26 +26,26 @@
       "description": "The NOS working group is developing a new surgical device, the TED (Transdouglas Endoscopic Device). The TED is a multichannel, articulated, rigid endoscope that facilitates surgical procedures in the upper abdomen (cholecystectomy, liver biopsy, splenectomy etc.) as well as in the pelvis (hysterectomy, cystectomy, etc.) by using a single entry.",
       "links": [{
         "description": "Protocol of the 1st meeting (incl. list of participants)",
-        "url": "http://www.nesacademy.org/downloads/NOSprotocol230606.pdf"
+        "url": "/NOSprotocol230606.pdf"
       }, {
         "description": "Protocol of the 2nd meeting (incl. list of participants)",
-        "url": "http://www.nesacademy.org/downloads/NOSprotocol280307.pdf"
+        "url": "/NOSprotocol280307.pdf"
       }, {
         "title": "Stark M.",
         "description": "Introduction to the NOS / SLO concept (The New European Surgery Academy)",
-        "url": "http://www.nesacademy.org/downloads/NOS211107_web.pdf"
+        "url": "/NOS211107_web.pdf"
       }, {
         "title": "Benhidjeb T.",
         "description": "Auxillary-Bilateral-Breast-Approach (ABBA) (Natural Orifice Surgery 1st Meeting, NESA, Berlin - 2006)",
-        "url": "http://www.nesacademy.org/downloads/benhidjeb_abba_web.pdf"
+        "url": "/benhidjeb_abba_web.pdf"
       }, {
         "title": "Witzel K.",
         "description": "Transumbilical herniorrhaphy (Natural Orifice Surgery Working Group, NESA, Berlin - 2006)",
-        "url": "http://www.nesacademy.org/downloads/witzelherniorrhaphy.pdf"
+        "url": "/witzelherniorrhaphy.pdf"
       }, {
         "title": "Witzel K.",
         "description": "The transoral access in endoscopic thyroid resection (NESA, Berlin)",
-        "url": "http://www.nesacademy.org/downloads/witzeltransoral.pdf"
+        "url": "/witzeltransoral.pdf"
       }],
       "video": [{
         "url": "http://nesacademy.org/beta/video/NOS_TED.mpg",
@@ -92,7 +92,7 @@
       "links": [{
         "title": "New European Surgical Academy [PDF]",
         "description": "NESA’s Anti-Caesarean-Section Campaign: The dangers of overused Cesarean Sections (NESA)",
-        "url": "http://www.nesacademy.org/downloads/Anti_CS-Campaign.pdf"
+        "url": "/Anti_CS-Campaign.pdf"
       }]
     }, {
       "name": "Ten Step Vaginal Hysterectomy – A modified operative technique for vaginal hysterectomy",

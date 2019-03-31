@@ -385,6 +385,13 @@ header {
     -webkit-transition: 350ms ease all;
     -moz-transition: 350ms ease all;
     transition: 350ms ease all;
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    position: fixed;
+    overflow: scroll;
+    height: 100vh;
   }
   #main-menu #menu span#title {
     display: block;

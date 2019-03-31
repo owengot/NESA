@@ -6,7 +6,7 @@
           <h1>{{ about.title }}</h1>
           <p v-html="$md.render(about.description)"></p>
           <a
-            href="/Presentation-NESA.ppt"
+            href="/Presentation-NESA.pptx"
             target="_blank"
             class="presentation"
           >View the NESA Presentation</a>
