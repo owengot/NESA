@@ -1,113 +1,117 @@
 {
   "co_title": "Cooperations",
-  "co_introduction": "The NESA has cooperation agreements with the following institutions",
-  "co_entries": [{
+  "co_entries": [
+    {
       "title": "Academics without Borders (AWB/USF)",
-      "url": ""
+      "url": "https://nesacademy.org/about"
     },
     {
       "title": "ACMIT – Austrian Center for Medical Innovation and Technology (Wiener Neustadt, Austria)",
-      "url": ""
+      "url": "https://nesacademy.org/about"
     },
     {
       "title": "The Centro Chemis Iaccarino (Naples, Italy)",
-      "url": ""
+      "url": "https://nesacademy.org/about"
     },
     {
       "title": "The Spanish Institute of Micro-Immunotherapy (Spain)",
-      "url": ""
+      "url": "https://nesacademy.org/about"
     },
     {
       "title": "The Dansk Kirurgisk Selskab (DKS, Danish Surgical Society)",
-      "url": ""
+      "url": "https://nesacademy.org/about"
     },
     {
       "title": "The Deutsche Gesellschaft für Gynäkologie und Geburtshilfe (DGGG, German Society of Obstetrics and Gynecology)",
-      "url": ""
+      "url": "https://nesacademy.org/about"
     },
     {
       "title": "The European School of Transfusion Medicine (ESTM)",
-      "url": ""
+      "url": "https://nesacademy.org/about"
     },
     {
       "title": "European Society of Young Surgeons (ESYS-ECS)",
-      "url": ""
+      "url": "https://nesacademy.org/about"
     },
     {
       "title": "Frauengesundheit in der Entwicklungszusammenarbeit e.V. (FIDE, Woman’s health in development cooperation)",
-      "url": ""
+      "url": "https://nesacademy.org/about"
     },
     {
       "title": "FIGO (International Federation of Gynecology and Obstetrics)",
-      "url": ""
+      "url": "https://nesacademy.org/about"
     },
     {
       "title": "GeneSort",
-      "url": ""
+      "url": "https://nesacademy.org/about"
     },
     {
       "title": "Geniplet Palma SL (Palma de Mallorca, Spain)",
-      "url": ""
+      "url": "https://nesacademy.org/about"
     },
     {
       "title": "The Hong Kong Academy of Medicine (HKAM)",
-      "url": ""
+      "url": "https://nesacademy.org/about"
     },
     {
       "title": "International Academy for Laser Medicine and Surgery (IALMS)",
-      "url": ""
+      "url": "https://nesacademy.org/about"
     },
     {
       "title": "Institut für Gesundheitsvorsorge, Ernährungswissenschaften und Better-Aging-Medizin (IGEB, Institute for Health Science, Nutrition Science and Better-Aging-Medicine)",
-      "url": ""
+      "url": "https://nesacademy.org/about"
     },
     {
       "title": "Institut für Transkulturelle Gesundheitswissenschaften der Europa-Universität Viadrina, Frankfurt/Oder (IntraG, Institute for Transcultural Medical Sciences of the European University Viadrina)",
-      "url": ""
+      "url": "https://nesacademy.org/about"
     },
     {
       "title": "The International Society for Laser Surgery and Medicine (ISLSM)",
-      "url": ""
+      "url": "https://nesacademy.org/about"
     },
     {
       "title": "ISGE (International Society for Gynecologic Endoscopy)",
-      "url": ""
+      "url": "https://nesacademy.org/about"
     },
     {
       "title": "Northside Hospital (sponsor of World Symposium on Endometriosis 2011)",
-      "url": ""
+      "url": "https://nesacademy.org/about"
     },
     {
       "title": "The Society of Laparoendoscopic Surgeons (SLS)",
-      "url": ""
+      "url": "https://nesacademy.org/about"
     },
     {
       "title": "Turkish Association of Maternal Fetal Medicine and Perinatology",
-      "url": ""
+      "url": "https://nesacademy.org/about"
     },
     {
       "title": "The University of Cukurova (Adana, Turkey)",
-      "url": ""
+      "url": "https://nesacademy.org/about"
     },
     {
       "title": "The USP Clínica Palmaplanas, a teaching hospital of the NESA (Palma de Mallorca, Spain)",
-      "url": ""
+      "url": "https://nesacademy.org/about"
     },
     {
       "title": "The World Academy of Laser Applications (WALA)",
-      "url": ""
+      "url": " https://nesacademy.org/about"
     },
     {
       "title": "World of Medicine (W.O.M.)",
-      "url": ""
+      "url": " https://nesacademy.org/about"
     },
     {
       "title": "International Network for Health Workforce Education (INHWE)",
-      "url": ""
+      "url": "https://nesacademy.org/about "
     },
     {
       "title": "European Artist Guild for Medicine and Culture",
-      "url": ""
+      "url": "https://nesacademy.org/about"
+    },
+    {
+      "title": "Beijing AILUNKAIER Trade Co., Ltd.",
+      "url": "https://nesacademy.org/about"
     }
   ]
 }
