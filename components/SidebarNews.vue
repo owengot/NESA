@@ -3,19 +3,16 @@
     <div class="section">
       <h1>Subscribe to our Newsletter</h1>
       <p>Get regular updates on all the latest news and current events from NESA</p>
-      <div class="form">
-        <form name="subscribe" action="/news" netlify-honeypot="bot-field" method="post" netlify>
-          <input type="hidden" name="hidden-form" value="subscribe">
-          <p class="hidden">
-            <label>
-              Don’t fill this out:
-              <input name="bot-field">
-            </label>
-          </p>
-          <input class="form-field" placeholder="Your name" name="name" id="name">
-          <input class="form-field" placeholder="Your email" name="email" id="email">
-          <input class="form-button" type="submit" value="Subscribe">
+      <div class="form" v-if="!success">
+        <form name="subscribe">
+          <input id="name" v-model='name' placeholder="Your name">
+          <input id="email"  v-model='email' placeholder="Your email">
+          <div class="form-button" type="submit" value="Subscribe" @click="addEmail()">Subscribe</div>
         </form>
+      </div>
+
+      <div v-if="success" class="success">
+        <p>Thank you, you have succesfully subscribed.</p>
       </div>
 
       <p class="gdpr">
@@ -28,6 +25,18 @@
 </template>
 
 <style lang="scss" scoped>
+.success {
+  background: #fafafa;
+  padding: 10px;
+  border-radius: 10px;
+  width: 90%;
+  font-size: 12px;
+  margin: 20px auto;
+  p {
+  font-weight: bold !important;
+  line-height: 20px !important;
+}
+}
 .message {
   margin: 20px auto;
   width: 90%;
@@ -190,9 +199,16 @@ textarea:focus {
   color: #016895;
   background: #fafafa;
   border: 1px solid #d5d5d580;
+  border-radius: 5px;
   font-size: 1.15em;
-  padding: 12px 0;
+  font-weight: bold;
+  padding: 12px 15px;
   margin: 10px auto 0 !important;
+  &:hover {
+  background-color: #016895;
+  color: #fff;
+  cursor: pointer;
+}
 }
 .sidebar {
   width: 100%;
@@ -229,11 +245,15 @@ textarea:focus {
 </style>
 
 <script>
+import axios from "axios";
+
 export default {
   data() {
     return {
       openMenu: false,
       success: false,
+      email: '',
+      name: '',
       menu: [
         { href: "/about", title: "About" },
         { href: "/news", title: "News" },
@@ -248,10 +268,29 @@ export default {
     isActive(link) {
       return this.$route.fullPath === link.href;
     },
-    submit() {
+    addEmail() {
+
+      var self = this;
+      var data = {
+      address: this.email,
+      list: 'test',
+      name: this.name
+      }
+      axios.post('https://nesa-connect.herokuapp.com/address/add', data)
+      .then(function (response) {
+      console.log(response);
+      })
+      .catch(function (error) {
+      console.log(error);
+      });
+
       this.success = true;
-    }
+      this.email = '';
+      this.name = '';
+
+
   },
+},
   props: ["result"]
 };
 </script>
