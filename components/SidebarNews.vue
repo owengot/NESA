@@ -273,7 +273,7 @@ export default {
       var self = this;
       var data = {
       address: this.email,
-      list: 'test',
+      list: 'newsletter',
       name: this.name
       }
       axios.post('https://nesa-connect.herokuapp.com/address/add', data)
