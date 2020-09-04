@@ -24,7 +24,7 @@
     "jquery": "^3.3.1",
     "lodash.orderby": "^4.6.0",
     "markdown-it": "^8.4.2",
-    "marked": "^0.5.1",
+    "marked": "^0.7.0",
     "medium-zoom": "^1.0.2",
     "moment": "^2.24.0",
     "multi-json-loader": "^0.2.1",
